@@ -1,0 +1,21 @@
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\Pharmacy Management System.exe.config
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\Pharmacy Management System.exe
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\Pharmacy Management System.pdb
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\PresentationLayer.csproj.AssemblyReference.cache
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.Main.resources
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\Pharmacy_Management_System.Properties.Resources.resources
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\PresentationLayer.csproj.GenerateResource.cache
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\PresentationLayer.csproj.CoreCompileInputs.cache
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\Pharmacy Management System.exe
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\Pharmacy Management System.pdb
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\Bunifu_UI_v1.52.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.DotNetBar.Keyboard.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.DotNetBar.Schedule.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.DotNetBar2.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.Instrumentation.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.TreeGX.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\Guna.UI2.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\MetroFramework.dll
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.DotNetBar2.xml
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\bin\Debug\DevComponents.Instrumentation.xml
+D:\(PMS)\Pharmacy Management System\Pharmacy Management System\obj\Debug\Presenta.9C561136.Up2Date
