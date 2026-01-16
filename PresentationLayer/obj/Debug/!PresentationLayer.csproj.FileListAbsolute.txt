@@ -1,0 +1,14 @@
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!PresentationLayer.csproj.AssemblyReference.cache
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Main.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!PresentationLayer.csproj.GenerateResource.cache
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy Management System.exe
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy Management System.pdb
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\Pharmacy Management System.exe.config
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\Pharmacy Management System.exe
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\Pharmacy Management System.pdb
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\Bunifu_UI_v1.52.dll
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\Guna.UI2.dll
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\MetroFramework.dll
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Properties.Resources.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!PresentationLayer.csproj.CoreCompileInputs.cache
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!Present.0E4585B0.Up2Date

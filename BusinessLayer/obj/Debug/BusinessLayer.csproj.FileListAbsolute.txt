@@ -1,0 +1,6 @@
+D:\(PMS)\Pharmacy Management System\BusinessLayer\bin\Debug\BusinessLayer.dll
+D:\(PMS)\Pharmacy Management System\BusinessLayer\bin\Debug\BusinessLayer.pdb
+D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.csproj.AssemblyReference.cache
+D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
+D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.dll
+D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.pdb

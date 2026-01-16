@@ -21,5 +21,18 @@ namespace Pharmacy_Management_System
         {
             this.Close();
         }
+
+        private void Main_Load(object sender, EventArgs e)
+        {
+            LBLRole.Text = "Admin";
+            LBLUser.Text = "Imad Oulechgar";
+            LBLDate.Text = DateTime.Now.ToShortDateString();
+            LBLTime.Text = DateTime.Now.ToShortTimeString();
+        }
+
+        private void guna2ImageButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

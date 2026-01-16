@@ -77,18 +77,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DependentUpon>Resources.resx</DependentUpon>
-      <DesignTime>True</DesignTime>
-    </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Properties\Settings.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
@@ -99,19 +99,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\19807-bubka-Remove.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="Resources\19775-bubka-Delete.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-electronic-invoice-30.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-pharmacy-shop-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-pharmacy-80.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-pharmacy-48.png" />
@@ -124,6 +115,87 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-search-50.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-481.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-482.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-301.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-45.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-select-users-641.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-302.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-pharmacy-483.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\19775-bubka-Delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-451.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-drugs-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-dashboard-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supplier-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-reports-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-users-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-settings-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\unnamed.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-history-48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-history-48 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-40.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-80.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-search-501.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-up-64.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-up-64 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-up-64 %283%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-notification-401.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
