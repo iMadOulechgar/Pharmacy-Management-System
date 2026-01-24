@@ -73,6 +73,16 @@ namespace Pharmacy_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _9bb084fc_7548_469a_acae_04fa20715cf2 {
+            get {
+                object obj = ResourceManager.GetObject("9bb084fc-7548-469a-acae-04fa20715cf2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_dashboard_45 {
             get {
                 object obj = ResourceManager.GetObject("icons8-dashboard-45", resourceCulture);

@@ -12,3 +12,9 @@ D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\MetroFramework.d
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Properties.Resources.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!PresentationLayer.csproj.CoreCompileInputs.cache
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\!Present.0E4585B0.Up2Date
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Notification.Controles.ctlNotification.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\BusinessLayer.dll
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\DataAccessLayer.dll
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\BusinessLayer.pdb
+D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\DataAccessLayer.pdb
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Login.LoginFrm.resources

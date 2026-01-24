@@ -4,3 +4,6 @@ D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.csproj
 D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.csproj.CoreCompileInputs.cache
 D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.dll
 D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\BusinessLayer.pdb
+D:\(PMS)\Pharmacy Management System\BusinessLayer\bin\Debug\DataAccessLayer.dll
+D:\(PMS)\Pharmacy Management System\BusinessLayer\bin\Debug\DataAccessLayer.pdb
+D:\(PMS)\Pharmacy Management System\BusinessLayer\obj\Debug\Business.EA331CBA.Up2Date

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Pharmacy_Management_System.Login;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Pharmacy_Management_System
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Main());
+            Application.Run(new LoginFrm());
         }
     }
 }
