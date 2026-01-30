@@ -1,5 +1,7 @@
-﻿using Guna.UI2.WinForms.Suite;
+﻿using BusinessLayer;
+using Guna.UI2.WinForms.Suite;
 using Pharmacy_Management_System.Notification.Controles;
+using Pharmacy_Management_System.Stock;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +11,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using BusinessLayer;
 
 namespace Pharmacy_Management_System
 {
@@ -50,6 +51,12 @@ namespace Pharmacy_Management_System
         {
             pictureBox9.Visible = (pictureBox9.Visible == false);
             LayoutPanelNotification.Visible = (LayoutPanelNotification.Visible == false);
+        }
+
+        private void guna2GradientButton2_Click(object sender, EventArgs e)
+        {
+            MainStockForm frm = new MainStockForm();
+            frm.ShowDialog();
         }
     }
 }

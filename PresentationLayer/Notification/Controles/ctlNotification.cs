@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BusinessLayer;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -24,15 +25,10 @@ namespace Pharmacy_Management_System.Notification.Controles
         }
 
 
-
-        private void LBLTime_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void ctlNotification_Load(object sender, EventArgs e)
         {
             this.Width = this.Parent.Width - 25;
         }
+
     }
 }

@@ -1,0 +1,26 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Pharmacy_Management_System.Stock
+{
+    public partial class MainStockForm : Form
+    {
+        public MainStockForm()
+        {
+            InitializeComponent();
+        }
+
+        private void guna2GradientCircleButton1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+    }
+}
