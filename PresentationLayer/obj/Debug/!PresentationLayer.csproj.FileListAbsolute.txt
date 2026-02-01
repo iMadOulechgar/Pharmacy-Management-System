@@ -21,3 +21,4 @@ D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Managem
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Stock.MainStockForm.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Stock.Controles.StockHistoryctrl.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Drug.Controles.FindDrugctrl.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Users.frmManageUsers.resources

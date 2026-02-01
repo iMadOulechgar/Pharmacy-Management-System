@@ -40,5 +40,33 @@ namespace DataAccessLayer
 
             return RoleName;
         }
+
+        public static bool FindRoles(int RoleID , ref string RoleName)
+        {
+            bool result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT RoleID , RoleName FROM Roles WHERE RoleID = @RoleID";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@RoleID",RoleID);
+
+                    con.Open();
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    if (reader.Read())
+                    {
+                        RoleName = (string)reader["RoleName"];
+                        result = true;
+                    }
+                }
+            }
+
+            return result;
+        }
+
     }
 }

@@ -18,7 +18,6 @@ namespace Pharmacy_Management_System.Login
         {
             InitializeComponent();
         }
-
         private bool CheckIfDataAlreadyInRegistry()
         {
             if (clsRememberMe.CheckIsAlreadyInRegistry(TBUserName.Text.Trim(), TBPassword.Text.Trim()))
@@ -33,10 +32,14 @@ namespace Pharmacy_Management_System.Login
 
             Main DashBoard = new Main();
 
-            if (clsBusinessUsers.CheckLogin(TBUserName.Text.Trim(), TBPassword.Text.Trim(), ref IsActive))
+            clsBusinessUsers _User = clsBusinessUsers.FindUserByUsernameAndPassword(TBUserName.Text.Trim(), TBPassword.Text.Trim(),ref IsActive);
+            
+            if (_User != null)
             {
                 if (IsActive)
                 {
+                    clsCurrentUserLogin.CurrentUser = _User;
+
                     if (CBRememberMe.Checked)
                     {
                         if (!CheckIfDataAlreadyInRegistry())
