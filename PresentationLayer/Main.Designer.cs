@@ -34,7 +34,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.LBLNotificationNum = new System.Windows.Forms.Label();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.NotificationPic = new System.Windows.Forms.PictureBox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label3 = new System.Windows.Forms.Label();
@@ -43,7 +43,7 @@
             this.LBLRole = new System.Windows.Forms.Label();
             this.LBLUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
+            this.ProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -68,8 +68,8 @@
             this.LayoutPanelNotification = new System.Windows.Forms.FlowLayoutPanel();
             this.reflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -87,7 +87,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
             this.panel1.Controls.Add(this.LBLNotificationNum);
-            this.panel1.Controls.Add(this.pictureBox9);
+            this.panel1.Controls.Add(this.NotificationPic);
             this.panel1.Controls.Add(this.bunifuTextbox1);
             this.panel1.Controls.Add(this.guna2ImageButton1);
             this.panel1.Controls.Add(this.label3);
@@ -96,7 +96,7 @@
             this.panel1.Controls.Add(this.LBLRole);
             this.panel1.Controls.Add(this.LBLUser);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.guna2CirclePictureBox1);
+            this.panel1.Controls.Add(this.ProfilePicture);
             this.panel1.Controls.Add(this.guna2GradientCircleButton1);
             this.panel1.Location = new System.Drawing.Point(282, 0);
             this.panel1.Name = "panel1";
@@ -116,14 +116,14 @@
             this.LBLNotificationNum.TabIndex = 6;
             this.LBLNotificationNum.Text = "0";
             // 
-            // pictureBox9
+            // NotificationPic
             // 
-            this.pictureBox9.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_up_64__3_;
-            this.pictureBox9.Location = new System.Drawing.Point(625, 46);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(69, 50);
-            this.pictureBox9.TabIndex = 5;
-            this.pictureBox9.TabStop = false;
+            this.NotificationPic.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_up_64__3_;
+            this.NotificationPic.Location = new System.Drawing.Point(625, 46);
+            this.NotificationPic.Name = "NotificationPic";
+            this.NotificationPic.Size = new System.Drawing.Size(69, 50);
+            this.NotificationPic.TabIndex = 5;
+            this.NotificationPic.TabStop = false;
             // 
             // bunifuTextbox1
             // 
@@ -217,17 +217,16 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Role : ";
             // 
-            // guna2CirclePictureBox1
+            // ProfilePicture
             // 
-            this.guna2CirclePictureBox1.Image = global::Pharmacy_Management_System.Properties.Resources.unnamed;
-            this.guna2CirclePictureBox1.Location = new System.Drawing.Point(710, 3);
-            this.guna2CirclePictureBox1.Name = "guna2CirclePictureBox1";
-            this.guna2CirclePictureBox1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.guna2CirclePictureBox1.ShadowDecoration.Parent = this.guna2CirclePictureBox1;
-            this.guna2CirclePictureBox1.Size = new System.Drawing.Size(63, 66);
-            this.guna2CirclePictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.guna2CirclePictureBox1.TabIndex = 1;
-            this.guna2CirclePictureBox1.TabStop = false;
+            this.ProfilePicture.Location = new System.Drawing.Point(710, 3);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ProfilePicture.ShadowDecoration.Parent = this.ProfilePicture;
+            this.ProfilePicture.Size = new System.Drawing.Size(63, 66);
+            this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProfilePicture.TabIndex = 1;
+            this.ProfilePicture.TabStop = false;
             // 
             // guna2GradientCircleButton1
             // 
@@ -584,7 +583,7 @@
             this.reflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reflectionLabel1.Location = new System.Drawing.Point(305, 72);
             this.reflectionLabel1.Name = "reflectionLabel1";
-            this.reflectionLabel1.Size = new System.Drawing.Size(175, 70);
+            this.reflectionLabel1.Size = new System.Drawing.Size(114, 70);
             this.reflectionLabel1.TabIndex = 7;
             this.reflectionLabel1.Text = "<b><font size=\"+6\"><i>Dash</i><font color=\"#B02B2C\">board</font></font></b>";
             // 
@@ -607,8 +606,8 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.guna2CirclePictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -645,7 +644,7 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox guna2CirclePictureBox1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ProfilePicture;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LBLUser;
@@ -658,7 +657,7 @@
         private MetroFramework.Controls.MetroGrid metroGrid1;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
-        private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.PictureBox NotificationPic;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanelNotification;
         private System.Windows.Forms.Label LBLNotificationNum;
         private DevComponents.DotNetBar.Controls.ReflectionLabel reflectionLabel1;

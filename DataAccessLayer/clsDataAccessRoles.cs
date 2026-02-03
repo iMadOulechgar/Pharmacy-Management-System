@@ -9,7 +9,7 @@ namespace DataAccessLayer
 {
     public static class clsDataAccessRoles
     {
-        public static string GetRoleName(int RoleID)
+        public static string GetRoleName(int? RoleID)
         {
             string RoleName = "";
             

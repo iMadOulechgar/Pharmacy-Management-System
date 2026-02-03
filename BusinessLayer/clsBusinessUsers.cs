@@ -18,6 +18,7 @@ namespace BusinessLayer
         public bool? IsActive { get; set; }
         public string ImagePath { get; set; }
         public char? Gendor {  get; set; }
+        public string Email {  get; set; } 
 
 
         public clsBusinessUsers()
@@ -29,9 +30,10 @@ namespace BusinessLayer
             this.IsActive = null;
             this.ImagePath = "";
             this.Gendor = null;
+            this.Email = "";
         }
 
-        public clsBusinessUsers(int UserID,string UserName,string Password,int RoleID,bool IsActive,string ImagePath,char Gendor)
+        public clsBusinessUsers(int UserID,string UserName,string Password,int RoleID,bool IsActive,string ImagePath,char Gendor,string email)
         {
             this.UserID = UserID;
             this.Username = UserName;
@@ -39,31 +41,45 @@ namespace BusinessLayer
             this.RoleID = RoleID;
             this.CompositionRoles = clsBusinessRoles.FindRoleByID(RoleID);
             this.IsActive = IsActive;
-            this.ImagePath = "";
-            this.Gendor = null;
+            this.ImagePath = ImagePath;
+            this.Gendor = Gendor;
+            this.Email = email;
+        }
+
+        public static clsBusinessUsers FindUserByUsername(string UserName)
+        {
+            string Password = "", ImagePath = "", Email = "";
+            int RoleID = -1 , UserID = -1;
+            bool IsActive = false;
+            char Gendor = 'm';
+
+            if (clsDataAccessUsers.Find(ref UserID, UserName, ref Password, ref RoleID, ref IsActive, ref ImagePath, ref Gendor, ref Email))
+                return new clsBusinessUsers(UserID, UserName, Password, RoleID, IsActive, ImagePath, Gendor, Email);
+            else
+                return null;
         }
 
         public static clsBusinessUsers FindUserById(int UserID)
         {
-            string UserName = "", Password = "", ImagePath = "";
+            string UserName = "", Password = "", ImagePath = "" , Email = "";
             int RoleID = -1;
             bool IsActive = false;
             char Gendor = 'm';
 
-            if (clsDataAccessUsers.Find(UserID, ref UserName, ref Password, ref RoleID, ref IsActive, ref ImagePath, ref Gendor))
-                return new clsBusinessUsers(UserID, UserName, Password, RoleID, IsActive, ImagePath, Gendor);
+            if (clsDataAccessUsers.Find(UserID, ref UserName, ref Password, ref RoleID, ref IsActive, ref ImagePath, ref Gendor , ref Email))
+                return new clsBusinessUsers(UserID, UserName, Password, RoleID, IsActive, ImagePath, Gendor , Email);
             else
                 return null;
         }
 
         public static clsBusinessUsers FindUserByUsernameAndPassword(string UserName , string Password , ref bool IsActive)
         {
-            string ImagePath = "";
+            string ImagePath = "" , Email = "";
             int RoleID = -1 , UserID = -1;
             char Gendor = 'm';
 
-            if (clsDataAccessUsers.Find(ref UserID,  UserName, Password, ref RoleID, ref IsActive, ref ImagePath, ref Gendor))
-                return new clsBusinessUsers(UserID, UserName, Password, RoleID, IsActive, ImagePath, Gendor);
+            if (clsDataAccessUsers.Find(ref UserID,  UserName, Password, ref RoleID, ref IsActive, ref ImagePath, ref Gendor,ref Email))
+                return new clsBusinessUsers(UserID, UserName, Password, RoleID, IsActive, ImagePath, Gendor, Email);
             else
                 return null;
         }

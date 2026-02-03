@@ -34,7 +34,7 @@ namespace BusinessLayer
                 return null;
         }
 
-        public static string GetRoleNameByID(int ID)
+        public static string GetRoleNameByID(int? ID)
         {
             return clsDataAccessRoles.GetRoleName(ID);
         }

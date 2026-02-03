@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
+using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Notification.Controles;
 using Pharmacy_Management_System.Stock;
 using Pharmacy_Management_System.Users;
@@ -24,18 +25,29 @@ namespace Pharmacy_Management_System
             InitializeComponent();
         }
 
+        private void _FillUserDataInLoad()
+        {
+            LBLUser.Text = clsCurrentUserLogin.CurrentUser.Username;
+            LBLRole.Text = clsCurrentUserLogin.CurrentUser.CompositionRoles.RoleName;
+            ProfilePicture.Load(clsCurrentUserLogin.CurrentUser.ImagePath);
+            LBLDate.Text = DateTime.Now.ToShortDateString();
+            LBLTime.Text = DateTime.Now.ToShortTimeString();
+            LayoutPanelNotification.Visible = false;
+            NotificationPic.Visible = false;
+        }
+
         private void guna2GradientCircleButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
         private void Main_Load(object sender, EventArgs e)
         {
-            ReadAndWriteInFile.AddPictureInFolder(@"C:\Users\imad\Pictures\MyPhotos\277350598_1224823271257670_4271167348931403926_n");
+            _FillUserDataInLoad();
         }
 
         private void guna2ImageButton1_Click(object sender, EventArgs e)
         {
-            pictureBox9.Visible = (pictureBox9.Visible == false);
+            NotificationPic.Visible = (NotificationPic.Visible == false);
             LayoutPanelNotification.Visible = (LayoutPanelNotification.Visible == false);
         }
 

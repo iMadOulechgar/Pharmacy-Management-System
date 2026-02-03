@@ -22,11 +22,8 @@ namespace Pharmacy_Management_System.Validation_AllSettings
             string FileName = FileImad.Path.GetFileName(SourcePicture);
             string STRDestination = FileImad.Path.Combine(Path, FileName);
 
-            File.Copy(FileName, STRDestination,true);
+            File.Copy(SourcePicture, STRDestination,true);
         } 
-
-
-
 
     }
 }

@@ -47,7 +47,7 @@ namespace DataAccessLayer
         }
 
         public static bool Find(int UserID , ref string UserName , ref string Password,ref int RoleID , 
-            ref bool IsActive , ref string ImagePath , ref char Gendor)
+            ref bool IsActive , ref string ImagePath , ref char Gendor , ref string Email)
         {
             bool result = false;
 
@@ -70,6 +70,7 @@ namespace DataAccessLayer
                         RoleID = (int)Reader["RoleID"];
                         IsActive = (bool)Reader["IsActive"];
                         ImagePath = (string)Reader["ImagePath"];
+                        Email = (string)Reader["Email"];
                         Gendor = (char)Reader["Gendor"];
                     }
                 }
@@ -78,8 +79,43 @@ namespace DataAccessLayer
             return result;
         }
 
+        public static bool Find(ref int UserID,string UserName, ref string Password, ref int RoleID,
+           ref bool IsActive, ref string ImagePath, ref char Gendor, ref string Email)
+        {
+            bool result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM Users WHERE Username = @Username";
+
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Username", UserName);
+
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        result = true;
+
+                        UserID = (int)Reader["UserID"];
+                        Password = (string)Reader["Passwordhash"];
+                        RoleID = (int)Reader["RoleID"];
+                        IsActive = (bool)Reader["IsActive"];
+                        ImagePath = (string)Reader["ImagePath"];
+                        Email = (string)Reader["Email"];
+                        Gendor = Convert.ToChar((string)Reader["Gendor"]);
+                    }
+                }
+            }
+
+            return result;
+        }
+
         public static bool Find(ref int UserID, string UserName, string Password, ref int RoleID,
-            ref bool IsActive, ref string ImagePath, ref char Gendor)
+            ref bool IsActive, ref string ImagePath, ref char Gendor , ref string Email)
         {
             bool result = false;
 
@@ -104,6 +140,7 @@ namespace DataAccessLayer
                         RoleID = (int)Reader["RoleID"];
                         IsActive = (bool)Reader["IsActive"];
                         ImagePath = (string)Reader["ImagePath"];
+                        Email = (string)Reader["Email"];
                         Gendor = Convert.ToChar(Reader["Gendor"].ToString());
                     }
                 }
@@ -118,7 +155,7 @@ namespace DataAccessLayer
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "SELECT * FROM Users";
+                string Query = "SELECT * FROM View_Users";
 
                 using (SqlCommand cmd = new SqlCommand(Query , con))
                 {
@@ -131,6 +168,28 @@ namespace DataAccessLayer
 
             return Dt;
         } 
+
+
+        //public static int AddUser(string Username , string Password , int Role , bool IsActive , string ImagePath,
+        //    char Gendor , string Email
+        //    )
+        //{
+        //    using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+        //    {
+        //        string Query = 
+        //        using (SqlCommand cmd = new SqlCommand())
+        //        {
+
+        //        }
+
+
+
+
+        //    }
+
+
+
+        }
 
     }
 }
