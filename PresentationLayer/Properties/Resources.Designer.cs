@@ -93,6 +93,16 @@ namespace Pharmacy_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_check_mark {
+            get {
+                object obj = ResourceManager.GetObject("icons8-check-mark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_circle_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-circle-50", resourceCulture);
@@ -146,6 +156,16 @@ namespace Pharmacy_Management_System.Properties {
         internal static System.Drawing.Bitmap icons8_edit_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-edit-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_expired_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-expired-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -326,6 +346,16 @@ namespace Pharmacy_Management_System.Properties {
         internal static System.Drawing.Bitmap icons8_show_property_50 {
             get {
                 object obj = ResourceManager.GetObject("icons8-show-property-50", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_supplement_bottle {
+            get {
+                object obj = ResourceManager.GetObject("icons8-supplement-bottle", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

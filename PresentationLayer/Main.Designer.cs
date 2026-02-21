@@ -29,10 +29,8 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.ProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.LBLNotificationNum = new System.Windows.Forms.Label();
             this.NotificationPic = new System.Windows.Forms.PictureBox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
@@ -43,7 +41,6 @@
             this.LBLRole = new System.Windows.Forms.Label();
             this.LBLUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.ProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -63,13 +60,11 @@
             this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.metroGrid1 = new MetroFramework.Controls.MetroGrid();
-            this.guna2GradientButton5 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.LayoutPanelNotification = new System.Windows.Forms.FlowLayoutPanel();
             this.reflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).BeginInit();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -80,12 +75,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.panel1.Controls.Add(this.ProfilePicture);
             this.panel1.Controls.Add(this.LBLNotificationNum);
             this.panel1.Controls.Add(this.NotificationPic);
             this.panel1.Controls.Add(this.bunifuTextbox1);
@@ -96,12 +91,22 @@
             this.panel1.Controls.Add(this.LBLRole);
             this.panel1.Controls.Add(this.LBLUser);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.ProfilePicture);
             this.panel1.Controls.Add(this.guna2GradientCircleButton1);
             this.panel1.Location = new System.Drawing.Point(282, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1088, 72);
             this.panel1.TabIndex = 0;
+            // 
+            // ProfilePicture
+            // 
+            this.ProfilePicture.Location = new System.Drawing.Point(700, 1);
+            this.ProfilePicture.Name = "ProfilePicture";
+            this.ProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.ProfilePicture.ShadowDecoration.Parent = this.ProfilePicture;
+            this.ProfilePicture.Size = new System.Drawing.Size(73, 69);
+            this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.ProfilePicture.TabIndex = 8;
+            this.ProfilePicture.TabStop = false;
             // 
             // LBLNotificationNum
             // 
@@ -124,6 +129,7 @@
             this.NotificationPic.Size = new System.Drawing.Size(69, 50);
             this.NotificationPic.TabIndex = 5;
             this.NotificationPic.TabStop = false;
+            this.NotificationPic.Visible = false;
             // 
             // bunifuTextbox1
             // 
@@ -216,17 +222,6 @@
             this.label2.Size = new System.Drawing.Size(51, 27);
             this.label2.TabIndex = 2;
             this.label2.Text = "Role : ";
-            // 
-            // ProfilePicture
-            // 
-            this.ProfilePicture.Location = new System.Drawing.Point(710, 3);
-            this.ProfilePicture.Name = "ProfilePicture";
-            this.ProfilePicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.ProfilePicture.ShadowDecoration.Parent = this.ProfilePicture;
-            this.ProfilePicture.Size = new System.Drawing.Size(63, 66);
-            this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.ProfilePicture.TabIndex = 1;
-            this.ProfilePicture.TabStop = false;
             // 
             // guna2GradientCircleButton1
             // 
@@ -481,6 +476,7 @@
             this.guna2GradientButton4.Size = new System.Drawing.Size(199, 45);
             this.guna2GradientButton4.TabIndex = 1;
             this.guna2GradientButton4.Text = "Drugs";
+            this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 
             // guna2GradientButton1
             // 
@@ -503,76 +499,18 @@
             this.guna2GradientButton1.TabIndex = 1;
             this.guna2GradientButton1.Text = "Dashboard";
             // 
-            // metroGrid1
-            // 
-            this.metroGrid1.AllowUserToResizeRows = false;
-            this.metroGrid1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.metroGrid1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
-            this.metroGrid1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.metroGrid1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(136)))), ((int)(((byte)(136)))));
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.metroGrid1.DefaultCellStyle = dataGridViewCellStyle2;
-            this.metroGrid1.EnableHeadersVisualStyles = false;
-            this.metroGrid1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            this.metroGrid1.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.metroGrid1.Location = new System.Drawing.Point(305, 161);
-            this.metroGrid1.Name = "metroGrid1";
-            this.metroGrid1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Pixel);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(198)))), ((int)(((byte)(247)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(17)))), ((int)(((byte)(17)))), ((int)(((byte)(17)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.metroGrid1.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.metroGrid1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            this.metroGrid1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.metroGrid1.Size = new System.Drawing.Size(999, 593);
-            this.metroGrid1.TabIndex = 2;
-            // 
-            // guna2GradientButton5
-            // 
-            this.guna2GradientButton5.CheckedState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.CustomImages.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2GradientButton5.FillColor2 = System.Drawing.Color.DarkCyan;
-            this.guna2GradientButton5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton5.ForeColor = System.Drawing.Color.White;
-            this.guna2GradientButton5.HoverState.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Location = new System.Drawing.Point(1124, 110);
-            this.guna2GradientButton5.Name = "guna2GradientButton5";
-            this.guna2GradientButton5.ShadowDecoration.Parent = this.guna2GradientButton5;
-            this.guna2GradientButton5.Size = new System.Drawing.Size(180, 45);
-            this.guna2GradientButton5.TabIndex = 3;
-            this.guna2GradientButton5.Text = "Check Stock ";
-            // 
             // LayoutPanelNotification
             // 
             this.LayoutPanelNotification.AutoScroll = true;
             this.LayoutPanelNotification.BackColor = System.Drawing.Color.White;
             this.LayoutPanelNotification.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.LayoutPanelNotification.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LayoutPanelNotification.Location = new System.Drawing.Point(630, 75);
+            this.LayoutPanelNotification.Location = new System.Drawing.Point(672, 73);
             this.LayoutPanelNotification.Margin = new System.Windows.Forms.Padding(0);
             this.LayoutPanelNotification.Name = "LayoutPanelNotification";
             this.LayoutPanelNotification.Size = new System.Drawing.Size(441, 167);
             this.LayoutPanelNotification.TabIndex = 4;
+            this.LayoutPanelNotification.Visible = false;
             this.LayoutPanelNotification.WrapContents = false;
             // 
             // reflectionLabel1
@@ -581,7 +519,7 @@
             // 
             // 
             this.reflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.reflectionLabel1.Location = new System.Drawing.Point(305, 72);
+            this.reflectionLabel1.Location = new System.Drawing.Point(303, 87);
             this.reflectionLabel1.Name = "reflectionLabel1";
             this.reflectionLabel1.Size = new System.Drawing.Size(114, 70);
             this.reflectionLabel1.TabIndex = 7;
@@ -594,8 +532,6 @@
             this.ClientSize = new System.Drawing.Size(1369, 766);
             this.Controls.Add(this.reflectionLabel1);
             this.Controls.Add(this.LayoutPanelNotification);
-            this.Controls.Add(this.guna2GradientButton5);
-            this.Controls.Add(this.metroGrid1);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -606,8 +542,8 @@
             this.Load += new System.EventHandler(this.Main_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).EndInit();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -619,7 +555,6 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.metroGrid1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -644,7 +579,6 @@
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
-        private Guna.UI2.WinForms.Guna2CirclePictureBox ProfilePicture;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LBLUser;
@@ -654,13 +588,12 @@
         private System.Windows.Forms.PictureBox pictureBox8;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
         private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
-        private MetroFramework.Controls.MetroGrid metroGrid1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton5;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox NotificationPic;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanelNotification;
         private System.Windows.Forms.Label LBLNotificationNum;
         private DevComponents.DotNetBar.Controls.ReflectionLabel reflectionLabel1;
+        private Guna.UI2.WinForms.Guna2CirclePictureBox ProfilePicture;
     }
 }
 

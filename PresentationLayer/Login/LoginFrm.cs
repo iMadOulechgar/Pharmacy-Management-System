@@ -32,7 +32,7 @@ namespace Pharmacy_Management_System.Login
 
             Main DashBoard = new Main();
 
-            clsBusinessUsers _User = clsBusinessUsers.FindUserByUsernameAndPassword(TBUserName.Text.Trim(), TBPassword.Text.Trim(),ref IsActive);
+            clsBusinessUsers _User = clsBusinessUsers.FindUserByUsernameAndPassword(TBUserName.Text.Trim(),clsConvertToHashPassword.ComputeHash(TBPassword.Text.Trim()),ref IsActive);
             
             if (_User != null)
             {

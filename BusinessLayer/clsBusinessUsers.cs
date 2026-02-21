@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Runtime.Remoting.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -10,27 +11,31 @@ namespace BusinessLayer
 {
     public class clsBusinessUsers
     {
-        public int? UserID { get; set; }
+        public enum enMode { Add =  0, Update = 1 }
+        public enMode Mode = enMode.Add;
+
+        public int UserID { get; set; }
         public string Username { get; set; }
         public string Passwordhash { get; set;}
-        public int? RoleID { get; set; }
+        public int RoleID { get; set; }
         public clsBusinessRoles CompositionRoles { get;}
-        public bool? IsActive { get; set; }
+        public bool IsActive { get; set; }
         public string ImagePath { get; set; }
-        public char? Gendor {  get; set; }
+        public char Gendor {  get; set; }
         public string Email {  get; set; } 
 
 
         public clsBusinessUsers()
         {
-            this.UserID = null;
+            this.UserID = -1;
             this.Username = "";
             this.Passwordhash = "";
-            this.RoleID = null;
-            this.IsActive = null;
+            this.RoleID = -1;
+            this.IsActive = false;
             this.ImagePath = "";
-            this.Gendor = null;
+            this.Gendor = 'M';
             this.Email = "";
+            Mode = enMode.Add;
         }
 
         public clsBusinessUsers(int UserID,string UserName,string Password,int RoleID,bool IsActive,string ImagePath,char Gendor,string email)
@@ -44,6 +49,55 @@ namespace BusinessLayer
             this.ImagePath = ImagePath;
             this.Gendor = Gendor;
             this.Email = email;
+            Mode = enMode.Update;
+        }
+
+        private bool _AddUser()
+        {
+            if (clsDataAccessUsers.AddUser(this.Username, this.Passwordhash, this.RoleID, this.IsActive, this.ImagePath, this.Gendor, this.Email) > 0)
+                return true;
+
+            return false;
+        }
+
+        private bool _UpdateUser()
+        {
+            if (clsDataAccessUsers.UpdateUser(this.UserID, this.Username, this.RoleID, this.IsActive, this.ImagePath, this.Gendor, this.Email))
+                return true;
+
+            return false;
+        }
+
+        public static bool DeleteUserByUserID(string Username)
+        {
+            return clsDataAccessUsers.DeleteUser(Username);
+        }
+
+        public static bool SwitchFromActiveToInactiver(bool IsActive, string Username)
+        {
+            return clsDataAccessUsers.ActiveOrDeActiveUser(IsActive, Username);
+        }
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.Add:
+                    if (_AddUser())
+                    {
+                        Mode = enMode.Update;
+                        return true;
+                    }
+                    break;
+                case enMode.Update:
+                    if (_UpdateUser())
+                    {
+                        return true;
+                    }
+                    break;
+            }
+
+            return false;
         }
 
         public static clsBusinessUsers FindUserByUsername(string UserName)

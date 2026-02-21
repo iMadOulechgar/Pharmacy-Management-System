@@ -10,7 +10,7 @@ namespace Pharmacy_Management_System.Validation_AllSettings
 {
     public static class ReadAndWriteInFile
     {
-        public static void AddPictureInFolder(string SourcePicture)
+        public static void AddPictureInFolder(ref string SourcePicture)
         {
             string Path = @"D:\(PMS)\Pharmacy Management System\PictureOfUsers";
 
@@ -23,6 +23,7 @@ namespace Pharmacy_Management_System.Validation_AllSettings
             string STRDestination = FileImad.Path.Combine(Path, FileName);
 
             File.Copy(SourcePicture, STRDestination,true);
+            SourcePicture = STRDestination;
         } 
 
     }

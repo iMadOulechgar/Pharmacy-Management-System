@@ -48,7 +48,9 @@
       <HintPath>..\..\..\FrameWorks DeskTop Design\metrofr\MetroFramework.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.VisualBasic" />
-    <Reference Include="System" />
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing.Design" />
@@ -69,6 +71,18 @@
     </Compile>
     <Compile Include="Drug\Controles\FindDrugctrl.Designer.cs">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Drug\FrmManageDrugs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Drug\FrmManageDrugs.Designer.cs">
+      <DependentUpon>FrmManageDrugs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\Controles\CtrlDesign.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="History\Controles\CtrlDesign.Designer.cs">
+      <DependentUpon>CtrlDesign.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\clsCurrentUserLogin.cs" />
     <Compile Include="Login\LoginFrm.cs">
@@ -103,6 +117,12 @@
     <Compile Include="Stock\MainStockForm.Designer.cs">
       <DependentUpon>MainStockForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Users\Add&amp;EditFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Users\Add&amp;EditFrm.Designer.cs">
+      <DependentUpon>Add&amp;EditFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\Controles\AddAndEditUserCtl.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -134,6 +154,12 @@
     <EmbeddedResource Include="Drug\Controles\FindDrugctrl.resx">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Drug\FrmManageDrugs.resx">
+      <DependentUpon>FrmManageDrugs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History\Controles\CtrlDesign.resx">
+      <DependentUpon>CtrlDesign.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -153,6 +179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Stock\MainStockForm.resx">
       <DependentUpon>MainStockForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Users\Add&amp;EditFrm.resx">
+      <DependentUpon>Add&amp;EditFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\Controles\AddAndEditUserCtl.resx">
       <DependentUpon>AddAndEditUserCtl.cs</DependentUpon>
@@ -330,6 +359,15 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\icons8-true-false-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-expired-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-check-mark.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-supplement-bottle.gif" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

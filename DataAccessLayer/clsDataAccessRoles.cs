@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -66,6 +67,25 @@ namespace DataAccessLayer
             }
 
             return result;
+        }
+
+        public static DataTable GetAllRoles()
+        {
+            DataTable Dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = @"SELECT * FROM Roles";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    Dt.Load(Reader);
+                }
+            }
+            return Dt;
         }
 
     }

@@ -25,3 +25,6 @@ D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Managem
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Users.Controles.UserInfoCtrl.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Users.UserDetails.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Users.Controles.AddAndEditUserCtl.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Users.Add_EditFrm.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Drug.FrmManageDrugs.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.History.Controles.CtrlDesign.resources

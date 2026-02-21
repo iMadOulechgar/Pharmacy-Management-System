@@ -29,27 +29,29 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmManageUsers));
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.DGVUsers = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showUserDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.activeUserAccountToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.editUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.TBSearch = new Guna.UI2.WinForms.Guna2TextBox();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBStatus = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.CBSelect = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LBLCount = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.showUserDetailsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.editUsersToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.deleteUserToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.guna2CirclePictureBox1 = new Guna.UI2.WinForms.Guna2CirclePictureBox();
             this.guna2Panel3.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
@@ -86,7 +88,8 @@
             this.guna2Panel1.BorderThickness = 5;
             this.guna2Panel1.Controls.Add(this.DGVUsers);
             this.guna2Panel1.Controls.Add(this.TBSearch);
-            this.guna2Panel1.Controls.Add(this.guna2ComboBox1);
+            this.guna2Panel1.Controls.Add(this.CBStatus);
+            this.guna2Panel1.Controls.Add(this.CBSelect);
             this.guna2Panel1.Controls.Add(this.LBLCount);
             this.guna2Panel1.Controls.Add(this.label3);
             this.guna2Panel1.Controls.Add(this.label2);
@@ -106,32 +109,32 @@
             this.DGVUsers.AllowUserToDeleteRows = false;
             this.DGVUsers.AllowUserToResizeColumns = false;
             this.DGVUsers.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            this.DGVUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.White;
+            this.DGVUsers.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.DGVUsers.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVUsers.BackgroundColor = System.Drawing.Color.WhiteSmoke;
             this.DGVUsers.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DGVUsers.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVUsers.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DGVUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVUsers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.DGVUsers.ColumnHeadersHeight = 21;
             this.DGVUsers.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVUsers.ContextMenuStrip = this.contextMenuStrip1;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DGVUsers.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVUsers.DefaultCellStyle = dataGridViewCellStyle6;
             this.DGVUsers.EnableHeadersVisualStyles = false;
             this.DGVUsers.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVUsers.Location = new System.Drawing.Point(17, 79);
@@ -165,6 +168,69 @@
             this.DGVUsers.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVUsers.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showUserDetailsToolStripMenuItem,
+            this.toolStripSeparator1,
+            this.activeUserAccountToolStripMenuItem,
+            this.editUsersToolStripMenuItem,
+            this.deleteUserToolStripMenuItem,
+            this.toolStripSeparator2,
+            this.sendEmailToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 126);
+            // 
+            // showUserDetailsToolStripMenuItem
+            // 
+            this.showUserDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showUserDetailsToolStripMenuItem.Image")));
+            this.showUserDetailsToolStripMenuItem.Name = "showUserDetailsToolStripMenuItem";
+            this.showUserDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.showUserDetailsToolStripMenuItem.Text = "Show User Details";
+            this.showUserDetailsToolStripMenuItem.Click += new System.EventHandler(this.showUserDetailsToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
+            // 
+            // activeUserAccountToolStripMenuItem
+            // 
+            this.activeUserAccountToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("activeUserAccountToolStripMenuItem.Image")));
+            this.activeUserAccountToolStripMenuItem.Name = "activeUserAccountToolStripMenuItem";
+            this.activeUserAccountToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.activeUserAccountToolStripMenuItem.Text = "Switches";
+            this.activeUserAccountToolStripMenuItem.Click += new System.EventHandler(this.activeUserAccountToolStripMenuItem_Click);
+            // 
+            // editUsersToolStripMenuItem
+            // 
+            this.editUsersToolStripMenuItem.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_edit_100;
+            this.editUsersToolStripMenuItem.Name = "editUsersToolStripMenuItem";
+            this.editUsersToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.editUsersToolStripMenuItem.Text = "Edit User";
+            this.editUsersToolStripMenuItem.Click += new System.EventHandler(this.editUsersToolStripMenuItem_Click);
+            // 
+            // deleteUserToolStripMenuItem
+            // 
+            this.deleteUserToolStripMenuItem.Image = global::Pharmacy_Management_System.Properties.Resources._19775_bubka_Delete;
+            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
+            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.deleteUserToolStripMenuItem.Text = "Delete User";
+            this.deleteUserToolStripMenuItem.Click += new System.EventHandler(this.deleteUserToolStripMenuItem_Click);
+            // 
+            // toolStripSeparator2
+            // 
+            this.toolStripSeparator2.Name = "toolStripSeparator2";
+            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            // 
             // TBSearch
             // 
             this.TBSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
@@ -178,7 +244,7 @@
             this.TBSearch.FocusedState.Parent = this.TBSearch;
             this.TBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TBSearch.HoverState.Parent = this.TBSearch;
-            this.TBSearch.Location = new System.Drawing.Point(83, 18);
+            this.TBSearch.Location = new System.Drawing.Point(80, 18);
             this.TBSearch.Name = "TBSearch";
             this.TBSearch.PasswordChar = '\0';
             this.TBSearch.PlaceholderText = "";
@@ -186,26 +252,56 @@
             this.TBSearch.ShadowDecoration.Parent = this.TBSearch;
             this.TBSearch.Size = new System.Drawing.Size(223, 36);
             this.TBSearch.TabIndex = 13;
+            this.TBSearch.TextChanged += new System.EventHandler(this.TBSearch_TextChanged);
             // 
-            // guna2ComboBox1
+            // CBStatus
             // 
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 5;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.Empty;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
-            this.guna2ComboBox1.FormattingEnabled = true;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(669, 18);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(245, 36);
-            this.guna2ComboBox1.TabIndex = 12;
+            this.CBStatus.BackColor = System.Drawing.Color.Transparent;
+            this.CBStatus.BorderRadius = 5;
+            this.CBStatus.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBStatus.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBStatus.FocusedColor = System.Drawing.Color.Empty;
+            this.CBStatus.FocusedState.Parent = this.CBStatus;
+            this.CBStatus.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBStatus.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBStatus.FormattingEnabled = true;
+            this.CBStatus.HoverState.Parent = this.CBStatus;
+            this.CBStatus.ItemHeight = 30;
+            this.CBStatus.Items.AddRange(new object[] {
+            "Active",
+            "InActive"});
+            this.CBStatus.ItemsAppearance.Parent = this.CBStatus;
+            this.CBStatus.Location = new System.Drawing.Point(80, 18);
+            this.CBStatus.Name = "CBStatus";
+            this.CBStatus.ShadowDecoration.Parent = this.CBStatus;
+            this.CBStatus.Size = new System.Drawing.Size(158, 36);
+            this.CBStatus.TabIndex = 12;
+            this.CBStatus.SelectedIndexChanged += new System.EventHandler(this.CBStatus_SelectedIndexChanged);
+            // 
+            // CBSelect
+            // 
+            this.CBSelect.BackColor = System.Drawing.Color.Transparent;
+            this.CBSelect.BorderRadius = 5;
+            this.CBSelect.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.CBSelect.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.CBSelect.FocusedColor = System.Drawing.Color.Empty;
+            this.CBSelect.FocusedState.Parent = this.CBSelect;
+            this.CBSelect.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.CBSelect.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
+            this.CBSelect.FormattingEnabled = true;
+            this.CBSelect.HoverState.Parent = this.CBSelect;
+            this.CBSelect.ItemHeight = 30;
+            this.CBSelect.Items.AddRange(new object[] {
+            "Username",
+            "RoleName",
+            "UserStatus"});
+            this.CBSelect.ItemsAppearance.Parent = this.CBSelect;
+            this.CBSelect.Location = new System.Drawing.Point(669, 18);
+            this.CBSelect.Name = "CBSelect";
+            this.CBSelect.ShadowDecoration.Parent = this.CBSelect;
+            this.CBSelect.Size = new System.Drawing.Size(245, 36);
+            this.CBSelect.TabIndex = 12;
+            this.CBSelect.SelectedIndexChanged += new System.EventHandler(this.CBSelect_SelectedIndexChanged);
             // 
             // LBLCount
             // 
@@ -237,68 +333,6 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Search :";
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(94, 24);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(198, 37);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Manage Users";
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.showUserDetailsToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.editUsersToolStripMenuItem,
-            this.deleteUserToolStripMenuItem,
-            this.toolStripSeparator2,
-            this.sendEmailToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(185, 126);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(181, 6);
-            // 
-            // toolStripSeparator2
-            // 
-            this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(181, 6);
-            // 
-            // showUserDetailsToolStripMenuItem
-            // 
-            this.showUserDetailsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("showUserDetailsToolStripMenuItem.Image")));
-            this.showUserDetailsToolStripMenuItem.Name = "showUserDetailsToolStripMenuItem";
-            this.showUserDetailsToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.showUserDetailsToolStripMenuItem.Text = "Show User Details";
-            this.showUserDetailsToolStripMenuItem.Click += new System.EventHandler(this.showUserDetailsToolStripMenuItem_Click);
-            // 
-            // editUsersToolStripMenuItem
-            // 
-            this.editUsersToolStripMenuItem.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_edit_100;
-            this.editUsersToolStripMenuItem.Name = "editUsersToolStripMenuItem";
-            this.editUsersToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.editUsersToolStripMenuItem.Text = "Edit User";
-            // 
-            // deleteUserToolStripMenuItem
-            // 
-            this.deleteUserToolStripMenuItem.Image = global::Pharmacy_Management_System.Properties.Resources._19775_bubka_Delete;
-            this.deleteUserToolStripMenuItem.Name = "deleteUserToolStripMenuItem";
-            this.deleteUserToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.deleteUserToolStripMenuItem.Text = "Delete User";
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("sendEmailToolStripMenuItem.Image")));
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(184, 22);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            // 
             // guna2Button1
             // 
             this.guna2Button1.BorderRadius = 6;
@@ -315,6 +349,17 @@
             this.guna2Button1.Size = new System.Drawing.Size(192, 45);
             this.guna2Button1.TabIndex = 4;
             this.guna2Button1.Text = "Add User";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(91, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 37);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Manage Users";
             // 
             // guna2CirclePictureBox1
             // 
@@ -361,7 +406,7 @@
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
         private Guna.UI2.WinForms.Guna2DataGridView DGVUsers;
         private Guna.UI2.WinForms.Guna2TextBox TBSearch;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox CBSelect;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LBLCount;
         private System.Windows.Forms.Label label3;
@@ -372,5 +417,7 @@
         private System.Windows.Forms.ToolStripMenuItem deleteUserToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator2;
         private System.Windows.Forms.ToolStripMenuItem sendEmailToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem activeUserAccountToolStripMenuItem;
+        private Guna.UI2.WinForms.Guna2ComboBox CBStatus;
     }
 }

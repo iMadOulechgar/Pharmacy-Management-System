@@ -1,5 +1,6 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
+using Pharmacy_Management_System.Drug;
 using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Notification.Controles;
 using Pharmacy_Management_System.Stock;
@@ -23,6 +24,11 @@ namespace Pharmacy_Management_System
         public Main()
         {
             InitializeComponent();
+        }
+
+        public void ChangeUiPictureBoxForCurrentUser(string Path)
+        {
+            ProfilePicture.Load(Path);
         }
 
         private void _FillUserDataInLoad()
@@ -60,7 +66,14 @@ namespace Pharmacy_Management_System
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
             frmManageUsers Users = new frmManageUsers();
+            Users.StoreMethodChangePicture(ChangeUiPictureBoxForCurrentUser);
             Users.ShowDialog();
+        }
+
+        private void guna2GradientButton4_Click(object sender, EventArgs e)
+        {
+            FrmManageDrugs frm = new FrmManageDrugs();
+            frm.ShowDialog();
         }
     }
 }
