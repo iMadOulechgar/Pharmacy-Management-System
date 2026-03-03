@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsBusinessBatches.cs" />
     <Compile Include="clsBusinessDrugForms.cs" />
     <Compile Include="clsBusinessDrugs.cs" />
     <Compile Include="clsBusinessRoles.cs" />

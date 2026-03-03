@@ -196,7 +196,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.label1);
             this.Name = "StockHistoryctrl";
-            this.Size = new System.Drawing.Size(596, 39);
+            this.Size = new System.Drawing.Size(577, 39);
             this.ResumeLayout(false);
             this.PerformLayout();
 

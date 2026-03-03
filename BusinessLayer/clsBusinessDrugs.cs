@@ -11,8 +11,8 @@ namespace BusinessLayer
     public class clsBusinessDrugs
     {
 
-        private enum enMode { Add , Update};
-        enMode Mode = enMode.Add;
+        public enum enMode { Add , Update};
+        public enMode Mode = enMode.Add;
 
         public string DrugName { get; set; }
         public int DrugFormID { get; set; }
@@ -33,6 +33,12 @@ namespace BusinessLayer
             Mode = enMode.Add;
         }
 
+
+        public static int GetDrugIDByName(string Name)
+        {
+            return clsDataAccessDrugs.GetDrugIDByName(Name);
+        }
+
         private bool _AddDrug()
         {
             if (clsDataAccessDrugs.AddNewDrug(this.DrugName, this.DrugFormID, this.IsActive, this.CreatedByUserID, this.PicturePath) > 0)
@@ -46,13 +52,19 @@ namespace BusinessLayer
             return clsDataAccessDrugs.GetAllDrugs();
         }
 
+        public static int TotalDrugs()
+        {
+            return clsDataAccessDrugs.GetTotalOfDrugs();
+        }
+
         public bool Save()
         {
-            switch (Mode)
+            switch(Mode)
             {
                 case enMode.Add:
                     if (_AddDrug())
                     {
+                        Mode = enMode.Update;
                         return true;
                     }
                     break;

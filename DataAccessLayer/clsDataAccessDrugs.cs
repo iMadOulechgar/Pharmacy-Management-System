@@ -16,10 +16,12 @@ namespace DataAccessLayer
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "SELECT * FROM Drugs";
+                string Query = "SELECT * FROM Drug_View";
 
                 using (SqlCommand cmd = new SqlCommand(Query,con))
                 {
+                    con.Open();
+
                     SqlDataReader Reader = cmd.ExecuteReader();
                     Table.Load(Reader);
                 }
@@ -36,6 +38,7 @@ namespace DataAccessLayer
             {
                 using (SqlCommand cmd = new SqlCommand("SP_ADDNewDrug",con))
                 {
+                    cmd.CommandType = CommandType.StoredProcedure;
                     cmd.Parameters.AddWithValue("@DrugName", DrugName);
                     cmd.Parameters.AddWithValue("@DrugFormID", FormID);
                     cmd.Parameters.AddWithValue("@IsActive", isactive);
@@ -57,6 +60,47 @@ namespace DataAccessLayer
             }
 
             return drugID;
+        }
+
+        public static int GetTotalOfDrugs()
+        {
+            int Total = 0;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT COUNT(*) FROM Drugs;";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    con.Open();
+
+                    Total = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            return Total;
+        }
+
+        public static int GetDrugIDByName(string Name)
+        {
+            int Result = 0;
+
+            using (SqlConnection Con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT DrugID FROM Drugs WHERE DrugName = @DrugName";
+
+                using (SqlCommand cmd = new SqlCommand(Query,Con))
+                {
+                    cmd.Parameters.AddWithValue("@DrugName",Name);
+
+                    object OJ = cmd.ExecuteScalar();
+
+                    if(OJ != null)
+                        Result = (int)OJ;
+                }
+            }
+
+            return Result;
         }
 
 

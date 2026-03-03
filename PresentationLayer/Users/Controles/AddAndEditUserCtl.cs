@@ -132,7 +132,7 @@ namespace Pharmacy_Management_System.Users.Controles
                 if (PictureProfile.ImageLocation != "")
                 {
                     string FilePath = PictureProfile.ImageLocation;
-                    ReadAndWriteInFile.AddPictureInFolder(ref FilePath);
+                    ReadAndWriteInFile.AddDrugPictureInFolder(ref FilePath);
                     _Users.ImagePath = FilePath;
                 }
             }   

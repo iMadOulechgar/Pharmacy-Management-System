@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer;
+using DevComponents.DotNetBar.Controls;
+using Pharmacy_Management_System.Validation_AllSettings;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,6 +10,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.Design;
 
 namespace Pharmacy_Management_System.Drug
 {
@@ -15,6 +19,29 @@ namespace Pharmacy_Management_System.Drug
         public FrmManageDrugs()
         {
             InitializeComponent();
+        }
+
+        private void LoadData()
+        {   
+            DataTable Drugs = clsBusinessDrugs.GetDrugs();
+            DGVDrugs.RowTemplate.Height = 50;
+
+            foreach (DataRow row in Drugs.Rows)
+            {
+                Image Local = Image.FromFile((string)row["PicturePath"]);
+                DGVDrugs.Rows.Add((string)row["DrugName"], (string)row["DrugForm"], (bool)row["IsActive"], Local);
+            }
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            AddOrEditDrug Add = new AddOrEditDrug();
+            Add.ShowDialog();
+        }
+
+        private void FrmManageDrugs_Load(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
