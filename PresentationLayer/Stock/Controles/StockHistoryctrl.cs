@@ -12,9 +12,31 @@ namespace Pharmacy_Management_System.Stock.Controles
 {
     public partial class StockHistoryctrl : UserControl
     {
-        public StockHistoryctrl()
+        public StockHistoryctrl(DateTime date, string action, int quantity, string userAction)
         {
             InitializeComponent();
+            Date = date;
+            Action = action;
+            Quantity = quantity;
+            UserAction = userAction;
+            History();
         }
+
+        public DateTime Date { get; set; }
+        public string Action { get; set; }
+        public int Quantity {  get; set; }
+        public string UserAction { get; set; }
+
+        private void History()
+        {
+            LBLDate.Text = this.Date.Date.ToString();
+            LBLAction.Text = this.Action;
+            LBLQuatity.Text = this.Quantity.ToString(); 
+            LBLUserAction.Text = this.UserAction;
+        } 
+
+
+
+
     }
 }

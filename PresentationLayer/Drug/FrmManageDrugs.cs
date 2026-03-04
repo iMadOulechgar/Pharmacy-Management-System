@@ -36,6 +36,7 @@ namespace Pharmacy_Management_System.Drug
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             AddOrEditDrug Add = new AddOrEditDrug();
+            Add.LoadDataIn += LoadData;
             Add.ShowDialog();
         }
 

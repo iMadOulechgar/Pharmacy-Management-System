@@ -28,31 +28,31 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.LBLDate = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.LBLQuatity = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
+            this.LBLUserAction = new System.Windows.Forms.Label();
+            this.LBLAction = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // LBLDate
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(12, 8);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(151, 18);
-            this.label1.TabIndex = 6;
-            this.label1.Text = "15 : 30 PM 01/05/2023";
+            this.LBLDate.AutoSize = true;
+            this.LBLDate.Font = new System.Drawing.Font("Sitka Small", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLDate.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLDate.Location = new System.Drawing.Point(12, 8);
+            this.LBLDate.Name = "LBLDate";
+            this.LBLDate.Size = new System.Drawing.Size(151, 18);
+            this.LBLDate.TabIndex = 6;
+            this.LBLDate.Text = "15 : 30 PM 01/05/2023";
             // 
             // label2
             // 
@@ -114,16 +114,16 @@
             this.label7.TabIndex = 7;
             this.label7.Text = "|";
             // 
-            // label8
+            // LBLQuatity
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.DimGray;
-            this.label8.Location = new System.Drawing.Point(335, 5);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(57, 24);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "+ 100";
+            this.LBLQuatity.AutoSize = true;
+            this.LBLQuatity.Font = new System.Drawing.Font("Sitka Small", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuatity.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLQuatity.Location = new System.Drawing.Point(335, 5);
+            this.LBLQuatity.Name = "LBLQuatity";
+            this.LBLQuatity.Size = new System.Drawing.Size(57, 24);
+            this.LBLQuatity.TabIndex = 6;
+            this.LBLQuatity.Text = "+ 100";
             // 
             // label9
             // 
@@ -155,34 +155,34 @@
             this.label11.TabIndex = 7;
             this.label11.Text = "|";
             // 
-            // label12
+            // LBLUserAction
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(437, 9);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(120, 19);
-            this.label12.TabIndex = 6;
-            this.label12.Text = "Imad Oulechgar";
+            this.LBLUserAction.AutoSize = true;
+            this.LBLUserAction.Font = new System.Drawing.Font("Sitka Small", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLUserAction.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLUserAction.Location = new System.Drawing.Point(437, 9);
+            this.LBLUserAction.Name = "LBLUserAction";
+            this.LBLUserAction.Size = new System.Drawing.Size(120, 19);
+            this.LBLUserAction.TabIndex = 6;
+            this.LBLUserAction.Text = "Imad Oulechgar";
             // 
-            // label13
+            // LBLAction
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.DimGray;
-            this.label13.Location = new System.Drawing.Point(219, 11);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(47, 15);
-            this.label13.TabIndex = 8;
-            this.label13.Text = "+ ADD";
+            this.LBLAction.AutoSize = true;
+            this.LBLAction.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAction.ForeColor = System.Drawing.Color.DimGray;
+            this.LBLAction.Location = new System.Drawing.Point(219, 11);
+            this.LBLAction.Name = "LBLAction";
+            this.LBLAction.Size = new System.Drawing.Size(47, 15);
+            this.LBLAction.TabIndex = 8;
+            this.LBLAction.Text = "+ ADD";
             // 
             // StockHistoryctrl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.Controls.Add(this.label13);
+            this.Controls.Add(this.LBLAction);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label7);
@@ -192,9 +192,9 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label12);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.LBLQuatity);
+            this.Controls.Add(this.LBLUserAction);
+            this.Controls.Add(this.LBLDate);
             this.Name = "StockHistoryctrl";
             this.Size = new System.Drawing.Size(577, 39);
             this.ResumeLayout(false);
@@ -204,18 +204,18 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label LBLDate;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LBLQuatity;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label LBLUserAction;
+        private System.Windows.Forms.Label LBLAction;
     }
 }

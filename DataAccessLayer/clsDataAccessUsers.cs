@@ -285,7 +285,29 @@ namespace DataAccessLayer
             return result;
         }
 
+        public static string GetUsernameByID(int ID)
+        {
+            string result = "";
 
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT Username FROM Users WHERE UserID = @ID";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@ID",ID);
+
+                    con.Open();
+
+                    object OJ = cmd.ExecuteScalar();
+
+                    if (OJ != null)
+                        result = (string)OJ;
+                }
+            }
+
+            return result;
+        }
 
     }
 }

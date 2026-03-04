@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddBatches));
             this.CBDrugsName = new Guna.UI2.WinForms.Guna2ComboBox();
             this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -47,13 +48,15 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.BTNSave = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.FlowPanel = new System.Windows.Forms.FlowLayoutPanel();
             this.guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.NUDQuantity)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // CBDrugsName
@@ -177,6 +180,7 @@
             this.TBPurchasePrice.ShadowDecoration.Parent = this.TBPurchasePrice;
             this.TBPurchasePrice.Size = new System.Drawing.Size(228, 36);
             this.TBPurchasePrice.TabIndex = 5;
+            this.TBPurchasePrice.Validating += new System.ComponentModel.CancelEventHandler(this.TBPurchasePrice_Validating);
             // 
             // guna2HtmlLabel4
             // 
@@ -220,6 +224,7 @@
             this.TBSellingPrice.ShadowDecoration.Parent = this.TBSellingPrice;
             this.TBSellingPrice.Size = new System.Drawing.Size(228, 36);
             this.TBSellingPrice.TabIndex = 5;
+            this.TBSellingPrice.Validating += new System.ComponentModel.CancelEventHandler(this.TBSellingPrice_Validating);
             // 
             // linkLabel1
             // 
@@ -312,13 +317,13 @@
             this.guna2Button2.Text = "Cancel";
             this.guna2Button2.Click += new System.EventHandler(this.guna2Button2_Click);
             // 
-            // flowLayoutPanel1
+            // FlowPanel
             // 
-            this.flowLayoutPanel1.BackColor = System.Drawing.Color.LightGray;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(566, 40);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(577, 379);
-            this.flowLayoutPanel1.TabIndex = 9;
+            this.FlowPanel.BackColor = System.Drawing.Color.LightGray;
+            this.FlowPanel.Location = new System.Drawing.Point(566, 40);
+            this.FlowPanel.Name = "FlowPanel";
+            this.FlowPanel.Size = new System.Drawing.Size(577, 379);
+            this.FlowPanel.TabIndex = 9;
             // 
             // guna2HtmlLabel7
             // 
@@ -330,13 +335,17 @@
             this.guna2HtmlLabel7.TabIndex = 2;
             this.guna2HtmlLabel7.Text = "Stock History :";
             // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
+            // 
             // AddBatches
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
             this.ClientSize = new System.Drawing.Size(1155, 488);
-            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.FlowPanel);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.BTNSave);
             this.Controls.Add(this.DTExpirationDate);
@@ -360,11 +369,13 @@
             this.Name = "AddBatches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBatches";
+            this.Load += new System.EventHandler(this.AddBatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUDQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,7 +401,8 @@
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI2.WinForms.Guna2Button BTNSave;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.FlowLayoutPanel FlowPanel;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }

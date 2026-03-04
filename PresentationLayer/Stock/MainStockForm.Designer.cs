@@ -34,6 +34,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainStockForm));
             this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LBLRows = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.CBSelect = new Guna.UI2.WinForms.Guna2ComboBox();
             this.TBSearch = new Guna.UI2.WinForms.Guna2TextBox();
             this.DGVDrugs = new Guna.UI2.WinForms.Guna2DataGridView();
@@ -43,17 +45,14 @@
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.Column7 = new System.Windows.Forms.DataGridViewImageColumn();
-            this.LBLRows = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.createReportToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.addNewStockToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.guna2Panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVDrugs)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -83,6 +82,26 @@
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
             this.guna2Panel3.Size = new System.Drawing.Size(1232, 608);
             this.guna2Panel3.TabIndex = 8;
+            // 
+            // LBLRows
+            // 
+            this.LBLRows.AutoSize = true;
+            this.LBLRows.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLRows.Location = new System.Drawing.Point(69, 584);
+            this.LBLRows.Name = "LBLRows";
+            this.LBLRows.Size = new System.Drawing.Size(15, 17);
+            this.LBLRows.TabIndex = 14;
+            this.LBLRows.Text = "0";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(18, 583);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(52, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Rows : ";
             // 
             // CBSelect
             // 
@@ -239,6 +258,30 @@
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
             // 
+            // Column7
+            // 
+            this.Column7.HeaderText = "DrugPic";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // guna2Button1
+            // 
+            this.guna2Button1.BorderRadius = 6;
+            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
+            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
+            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button1.ForeColor = System.Drawing.Color.White;
+            this.guna2Button1.HoverState.Parent = this.guna2Button1;
+            this.guna2Button1.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_add_48;
+            this.guna2Button1.Location = new System.Drawing.Point(1026, 53);
+            this.guna2Button1.Name = "guna2Button1";
+            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
+            this.guna2Button1.Size = new System.Drawing.Size(195, 45);
+            this.guna2Button1.TabIndex = 3;
+            this.guna2Button1.Text = "Add Stock";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -273,73 +316,21 @@
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.createReportToolStripMenuItem,
-            this.toolStripSeparator1,
-            this.addNewStockToolStripMenuItem});
+            this.toolStripSeparator1});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(156, 54);
-            // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(152, 6);
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "DrugPic";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // LBLRows
-            // 
-            this.LBLRows.AutoSize = true;
-            this.LBLRows.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLRows.Location = new System.Drawing.Point(69, 584);
-            this.LBLRows.Name = "LBLRows";
-            this.LBLRows.Size = new System.Drawing.Size(15, 17);
-            this.LBLRows.TabIndex = 14;
-            this.LBLRows.Text = "0";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 583);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(52, 17);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "Rows : ";
-            // 
-            // guna2Button1
-            // 
-            this.guna2Button1.BorderRadius = 6;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_add_48;
-            this.guna2Button1.Location = new System.Drawing.Point(1026, 53);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(195, 45);
-            this.guna2Button1.TabIndex = 3;
-            this.guna2Button1.Text = "Add Stock";
-            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(147, 32);
             // 
             // createReportToolStripMenuItem
             // 
             this.createReportToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("createReportToolStripMenuItem.Image")));
             this.createReportToolStripMenuItem.Name = "createReportToolStripMenuItem";
-            this.createReportToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.createReportToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.createReportToolStripMenuItem.Text = "Create Report";
             // 
-            // addNewStockToolStripMenuItem
+            // toolStripSeparator1
             // 
-            this.addNewStockToolStripMenuItem.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_add_48;
-            this.addNewStockToolStripMenuItem.Name = "addNewStockToolStripMenuItem";
-            this.addNewStockToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
-            this.addNewStockToolStripMenuItem.Text = "Add New Stock";
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(143, 6);
             // 
             // MainStockForm
             // 
@@ -380,7 +371,6 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem createReportToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripMenuItem addNewStockToolStripMenuItem;
         private System.Windows.Forms.DataGridViewImageColumn Column7;
         private System.Windows.Forms.Label LBLRows;
         private System.Windows.Forms.Label label4;

@@ -29,8 +29,8 @@ namespace Pharmacy_Management_System.Stock
             foreach (DataRow Row in Stock.Rows)
             {
                 Image Pic = Image.FromFile((string)Row["PicturePath"]);
-                DGVDrugs.Rows.Add((int)Row["BatchID"], (string)Row["DrugName"], (int)Row["Quantity"], (decimal)Row["PerchasePricePerUnit"],
-                    (decimal)Row["SellingPricePerUnit"] , (DateTime)Row["ExpirationDate"] , Pic);
+                DGVDrugs.Rows.Add((int)Row["BatchID"], (string)Row["DrugName"], (int)Row["Quantity"], (decimal)Row["PurchasePricePerUnit"],
+                    (decimal)Row["SellingPricePerUnit"] , ((DateTime)Row["ExpirationDate"]).Date , Pic);
             }
 
             LBLRows.Text = DGVDrugs.RowCount.ToString();
@@ -58,10 +58,6 @@ namespace Pharmacy_Management_System.Stock
                 {
                     Stock.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", ColumnName, TextLign); 
                 }
-                else
-                {
-                    Stock.DefaultView.RowFilter = string.Format("[{0}] = '{1}'", ColumnName, TextLign);
-                }
             }
         }
 
@@ -73,6 +69,7 @@ namespace Pharmacy_Management_System.Stock
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             AddBatches Batches = new AddBatches();
+            Batches.LoadDataAfterAdd += LoadDataInDGVLoadDataInDGV;
             Batches.ShowDialog();
         }
     }

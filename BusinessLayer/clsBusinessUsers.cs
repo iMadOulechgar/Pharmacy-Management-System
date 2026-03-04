@@ -148,6 +148,10 @@ namespace BusinessLayer
             return clsDataAccessUsers.GetAllUsers();
         }
 
+        public static string GetUserNameByID(int UserId)
+        {
+            return clsDataAccessUsers.GetUsernameByID(UserId);
+        }
 
     }
 }

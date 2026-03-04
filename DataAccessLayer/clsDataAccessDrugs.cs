@@ -92,6 +92,8 @@ namespace DataAccessLayer
                 using (SqlCommand cmd = new SqlCommand(Query,Con))
                 {
                     cmd.Parameters.AddWithValue("@DrugName",Name);
+                    
+                    Con.Open();
 
                     object OJ = cmd.ExecuteScalar();
 

@@ -26,6 +26,8 @@ namespace Pharmacy_Management_System.Drug
             Mode = enMode.Add;
         }
 
+        public event Action LoadDataIn;
+
         clsBusinessDrugs _Drug;
 
         private void ChangeTitle()
@@ -80,8 +82,10 @@ namespace Pharmacy_Management_System.Drug
 
         private void guna2Button3_Click(object sender, EventArgs e)
         {
+            LoadDataIn?.Invoke();
             this.Close();
         }
+
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
