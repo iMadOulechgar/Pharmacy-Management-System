@@ -30,6 +30,26 @@ namespace DataAccessLayer
             return Table;
         }
 
+        public static DataTable GetAllInvoicesDrugs()
+        {
+            DataTable Table = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM ActiveDrugsCanBeInvoiced_View";
+
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    Table.Load(Reader);
+                }
+            }
+
+            return Table;
+        }
+
         public static int AddNewDrug(string DrugName , int FormID , bool isactive , int CreatedbyUserID , string Path)
         {
             int drugID = 0;
@@ -74,7 +94,13 @@ namespace DataAccessLayer
                 {
                     con.Open();
 
-                    Total = (int)cmd.ExecuteScalar();
+                    object Obj = cmd.ExecuteScalar();
+
+                    if (Obj != DBNull.Value)
+                    {
+                        Total = (int)Obj;
+                    }
+
                 }
             }
 
@@ -100,6 +126,117 @@ namespace DataAccessLayer
                     if(OJ != null)
                         Result = (int)OJ;
                 }
+            }
+
+            return Result;
+        }
+
+        public static bool IsDrugExists(string Drugname)
+        {
+            bool Result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "select 1 from Drugs WHERE DrugName = @drugname;";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@drugname", Drugname);
+                    
+                    con.Open();
+
+                    object OJ = cmd.ExecuteScalar();
+
+                    if (OJ != null)
+                    {
+                        Result = true;
+                    }
+                }
+            }
+
+            return Result;
+        }
+
+        public static int GetDrugAvailableInStock()
+        {
+            int Result = 0;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT count(*) from Drugs Where Drugs.IsActive = 1;";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    con.Open();
+
+                    Result = (int)cmd.ExecuteScalar();
+                }
+            }
+
+            return Result;
+        }
+
+        public static bool Find(ref int drugid, string drugname, ref int drugformid, ref bool isactive, ref int createdbyuser, ref string pathpic)
+        {
+            bool Result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM Drugs WHERE DrugName = @drugname";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@drugname", drugname);
+
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Result = true;
+                        drugid = (int)Reader["DrugID"];
+                        drugformid = (int)Reader["DrugFormID"];
+                        isactive = (bool)Reader["IsActive"];
+                        createdbyuser = (int)Reader["CreatedByUserID"];
+                        pathpic = (string)Reader["PicturePath"];
+                    }
+                    Reader.Close();
+                }
+
+            }
+
+            return Result;
+        }
+
+        public static bool Find(int drugid, ref string drugname, ref int drugformid, ref bool isactive, ref int createdbyuser, ref string pathpic)
+        {
+            bool Result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM Drugs WHERE DrugID = @drugname";
+
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@drugname", drugid);
+
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Result = true;
+                        drugname = (string)Reader["DrugName"];
+                        drugformid = (int)Reader["DrugFormID"];
+                        isactive = (bool)Reader["IsActive"];
+                        createdbyuser = (int)Reader["CreatedByUserID"];
+                        pathpic = (string)Reader["PicturePath"];
+                    }
+                    Reader.Close();
+                }
+
             }
 
             return Result;

@@ -111,6 +111,12 @@ namespace Pharmacy_Management_System.Drug
 
         private bool _SetData()
         {
+            if (clsBusinessDrugs.CheckDrugIsExistsByDrugName(TBDrugName.Text.Trim()))
+            {
+                MessageBox.Show("This Drug Is Already Exists", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             _Drug.CreatedByUserID = clsCurrentUserLogin.CurrentUser.UserID;
 
             if (TBDrugName.Text.Trim() != "")
@@ -177,5 +183,12 @@ namespace Pharmacy_Management_System.Drug
             }
 
         }
+
+        private void AddOrEditDrug_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoadDataIn?.Invoke();
+        }
+
+
     }
 }

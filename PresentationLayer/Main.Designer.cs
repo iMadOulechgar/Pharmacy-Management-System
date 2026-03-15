@@ -29,12 +29,14 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.guna2CircleButton1 = new Guna.UI2.WinForms.Guna2CircleButton();
             this.ProfilePicture = new Guna.UI2.WinForms.Guna2CirclePictureBox();
-            this.LBLNotificationNum = new System.Windows.Forms.Label();
             this.NotificationPic = new System.Windows.Forms.PictureBox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
-            this.guna2ImageButton1 = new Guna.UI2.WinForms.Guna2ImageButton();
             this.label3 = new System.Windows.Forms.Label();
             this.LBLTime = new System.Windows.Forms.Label();
             this.LBLDate = new System.Windows.Forms.Label();
@@ -62,6 +64,31 @@
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.LayoutPanelNotification = new System.Windows.Forms.FlowLayoutPanel();
             this.reflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LBLTotlaDrugs2 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.LBLTotlaDrugs1 = new System.Windows.Forms.Label();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LBLAvailableStock2 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.LBLAvailableStock1 = new System.Windows.Forms.Label();
+            this.pictureBox10 = new System.Windows.Forms.PictureBox();
+            this.guna2Panel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.LBLTotalSales2 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.LBLTotalSales1 = new System.Windows.Forms.Label();
+            this.pictureBox11 = new System.Windows.Forms.PictureBox();
+            this.TBSearch = new Guna.UI2.WinForms.Guna2TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.DGVDrugs = new Guna.UI2.WinForms.Guna2DataGridView();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewImageColumn();
+            this.LBLNotificationNum = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).BeginInit();
@@ -75,16 +102,23 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.guna2Panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            this.guna2Panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+            this.guna2Panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDrugs)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel1.Controls.Add(this.ProfilePicture);
             this.panel1.Controls.Add(this.LBLNotificationNum);
+            this.panel1.Controls.Add(this.guna2CircleButton1);
+            this.panel1.Controls.Add(this.ProfilePicture);
             this.panel1.Controls.Add(this.NotificationPic);
             this.panel1.Controls.Add(this.bunifuTextbox1);
-            this.panel1.Controls.Add(this.guna2ImageButton1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.LBLTime);
             this.panel1.Controls.Add(this.LBLDate);
@@ -94,8 +128,25 @@
             this.panel1.Controls.Add(this.guna2GradientCircleButton1);
             this.panel1.Location = new System.Drawing.Point(282, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1088, 72);
+            this.panel1.Size = new System.Drawing.Size(1104, 72);
             this.panel1.TabIndex = 0;
+            // 
+            // guna2CircleButton1
+            // 
+            this.guna2CircleButton1.CheckedState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.CustomImages.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2CircleButton1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.guna2CircleButton1.ForeColor = System.Drawing.Color.White;
+            this.guna2CircleButton1.HoverState.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_notification_401;
+            this.guna2CircleButton1.Location = new System.Drawing.Point(637, 12);
+            this.guna2CircleButton1.Name = "guna2CircleButton1";
+            this.guna2CircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.guna2CircleButton1.ShadowDecoration.Parent = this.guna2CircleButton1;
+            this.guna2CircleButton1.Size = new System.Drawing.Size(44, 36);
+            this.guna2CircleButton1.TabIndex = 9;
+            this.guna2CircleButton1.Click += new System.EventHandler(this.guna2CircleButton1_Click);
             // 
             // ProfilePicture
             // 
@@ -107,19 +158,6 @@
             this.ProfilePicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.ProfilePicture.TabIndex = 8;
             this.ProfilePicture.TabStop = false;
-            // 
-            // LBLNotificationNum
-            // 
-            this.LBLNotificationNum.AutoSize = true;
-            this.LBLNotificationNum.BackColor = System.Drawing.Color.Red;
-            this.LBLNotificationNum.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.LBLNotificationNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLNotificationNum.ForeColor = System.Drawing.Color.White;
-            this.LBLNotificationNum.Location = new System.Drawing.Point(667, 10);
-            this.LBLNotificationNum.Name = "LBLNotificationNum";
-            this.LBLNotificationNum.Size = new System.Drawing.Size(15, 16);
-            this.LBLNotificationNum.TabIndex = 6;
-            this.LBLNotificationNum.Text = "0";
             // 
             // NotificationPic
             // 
@@ -143,18 +181,6 @@
             this.bunifuTextbox1.Size = new System.Drawing.Size(440, 42);
             this.bunifuTextbox1.TabIndex = 4;
             this.bunifuTextbox1.text = "";
-            // 
-            // guna2ImageButton1
-            // 
-            this.guna2ImageButton1.CheckedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.HoverState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_notification_80;
-            this.guna2ImageButton1.Location = new System.Drawing.Point(635, 12);
-            this.guna2ImageButton1.Name = "guna2ImageButton1";
-            this.guna2ImageButton1.PressedState.Parent = this.guna2ImageButton1;
-            this.guna2ImageButton1.Size = new System.Drawing.Size(42, 43);
-            this.guna2ImageButton1.TabIndex = 3;
-            this.guna2ImageButton1.Click += new System.EventHandler(this.guna2ImageButton1_Click);
             // 
             // label3
             // 
@@ -233,7 +259,7 @@
             this.guna2GradientCircleButton1.ForeColor = System.Drawing.Color.White;
             this.guna2GradientCircleButton1.HoverState.Parent = this.guna2GradientCircleButton1;
             this.guna2GradientCircleButton1.Image = global::Pharmacy_Management_System.Properties.Resources._19775_bubka_Delete;
-            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(1026, 11);
+            this.guna2GradientCircleButton1.Location = new System.Drawing.Point(1029, 10);
             this.guna2GradientCircleButton1.Name = "guna2GradientCircleButton1";
             this.guna2GradientCircleButton1.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.guna2GradientCircleButton1.ShadowDecoration.Parent = this.guna2GradientCircleButton1;
@@ -505,10 +531,10 @@
             this.LayoutPanelNotification.BackColor = System.Drawing.Color.White;
             this.LayoutPanelNotification.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.LayoutPanelNotification.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LayoutPanelNotification.Location = new System.Drawing.Point(672, 73);
+            this.LayoutPanelNotification.Location = new System.Drawing.Point(734, 75);
             this.LayoutPanelNotification.Margin = new System.Windows.Forms.Padding(0);
             this.LayoutPanelNotification.Name = "LayoutPanelNotification";
-            this.LayoutPanelNotification.Size = new System.Drawing.Size(441, 167);
+            this.LayoutPanelNotification.Size = new System.Drawing.Size(441, 199);
             this.LayoutPanelNotification.TabIndex = 4;
             this.LayoutPanelNotification.Visible = false;
             this.LayoutPanelNotification.WrapContents = false;
@@ -519,17 +545,375 @@
             // 
             // 
             this.reflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
-            this.reflectionLabel1.Location = new System.Drawing.Point(303, 87);
+            this.reflectionLabel1.Location = new System.Drawing.Point(299, 78);
             this.reflectionLabel1.Name = "reflectionLabel1";
             this.reflectionLabel1.Size = new System.Drawing.Size(114, 70);
             this.reflectionLabel1.TabIndex = 7;
             this.reflectionLabel1.Text = "<b><font size=\"+6\"><i>Dash</i><font color=\"#B02B2C\">board</font></font></b>";
             // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel1.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel1.BorderRadius = 15;
+            this.guna2Panel1.BorderThickness = 3;
+            this.guna2Panel1.Controls.Add(this.LBLTotlaDrugs2);
+            this.guna2Panel1.Controls.Add(this.label6);
+            this.guna2Panel1.Controls.Add(this.LBLTotlaDrugs1);
+            this.guna2Panel1.Controls.Add(this.pictureBox9);
+            this.guna2Panel1.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel1.Location = new System.Drawing.Point(313, 154);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(265, 87);
+            this.guna2Panel1.TabIndex = 8;
+            // 
+            // LBLTotlaDrugs2
+            // 
+            this.LBLTotlaDrugs2.AutoSize = true;
+            this.LBLTotlaDrugs2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLTotlaDrugs2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTotlaDrugs2.ForeColor = System.Drawing.Color.White;
+            this.LBLTotlaDrugs2.Location = new System.Drawing.Point(193, 34);
+            this.LBLTotlaDrugs2.Name = "LBLTotlaDrugs2";
+            this.LBLTotlaDrugs2.Size = new System.Drawing.Size(54, 23);
+            this.LBLTotlaDrugs2.TabIndex = 10;
+            this.LBLTotlaDrugs2.Text = "[????]";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label6.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(89, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(82, 15);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "Total Drugs";
+            // 
+            // LBLTotlaDrugs1
+            // 
+            this.LBLTotlaDrugs1.AutoSize = true;
+            this.LBLTotlaDrugs1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLTotlaDrugs1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTotlaDrugs1.ForeColor = System.Drawing.Color.White;
+            this.LBLTotlaDrugs1.Location = new System.Drawing.Point(88, 50);
+            this.LBLTotlaDrugs1.Name = "LBLTotlaDrugs1";
+            this.LBLTotlaDrugs1.Size = new System.Drawing.Size(54, 23);
+            this.LBLTotlaDrugs1.TabIndex = 10;
+            this.LBLTotlaDrugs1.Text = "[????]";
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox9.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_drugs_48;
+            this.pictureBox9.Location = new System.Drawing.Point(17, 20);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox9.TabIndex = 9;
+            this.pictureBox9.TabStop = false;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel2.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel2.BorderRadius = 15;
+            this.guna2Panel2.BorderThickness = 3;
+            this.guna2Panel2.Controls.Add(this.LBLAvailableStock2);
+            this.guna2Panel2.Controls.Add(this.label8);
+            this.guna2Panel2.Controls.Add(this.LBLAvailableStock1);
+            this.guna2Panel2.Controls.Add(this.pictureBox10);
+            this.guna2Panel2.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel2.Location = new System.Drawing.Point(674, 154);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(265, 87);
+            this.guna2Panel2.TabIndex = 8;
+            // 
+            // LBLAvailableStock2
+            // 
+            this.LBLAvailableStock2.AutoSize = true;
+            this.LBLAvailableStock2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLAvailableStock2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvailableStock2.ForeColor = System.Drawing.Color.White;
+            this.LBLAvailableStock2.Location = new System.Drawing.Point(193, 34);
+            this.LBLAvailableStock2.Name = "LBLAvailableStock2";
+            this.LBLAvailableStock2.Size = new System.Drawing.Size(54, 23);
+            this.LBLAvailableStock2.TabIndex = 10;
+            this.LBLAvailableStock2.Text = "[????]";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label8.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(89, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(107, 15);
+            this.label8.TabIndex = 10;
+            this.label8.Text = "Available Stock";
+            // 
+            // LBLAvailableStock1
+            // 
+            this.LBLAvailableStock1.AutoSize = true;
+            this.LBLAvailableStock1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLAvailableStock1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLAvailableStock1.ForeColor = System.Drawing.Color.White;
+            this.LBLAvailableStock1.Location = new System.Drawing.Point(88, 50);
+            this.LBLAvailableStock1.Name = "LBLAvailableStock1";
+            this.LBLAvailableStock1.Size = new System.Drawing.Size(54, 23);
+            this.LBLAvailableStock1.TabIndex = 10;
+            this.LBLAvailableStock1.Text = "[????]";
+            // 
+            // pictureBox10
+            // 
+            this.pictureBox10.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox10.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_available_stock_100;
+            this.pictureBox10.Location = new System.Drawing.Point(17, 20);
+            this.pictureBox10.Name = "pictureBox10";
+            this.pictureBox10.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox10.TabIndex = 9;
+            this.pictureBox10.TabStop = false;
+            // 
+            // guna2Panel3
+            // 
+            this.guna2Panel3.BackColor = System.Drawing.SystemColors.Control;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel3.BorderRadius = 15;
+            this.guna2Panel3.BorderThickness = 3;
+            this.guna2Panel3.Controls.Add(this.LBLTotalSales2);
+            this.guna2Panel3.Controls.Add(this.label11);
+            this.guna2Panel3.Controls.Add(this.LBLTotalSales1);
+            this.guna2Panel3.Controls.Add(this.pictureBox11);
+            this.guna2Panel3.FillColor = System.Drawing.Color.DarkSlateGray;
+            this.guna2Panel3.Location = new System.Drawing.Point(1047, 154);
+            this.guna2Panel3.Name = "guna2Panel3";
+            this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
+            this.guna2Panel3.Size = new System.Drawing.Size(265, 87);
+            this.guna2Panel3.TabIndex = 8;
+            // 
+            // LBLTotalSales2
+            // 
+            this.LBLTotalSales2.AutoSize = true;
+            this.LBLTotalSales2.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLTotalSales2.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTotalSales2.ForeColor = System.Drawing.Color.White;
+            this.LBLTotalSales2.Location = new System.Drawing.Point(193, 34);
+            this.LBLTotalSales2.Name = "LBLTotalSales2";
+            this.LBLTotalSales2.Size = new System.Drawing.Size(54, 23);
+            this.LBLTotalSales2.TabIndex = 10;
+            this.LBLTotalSales2.Text = "[????]";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.label11.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(89, 9);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(79, 15);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Total Sales";
+            // 
+            // LBLTotalSales1
+            // 
+            this.LBLTotalSales1.AutoSize = true;
+            this.LBLTotalSales1.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.LBLTotalSales1.Font = new System.Drawing.Font("Book Antiqua", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLTotalSales1.ForeColor = System.Drawing.Color.White;
+            this.LBLTotalSales1.Location = new System.Drawing.Point(88, 50);
+            this.LBLTotalSales1.Name = "LBLTotalSales1";
+            this.LBLTotalSales1.Size = new System.Drawing.Size(54, 23);
+            this.LBLTotalSales1.TabIndex = 10;
+            this.LBLTotalSales1.Text = "[????]";
+            // 
+            // pictureBox11
+            // 
+            this.pictureBox11.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.pictureBox11.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox11.Image")));
+            this.pictureBox11.Location = new System.Drawing.Point(17, 20);
+            this.pictureBox11.Name = "pictureBox11";
+            this.pictureBox11.Size = new System.Drawing.Size(53, 50);
+            this.pictureBox11.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox11.TabIndex = 9;
+            this.pictureBox11.TabStop = false;
+            // 
+            // TBSearch
+            // 
+            this.TBSearch.BorderRadius = 5;
+            this.TBSearch.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.TBSearch.DefaultText = "";
+            this.TBSearch.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.TBSearch.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.TBSearch.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBSearch.DisabledState.Parent = this.TBSearch;
+            this.TBSearch.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.TBSearch.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBSearch.FocusedState.Parent = this.TBSearch;
+            this.TBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.TBSearch.HoverState.Parent = this.TBSearch;
+            this.TBSearch.Location = new System.Drawing.Point(462, 343);
+            this.TBSearch.Name = "TBSearch";
+            this.TBSearch.PasswordChar = '\0';
+            this.TBSearch.PlaceholderText = "";
+            this.TBSearch.SelectedText = "";
+            this.TBSearch.ShadowDecoration.Parent = this.TBSearch;
+            this.TBSearch.Size = new System.Drawing.Size(200, 36);
+            this.TBSearch.TabIndex = 18;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.label4.Location = new System.Drawing.Point(310, 351);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 17);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "Search By DrugName :";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.label7.Location = new System.Drawing.Point(1201, 358);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(131, 21);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "Drugs Available";
+            // 
+            // DGVDrugs
+            // 
+            this.DGVDrugs.AllowUserToAddRows = false;
+            this.DGVDrugs.AllowUserToDeleteRows = false;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            this.DGVDrugs.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+            this.DGVDrugs.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVDrugs.BackgroundColor = System.Drawing.Color.Silver;
+            this.DGVDrugs.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.DGVDrugs.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGVDrugs.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DGVDrugs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            this.DGVDrugs.ColumnHeadersHeight = 50;
+            this.DGVDrugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGVDrugs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column5,
+            this.Column1,
+            this.Column2,
+            this.Column3,
+            this.Column4});
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDrugs.DefaultCellStyle = dataGridViewCellStyle9;
+            this.DGVDrugs.EnableHeadersVisualStyles = false;
+            this.DGVDrugs.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGVDrugs.Location = new System.Drawing.Point(313, 382);
+            this.DGVDrugs.Name = "DGVDrugs";
+            this.DGVDrugs.ReadOnly = true;
+            this.DGVDrugs.RowHeadersVisible = false;
+            this.DGVDrugs.RowHeadersWidth = 40;
+            this.DGVDrugs.RowTemplate.Height = 100;
+            this.DGVDrugs.RowTemplate.ReadOnly = true;
+            this.DGVDrugs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.DGVDrugs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DGVDrugs.Size = new System.Drawing.Size(1019, 379);
+            this.DGVDrugs.TabIndex = 20;
+            this.DGVDrugs.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
+            this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.Font = null;
+            this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.ForeColor = System.Drawing.Color.Empty;
+            this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.SelectionBackColor = System.Drawing.Color.Empty;
+            this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.SelectionForeColor = System.Drawing.Color.Empty;
+            this.DGVDrugs.ThemeStyle.BackColor = System.Drawing.Color.Silver;
+            this.DGVDrugs.ThemeStyle.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGVDrugs.ThemeStyle.HeaderStyle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.DGVDrugs.ThemeStyle.HeaderStyle.BorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.DGVDrugs.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DGVDrugs.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
+            this.DGVDrugs.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.DGVDrugs.ThemeStyle.HeaderStyle.Height = 50;
+            this.DGVDrugs.ThemeStyle.ReadOnly = true;
+            this.DGVDrugs.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
+            this.DGVDrugs.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.DGVDrugs.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
+            this.DGVDrugs.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            this.DGVDrugs.ThemeStyle.RowsStyle.Height = 100;
+            this.DGVDrugs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            this.DGVDrugs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            // 
+            // Column5
+            // 
+            this.Column5.HeaderText = "DrugID";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            this.Column1.HeaderText = "DrugName";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.HeaderText = "DrugForm";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.HeaderText = "Status";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            this.Column3.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.Column3.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // Column4
+            // 
+            this.Column4.HeaderText = "Drug picture";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // LBLNotificationNum
+            // 
+            this.LBLNotificationNum.BackColor = System.Drawing.Color.Red;
+            this.LBLNotificationNum.ForeColor = System.Drawing.Color.White;
+            this.LBLNotificationNum.Location = new System.Drawing.Point(666, 12);
+            this.LBLNotificationNum.Name = "LBLNotificationNum";
+            this.LBLNotificationNum.Size = new System.Drawing.Size(9, 15);
+            this.LBLNotificationNum.TabIndex = 10;
+            this.LBLNotificationNum.Text = "0";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1369, 766);
+            this.ClientSize = new System.Drawing.Size(1386, 766);
+            this.Controls.Add(this.DGVDrugs);
+            this.Controls.Add(this.TBSearch);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.guna2Panel3);
+            this.Controls.Add(this.guna2Panel2);
+            this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.reflectionLabel1);
             this.Controls.Add(this.LayoutPanelNotification);
             this.Controls.Add(this.panel1);
@@ -555,7 +939,18 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.guna2Panel1.ResumeLayout(false);
+            this.guna2Panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            this.guna2Panel2.ResumeLayout(false);
+            this.guna2Panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+            this.guna2Panel3.ResumeLayout(false);
+            this.guna2Panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVDrugs)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -587,13 +982,37 @@
         private System.Windows.Forms.Label LBLDate;
         private System.Windows.Forms.PictureBox pictureBox8;
         private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
-        private Guna.UI2.WinForms.Guna2ImageButton guna2ImageButton1;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox NotificationPic;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanelNotification;
-        private System.Windows.Forms.Label LBLNotificationNum;
         private DevComponents.DotNetBar.Controls.ReflectionLabel reflectionLabel1;
         private Guna.UI2.WinForms.Guna2CirclePictureBox ProfilePicture;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label LBLTotlaDrugs2;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label LBLTotlaDrugs1;
+        private System.Windows.Forms.PictureBox pictureBox9;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
+        private System.Windows.Forms.Label LBLAvailableStock2;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label LBLAvailableStock1;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel3;
+        private System.Windows.Forms.Label LBLTotalSales2;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label LBLTotalSales1;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private Guna.UI2.WinForms.Guna2TextBox TBSearch;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label7;
+        private Guna.UI2.WinForms.Guna2DataGridView DGVDrugs;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewImageColumn Column4;
+        private Guna.UI2.WinForms.Guna2CircleButton guna2CircleButton1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LBLNotificationNum;
     }
 }
 

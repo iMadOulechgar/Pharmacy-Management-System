@@ -44,5 +44,11 @@ namespace Pharmacy_Management_System.Drug
         {
             LoadData();
         }
+
+        private void showDrugInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmShowDrugInfo DrugInfo = new FrmShowDrugInfo(DGVDrugs.CurrentRow.Cells[0].Value.ToString());
+            DrugInfo.ShowDialog();
+        }
     }
 }

@@ -13,7 +13,7 @@ namespace DataAccessLayer
     {
 
         public static int ADDNewBatch(int DrugID , int Quantity , decimal PurchasePrice , decimal SellingPrice , 
-            DateTime ExpirationDate , DateTime CreatedAt)
+            DateTime ExpirationDate , DateTime CreatedAt,int OldQuantity , int CreatedByUserID)
         {
             int Result = 0;
 
@@ -29,6 +29,8 @@ namespace DataAccessLayer
                     cmd.Parameters.AddWithValue("@SellingPrice", SellingPrice);
                     cmd.Parameters.AddWithValue("@ExpirationDate", ExpirationDate);
                     cmd.Parameters.AddWithValue("@createdate", CreatedAt);
+                    cmd.Parameters.AddWithValue("@OldQuantity", OldQuantity);
+                    cmd.Parameters.AddWithValue("@CreatedByUserID",CreatedByUserID);
 
                     SqlParameter Output = new SqlParameter("@batcheid", SqlDbType.Int)
                     {
@@ -68,7 +70,68 @@ namespace DataAccessLayer
             return Dt;
         }
 
+        public static int GetOldQuantity(int DrugID)
+        {
+            int Result = 0;
+            
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT dbo.F_GetOldQuatity(@Imad);";
 
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@Imad", DrugID);
+
+                    con.Open();
+
+                    object OJ = cmd.ExecuteScalar(); 
+                    if(OJ != null) 
+                        Result = (int)OJ;
+                }
+            }
+
+            return Result;
+        }
+
+        public static bool Find(ref int BatchID ,int DrugID, ref int Quantity, ref decimal PurchasePrice, ref decimal SellingPrice,
+            ref DateTime ExpirationDate, ref DateTime CreatedAt, ref int OldQuantity, ref int CreatedByUserID)
+        {
+            bool Result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM DrugBatches WHERE DrugID = @drugid";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@drugid", DrugID);
+
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Result = true;
+                        BatchID = (int)Reader["BatchID"];
+                        Quantity = (int)Reader["Quantity"];
+                        PurchasePrice = (decimal)Reader["PurchasePricePerUnit"];
+                        SellingPrice = (decimal)Reader["SellingPricePerUnit"];
+                        ExpirationDate = (DateTime)Reader["ExpirationDate"];
+                        CreatedAt = (DateTime)Reader["CreatedAt"];
+
+                        if (DBNull.Value == Reader["OldQuatity"])
+                            OldQuantity = 0;
+                        else
+                            OldQuantity = (int)Reader["OldQuatity"];
+
+                        CreatedByUserID = (int)Reader["CreatedByUserID"];
+                    }
+                }
+            }
+
+            return Result;
+        }
 
     }
 }

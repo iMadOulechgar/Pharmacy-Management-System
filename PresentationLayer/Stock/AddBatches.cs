@@ -1,4 +1,6 @@
 ﻿using BusinessLayer;
+using Pharmacy_Management_System.Drug;
+using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Stock.Controles;
 using Pharmacy_Management_System.Validation_AllSettings;
 using System;
@@ -27,6 +29,9 @@ namespace Pharmacy_Management_System.Stock
 
         private void FillComboBox()
         {
+            CBDrugsName.Items.Clear();
+
+            CBDrugsName.Items.Add("None");
             CBDrugsName.SelectedIndex = 0;
 
             DataTable Table = clsBusinessDrugs.GetDrugs();
@@ -49,7 +54,9 @@ namespace Pharmacy_Management_System.Stock
             _DrugBatches.PerchasePrice = Convert.ToDecimal(TBPurchasePrice.Text);
             _DrugBatches.SellingPrice = Convert.ToDecimal(TBSellingPrice.Text);
             _DrugBatches.ExpirationDate = DTExpirationDate.Value.Date;
-            _DrugBatches.CreatedAt = DateTime.Now;  
+            _DrugBatches.CreatedAt = DateTime.Now;
+            _DrugBatches.OldQuantity = clsBusinessBatches.GetOldQuantityByDrugID(_DrugBatches.DrugID);
+            _DrugBatches.CreatedByUserID = clsCurrentUserLogin.CurrentUser.UserID;
         }
 
         private void _SetControlsInPanel()
@@ -59,13 +66,31 @@ namespace Pharmacy_Management_System.Stock
             foreach (DataRow item in Table.Rows)
             {
                 StockHistoryctrl StockHistory = new StockHistoryctrl((DateTime)item["CreatedAt"], (string)item["ActionType"],
-                    (int)item["Quantity"],clsBusinessUsers.GetUserNameByID((int)item["CreatedByUserID"]));  
+                    (int)item["NewQuantity"],clsBusinessUsers.GetUserNameByID((int)item["CreatedByUserID"]),(string)item["DrugName"]);  
                 FlowPanel.Controls.Add(StockHistory);
             }
         }
 
         private bool Validation()
         {
+            if (TBSellingPrice.Text == "" || TBPurchasePrice.Text == "")
+            {
+                MessageBox.Show("Price Is Empty ):", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (CBDrugsName.Text == "None")
+            {
+                MessageBox.Show("Select Specific Drug ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
+            if (NUDQuantity.Value <= 0)
+            {
+                MessageBox.Show("Quantity Could Not Be Zero Ou Less Then Zero", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return false;
+            }
+
             if (Convert.ToDouble(TBSellingPrice.Text) < Convert.ToDouble(TBPurchasePrice.Text))
             {
                 MessageBox.Show("The Selling Price Could Not Greater Then Purchase Price","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
@@ -112,7 +137,6 @@ namespace Pharmacy_Management_System.Stock
                     }
                     else
                     {
-                        LoadDataAfterAdd?.Invoke();
                         this.Close();
                     }
                 }
@@ -149,6 +173,18 @@ namespace Pharmacy_Management_System.Stock
         {
             FillComboBox();
             _SetControlsInPanel();
+        }
+
+        private void AddBatches_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoadDataAfterAdd?.Invoke();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AddOrEditDrug Drug = new AddOrEditDrug();
+            Drug.LoadDataIn += FillComboBox;
+            Drug.ShowDialog();
         }
     }
 }

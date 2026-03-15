@@ -53,5 +53,33 @@ namespace DataAccessLayer
             return Result;
         }
 
+        public static bool Find(int drugformid , ref string FormName)
+        {
+            bool Result = false;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM DrugForms WHERE DrugFormID = @ID";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@ID",drugformid);
+
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    if (Reader.Read())
+                    {
+                        Result = true;
+                        FormName = (string)Reader["DrugForm"];
+                    }
+                    Reader.Close();
+                }
+            }
+            return Result;
+        }
+
+
     }
 }

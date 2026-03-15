@@ -45,6 +45,7 @@
     <Compile Include="clsConnectionString.cs" />
     <Compile Include="clsDataAccessDrugs.cs" />
     <Compile Include="clsDataAccessBatches.cs" />
+    <Compile Include="clsDataAccessInvoices.cs" />
     <Compile Include="clsDataAccessRoles.cs" />
     <Compile Include="clsDataAccessStockHistory.cs" />
     <Compile Include="clsDataAccessUsers.cs" />

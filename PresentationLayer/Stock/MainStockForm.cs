@@ -3,11 +3,17 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Drawing;
+using ImadDraw = System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using iText.Kernel.Pdf;
+using iText.Layout;
+using iText.Layout.Element;
+using iText.IO.Image;
+using Pharmacy_Management_System.Login;
+using Pharmacy_Management_System.Reports;
 
 namespace Pharmacy_Management_System.Stock
 {
@@ -22,15 +28,17 @@ namespace Pharmacy_Management_System.Stock
 
         private void LoadDataInDGVLoadDataInDGV()
         {
+            DGVDrugs.Rows.Clear();
+
             CBSelect.SelectedIndex = 0;
 
             Stock = clsBusinessBatches.GetAllBatches();
 
             foreach (DataRow Row in Stock.Rows)
             {
-                Image Pic = Image.FromFile((string)Row["PicturePath"]);
+                ImadDraw.Image Pic = ImadDraw.Image.FromFile((string)Row["PicturePath"]);
                 DGVDrugs.Rows.Add((int)Row["BatchID"], (string)Row["DrugName"], (int)Row["Quantity"], (decimal)Row["PurchasePricePerUnit"],
-                    (decimal)Row["SellingPricePerUnit"] , ((DateTime)Row["ExpirationDate"]).Date , Pic);
+                    (decimal)Row["SellingPricePerUnit"] , ((DateTime)Row["ExpirationDate"]).Date.ToString(), Pic);
             }
 
             LBLRows.Text = DGVDrugs.RowCount.ToString();
@@ -45,18 +53,35 @@ namespace Pharmacy_Management_System.Stock
         {
             string ColumnName = CBSelect.Text;
             string TextLign = TBSearch.Text;
+            int Index = 0;
 
             if (ColumnName == "None")
             {
-                MessageBox.Show("Select A Column In ComboBox", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 TBSearch.Text = "";
+                TextLign = "";
                 return;
             }
             else
             {
-                if (ColumnName == "DrugName")
+                switch (ColumnName)
                 {
-                    Stock.DefaultView.RowFilter = string.Format("[{0}] LIKE '{1}%'", ColumnName, TextLign); 
+                    case "DrugName":
+                        Index = 1;
+                    break;
+
+                    case "Quantity":
+                        Index = 2;
+                    break;
+
+                }
+
+
+                foreach (DataGridViewRow Row in DGVDrugs.Rows)
+                {
+                    if (Row.Cells[Index].Value.ToString().Contains(TextLign))
+                        Row.Visible = true;
+                    else
+                        Row.Visible = false;    
                 }
             }
         }
@@ -72,5 +97,14 @@ namespace Pharmacy_Management_System.Stock
             Batches.LoadDataAfterAdd += LoadDataInDGVLoadDataInDGV;
             Batches.ShowDialog();
         }
+
+        private void createReportToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsReportInfo.CreateReport("ReportN°"+(int)DGVDrugs.CurrentRow.Cells[0].Value+".Pdf", DGVDrugs.CurrentRow.Cells[1].Value.ToString());
+        }
+
+
+
+
     }
 }

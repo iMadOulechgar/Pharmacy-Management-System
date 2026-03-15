@@ -26,6 +26,18 @@ namespace Pharmacy_Management_System
             InitializeComponent();
         }
 
+        private void LoadData()
+        {
+            DataTable Drugs = clsBusinessDrugs.GetAllDrugsForSale();
+            DGVDrugs.RowTemplate.Height = 50;
+
+            foreach (DataRow row in Drugs.Rows)
+            {
+                Image Local = Image.FromFile((string)row["PicturePath"]);
+                DGVDrugs.Rows.Add((int)row["DrugID"],(string)row["DrugName"], (string)row["DrugForm"], (bool)row["IsActive"], Local);
+            }
+        }
+
         public void ChangeUiPictureBoxForCurrentUser(string Path)
         {
             ProfilePicture.Load(Path);
@@ -33,6 +45,7 @@ namespace Pharmacy_Management_System
 
         private void _FillUserDataInLoad()
         {
+            LoadData();
             LBLUser.Text = clsCurrentUserLogin.CurrentUser.Username;
             LBLRole.Text = clsCurrentUserLogin.CurrentUser.CompositionRoles.RoleName;
             ProfilePicture.Load(clsCurrentUserLogin.CurrentUser.ImagePath);
@@ -40,6 +53,12 @@ namespace Pharmacy_Management_System
             LBLTime.Text = DateTime.Now.ToShortTimeString();
             LayoutPanelNotification.Visible = false;
             NotificationPic.Visible = false;
+            LBLTotlaDrugs1.Text = clsBusinessDrugs.TotalDrugs().ToString();
+            LBLTotlaDrugs2.Text = LBLTotlaDrugs1.Text;
+            LBLAvailableStock1.Text = clsBusinessDrugs.GetAllAvailableDrugs().ToString();
+            LBLAvailableStock2.Text = LBLAvailableStock1.Text;
+            LBLTotalSales1.Text = clsBusinessInvoices.GetTotalSales().ToString();
+            LBLTotalSales2.Text = LBLTotalSales1.Text;
         }
 
         private void guna2GradientCircleButton1_Click(object sender, EventArgs e)
@@ -49,12 +68,6 @@ namespace Pharmacy_Management_System
         private void Main_Load(object sender, EventArgs e)
         {
             _FillUserDataInLoad();
-        }
-
-        private void guna2ImageButton1_Click(object sender, EventArgs e)
-        {
-            NotificationPic.Visible = (NotificationPic.Visible == false);
-            LayoutPanelNotification.Visible = (LayoutPanelNotification.Visible == false);
         }
 
         private void guna2GradientButton2_Click(object sender, EventArgs e)
@@ -74,6 +87,21 @@ namespace Pharmacy_Management_System
         {
             FrmManageDrugs frm = new FrmManageDrugs();
             frm.ShowDialog();
+        }
+
+        private void guna2CircleButton1_Click(object sender, EventArgs e)
+        {
+            NotificationPic.Visible = (NotificationPic.Visible == false);
+            bool Panel = (LayoutPanelNotification.Visible == false);
+            if (Panel)
+            {
+                LayoutPanelNotification.Visible = Panel;
+                LayoutPanelNotification.BringToFront();
+            }
+            else
+            {
+                LayoutPanelNotification.Visible = Panel;
+            }
         }
     }
 }

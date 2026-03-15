@@ -61,7 +61,7 @@
             // guna2Panel3
             // 
             this.guna2Panel3.BackColor = System.Drawing.Color.Transparent;
-            this.guna2Panel3.BorderColor = System.Drawing.Color.White;
+            this.guna2Panel3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(128)))), ((int)(((byte)(255)))));
             this.guna2Panel3.BorderRadius = 15;
             this.guna2Panel3.BorderThickness = 5;
             this.guna2Panel3.Controls.Add(this.LBLRows);
@@ -75,19 +75,19 @@
             this.guna2Panel3.Controls.Add(this.label3);
             this.guna2Panel3.CustomBorderColor = System.Drawing.Color.Black;
             this.guna2Panel3.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel3.Location = new System.Drawing.Point(1, 0);
+            this.guna2Panel3.Location = new System.Drawing.Point(-2, 0);
             this.guna2Panel3.Name = "guna2Panel3";
             this.guna2Panel3.ShadowDecoration.Depth = 5;
             this.guna2Panel3.ShadowDecoration.Enabled = true;
             this.guna2Panel3.ShadowDecoration.Parent = this.guna2Panel3;
-            this.guna2Panel3.Size = new System.Drawing.Size(1232, 608);
+            this.guna2Panel3.Size = new System.Drawing.Size(1372, 737);
             this.guna2Panel3.TabIndex = 8;
             // 
             // LBLRows
             // 
             this.LBLRows.AutoSize = true;
             this.LBLRows.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLRows.Location = new System.Drawing.Point(69, 584);
+            this.LBLRows.Location = new System.Drawing.Point(69, 711);
             this.LBLRows.Name = "LBLRows";
             this.LBLRows.Size = new System.Drawing.Size(15, 17);
             this.LBLRows.TabIndex = 14;
@@ -97,7 +97,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(18, 583);
+            this.label4.Location = new System.Drawing.Point(18, 710);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(52, 17);
             this.label4.TabIndex = 15;
@@ -118,8 +118,7 @@
             this.CBSelect.ItemHeight = 30;
             this.CBSelect.Items.AddRange(new object[] {
             "None",
-            "DrugName",
-            "ExpirationDate"});
+            "DrugName"});
             this.CBSelect.ItemsAppearance.Parent = this.CBSelect;
             this.CBSelect.Location = new System.Drawing.Point(386, 62);
             this.CBSelect.Name = "CBSelect";
@@ -141,7 +140,7 @@
             this.TBSearch.FocusedState.Parent = this.TBSearch;
             this.TBSearch.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.TBSearch.HoverState.Parent = this.TBSearch;
-            this.TBSearch.Location = new System.Drawing.Point(80, 62);
+            this.TBSearch.Location = new System.Drawing.Point(90, 62);
             this.TBSearch.Name = "TBSearch";
             this.TBSearch.PasswordChar = '\0';
             this.TBSearch.PlaceholderText = "";
@@ -170,7 +169,7 @@
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.DGVDrugs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DGVDrugs.ColumnHeadersHeight = 40;
+            this.DGVDrugs.ColumnHeadersHeight = 45;
             this.DGVDrugs.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.DGVDrugs.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -180,10 +179,11 @@
             this.Column5,
             this.Column6,
             this.Column7});
+            this.DGVDrugs.ContextMenuStrip = this.contextMenuStrip1;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.ControlText;
             dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(3);
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
@@ -195,9 +195,13 @@
             this.DGVDrugs.Name = "DGVDrugs";
             this.DGVDrugs.ReadOnly = true;
             this.DGVDrugs.RowHeadersVisible = false;
-            this.DGVDrugs.RowHeadersWidth = 30;
+            this.DGVDrugs.RowHeadersWidth = 100;
+            this.DGVDrugs.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.DGVDrugs.RowTemplate.Height = 100;
+            this.DGVDrugs.RowTemplate.ReadOnly = true;
+            this.DGVDrugs.RowTemplate.Resizable = System.Windows.Forms.DataGridViewTriState.False;
             this.DGVDrugs.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DGVDrugs.Size = new System.Drawing.Size(1200, 476);
+            this.DGVDrugs.Size = new System.Drawing.Size(1339, 603);
             this.DGVDrugs.TabIndex = 11;
             this.DGVDrugs.Theme = Guna.UI2.WinForms.Enums.DataGridViewPresetThemes.Default;
             this.DGVDrugs.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
@@ -212,13 +216,13 @@
             this.DGVDrugs.ThemeStyle.HeaderStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
             this.DGVDrugs.ThemeStyle.HeaderStyle.ForeColor = System.Drawing.Color.White;
             this.DGVDrugs.ThemeStyle.HeaderStyle.HeaightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.DGVDrugs.ThemeStyle.HeaderStyle.Height = 40;
+            this.DGVDrugs.ThemeStyle.HeaderStyle.Height = 45;
             this.DGVDrugs.ThemeStyle.ReadOnly = true;
             this.DGVDrugs.ThemeStyle.RowsStyle.BackColor = System.Drawing.Color.White;
             this.DGVDrugs.ThemeStyle.RowsStyle.BorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             this.DGVDrugs.ThemeStyle.RowsStyle.Font = new System.Drawing.Font("Segoe UI", 10.5F);
-            this.DGVDrugs.ThemeStyle.RowsStyle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            this.DGVDrugs.ThemeStyle.RowsStyle.Height = 22;
+            this.DGVDrugs.ThemeStyle.RowsStyle.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.DGVDrugs.ThemeStyle.RowsStyle.Height = 100;
             this.DGVDrugs.ThemeStyle.RowsStyle.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.DGVDrugs.ThemeStyle.RowsStyle.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
             // 
@@ -274,7 +278,7 @@
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
             this.guna2Button1.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_add_48;
-            this.guna2Button1.Location = new System.Drawing.Point(1026, 53);
+            this.guna2Button1.Location = new System.Drawing.Point(1165, 53);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(195, 45);
@@ -286,6 +290,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.label2.Location = new System.Drawing.Point(305, 70);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(75, 17);
@@ -296,7 +301,8 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(18, 70);
+            this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            this.label1.Location = new System.Drawing.Point(28, 70);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(56, 17);
             this.label1.TabIndex = 9;
@@ -306,6 +312,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.label3.Location = new System.Drawing.Point(16, 14);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(152, 30);
@@ -326,6 +333,7 @@
             this.createReportToolStripMenuItem.Name = "createReportToolStripMenuItem";
             this.createReportToolStripMenuItem.Size = new System.Drawing.Size(146, 22);
             this.createReportToolStripMenuItem.Text = "Create Report";
+            this.createReportToolStripMenuItem.Click += new System.EventHandler(this.createReportToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
@@ -337,13 +345,14 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1234, 620);
+            this.ClientSize = new System.Drawing.Size(1370, 736);
             this.Controls.Add(this.guna2Panel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "MainStockForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stock Manager";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.MainStockForm_Load);
             this.guna2Panel3.ResumeLayout(false);
             this.guna2Panel3.PerformLayout();

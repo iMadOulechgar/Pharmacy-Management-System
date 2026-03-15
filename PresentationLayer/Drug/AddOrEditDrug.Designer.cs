@@ -327,6 +327,7 @@
             this.Name = "AddOrEditDrug";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddOrEditDrug";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddOrEditDrug_FormClosing);
             this.Load += new System.EventHandler(this.AddOrEditDrug_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -10,6 +10,16 @@ namespace BusinessLayer
 {
     public class clsBusinessDrugForms
     {
+
+        public int DrugFormId { get; set; }
+        public string DrugForm {  get; set; }
+
+        public clsBusinessDrugForms(int drugformid , string drugform)
+        {
+            this.DrugFormId = drugformid;
+            this.DrugForm = drugform;
+        }
+
         public static DataTable GetAllDrugForms()
         {
             return clsDataAccessDrugForms.DrugForms();
@@ -18,6 +28,20 @@ namespace BusinessLayer
         public static int GetDrugFormID(string DrugName)
         {
             return clsDataAccessDrugForms.GetDrugIdByName(DrugName);
+        }
+
+        public static clsBusinessDrugForms FindByDrugFormId(int DrugFormId)
+        {
+            string DrugForm = "";
+
+            if (clsDataAccessDrugForms.Find(DrugFormId,ref DrugForm))
+            {
+                return new clsBusinessDrugForms(DrugFormId, DrugForm);
+            }
+            else
+            {
+                return null;
+            }
         }
 
 

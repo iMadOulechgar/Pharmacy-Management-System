@@ -212,6 +212,7 @@
             this.PBpicture.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
             this.PBpicture.ShadowDecoration.Parent = this.PBpicture;
             this.PBpicture.Size = new System.Drawing.Size(145, 128);
+            this.PBpicture.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PBpicture.TabIndex = 3;
             this.PBpicture.TabStop = false;
             // 
@@ -220,7 +221,7 @@
             this.LLBLDrugInfo.AutoSize = true;
             this.LLBLDrugInfo.Font = new System.Drawing.Font("Lucida Bright", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LLBLDrugInfo.LinkColor = System.Drawing.Color.Maroon;
-            this.LLBLDrugInfo.Location = new System.Drawing.Point(504, 228);
+            this.LLBLDrugInfo.Location = new System.Drawing.Point(504, 213);
             this.LLBLDrugInfo.Name = "LLBLDrugInfo";
             this.LLBLDrugInfo.Size = new System.Drawing.Size(101, 15);
             this.LLBLDrugInfo.TabIndex = 4;

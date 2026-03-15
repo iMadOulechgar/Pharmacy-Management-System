@@ -14,6 +14,7 @@ namespace BusinessLayer
         public enum enMode { Add , Update};
         public enMode Mode = enMode.Add;
 
+        public int DrugId {  get; set; }
         public string DrugName { get; set; }
         public int DrugFormID { get; set; }
 
@@ -21,6 +22,19 @@ namespace BusinessLayer
         public bool IsActive { get; set; }
         public int CreatedByUserID { get; set; }
         public string PicturePath { get; set; }
+
+        public clsBusinessDrugs(int drugid , string drugname , int drugformid , bool isactive , int createdbyuser , string pathpic)
+        {
+            this.DrugId = drugid;
+            this.DrugName = drugname;
+            this.DrugFormID = drugformid;
+            this.DrugForms = clsBusinessDrugForms.FindByDrugFormId(drugformid);
+            this.IsActive = isactive;
+            this.CreatedByUserID = createdbyuser;
+            this.PicturePath = pathpic;
+            
+            Mode = enMode.Update;
+        }
 
         public clsBusinessDrugs()
         {
@@ -33,6 +47,43 @@ namespace BusinessLayer
             Mode = enMode.Add;
         }
 
+        public static clsBusinessDrugs FindByDrugName(string Drugname)
+        {
+            int drugid = -1, drugformid = -1, createdbyuser = -1;
+            bool isactive = false;
+            string pathpic = "";
+
+            if (clsDataAccessDrugs.Find(ref drugid, Drugname,ref drugformid,ref isactive,ref createdbyuser,ref pathpic))
+            {
+                return new clsBusinessDrugs(drugid, Drugname, drugformid, isactive, createdbyuser, pathpic);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static clsBusinessDrugs FindByDrugID(int DrugID)
+        {
+            string drugName = "";
+            int drugformid = -1, createdbyuser = -1;
+            bool isactive = false;
+            string pathpic = "";
+
+            if (clsDataAccessDrugs.Find(DrugID, ref drugName, ref drugformid, ref isactive, ref createdbyuser, ref pathpic))
+            {
+                return new clsBusinessDrugs(DrugID, drugName, drugformid, isactive, createdbyuser, pathpic);
+            }
+            else
+            {
+                return null;
+            }
+        }
+
+        public static bool CheckDrugIsExistsByDrugName(string Drugname)
+        {
+            return clsDataAccessDrugs.IsDrugExists(Drugname);
+        }
 
         public static int GetDrugIDByName(string Name)
         {
@@ -55,6 +106,16 @@ namespace BusinessLayer
         public static int TotalDrugs()
         {
             return clsDataAccessDrugs.GetTotalOfDrugs();
+        }
+
+        public static int GetAllAvailableDrugs()
+        {
+            return clsDataAccessDrugs.GetDrugAvailableInStock();
+        }
+
+        public static DataTable GetAllDrugsForSale()
+        {
+            return clsDataAccessDrugs.GetAllInvoicesDrugs();
         }
 
         public bool Save()

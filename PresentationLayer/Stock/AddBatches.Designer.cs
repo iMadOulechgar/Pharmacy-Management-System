@@ -72,8 +72,6 @@
             this.CBDrugsName.FormattingEnabled = true;
             this.CBDrugsName.HoverState.Parent = this.CBDrugsName;
             this.CBDrugsName.ItemHeight = 30;
-            this.CBDrugsName.Items.AddRange(new object[] {
-            "None"});
             this.CBDrugsName.ItemsAppearance.Parent = this.CBDrugsName;
             this.CBDrugsName.Location = new System.Drawing.Point(176, 11);
             this.CBDrugsName.Name = "CBDrugsName";
@@ -237,6 +235,7 @@
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Add New Drug";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // guna2HtmlLabel5
             // 
@@ -292,7 +291,7 @@
             this.BTNSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSave.ForeColor = System.Drawing.Color.White;
             this.BTNSave.HoverState.Parent = this.BTNSave;
-            this.BTNSave.Location = new System.Drawing.Point(994, 431);
+            this.BTNSave.Location = new System.Drawing.Point(1054, 431);
             this.BTNSave.Name = "BTNSave";
             this.BTNSave.ShadowDecoration.Parent = this.BTNSave;
             this.BTNSave.Size = new System.Drawing.Size(147, 45);
@@ -309,7 +308,7 @@
             this.guna2Button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button2.ForeColor = System.Drawing.Color.White;
             this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(840, 431);
+            this.guna2Button2.Location = new System.Drawing.Point(900, 431);
             this.guna2Button2.Name = "guna2Button2";
             this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
             this.guna2Button2.Size = new System.Drawing.Size(138, 45);
@@ -320,16 +319,16 @@
             // FlowPanel
             // 
             this.FlowPanel.BackColor = System.Drawing.Color.LightGray;
-            this.FlowPanel.Location = new System.Drawing.Point(566, 40);
+            this.FlowPanel.Location = new System.Drawing.Point(563, 40);
             this.FlowPanel.Name = "FlowPanel";
-            this.FlowPanel.Size = new System.Drawing.Size(577, 379);
+            this.FlowPanel.Size = new System.Drawing.Size(636, 379);
             this.FlowPanel.TabIndex = 9;
             // 
             // guna2HtmlLabel7
             // 
             this.guna2HtmlLabel7.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel7.Font = new System.Drawing.Font("Segoe UI Semibold", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2HtmlLabel7.Location = new System.Drawing.Point(566, 12);
+            this.guna2HtmlLabel7.Location = new System.Drawing.Point(563, 12);
             this.guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             this.guna2HtmlLabel7.Size = new System.Drawing.Size(101, 22);
             this.guna2HtmlLabel7.TabIndex = 2;
@@ -344,7 +343,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Gainsboro;
-            this.ClientSize = new System.Drawing.Size(1155, 488);
+            this.ClientSize = new System.Drawing.Size(1214, 488);
             this.Controls.Add(this.FlowPanel);
             this.Controls.Add(this.guna2Button2);
             this.Controls.Add(this.BTNSave);
@@ -369,6 +368,7 @@
             this.Name = "AddBatches";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AddBatches";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AddBatches_FormClosing);
             this.Load += new System.EventHandler(this.AddBatches_Load);
             ((System.ComponentModel.ISupportInitialize)(this.NUDQuantity)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

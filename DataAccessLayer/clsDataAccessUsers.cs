@@ -59,6 +59,8 @@ namespace DataAccessLayer
                 {
                     cmd.Parameters.AddWithValue("@UserID",UserID);
 
+                    con.Open();
+
                     SqlDataReader Reader = cmd.ExecuteReader();
 
                     if (Reader.Read())
@@ -70,8 +72,12 @@ namespace DataAccessLayer
                         RoleID = (int)Reader["RoleID"];
                         IsActive = (bool)Reader["IsActive"];
                         ImagePath = (string)Reader["ImagePath"];
-                        Email = (string)Reader["Email"];
-                        Gendor = (char)Reader["Gendor"];
+                        if (DBNull.Value != Reader["Email"])
+                            Email = (string)Reader["Email"];
+                        else
+                            Email = "";
+
+                        Gendor = Convert.ToChar((Reader["Gendor"].ToString()));
                     }
                 }
             }

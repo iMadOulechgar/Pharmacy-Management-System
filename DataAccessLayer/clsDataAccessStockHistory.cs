@@ -17,7 +17,7 @@ namespace DataAccessLayer
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "SELECT * FROM StockHistory;";
+                string Query = "SELECT * FROM StockHistory_View;";
 
                 using (SqlCommand cmd = new SqlCommand(Query,con))
                 {
