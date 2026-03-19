@@ -179,7 +179,6 @@ namespace Pharmacy_Management_System.Stock
         {
             LoadDataAfterAdd?.Invoke();
         }
-
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             AddOrEditDrug Drug = new AddOrEditDrug();

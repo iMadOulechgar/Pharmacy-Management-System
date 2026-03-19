@@ -7,20 +7,24 @@
       "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\invoices\\frminvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:invoices\\frminvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\invoices\\frminvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:invoices\\frminvoices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\invoices\\controles\\ctlinvoicedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:invoices\\controles\\ctlinvoicedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\invoices\\controles\\ctlinvoicedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:invoices\\controles\\ctlinvoicedetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:main.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\stock\\mainstockform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:stock\\mainstockform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|d:\\(pms)\\pharmacy management system\\presentationlayer\\main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:main.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\reports\\clsreportinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1F8A1706-A3EA-4732-853C-63CC61E4FCF6}|!PresentationLayer.csproj|solutionrelative:reports\\clsreportinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,26 +50,63 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Main.Designer.cs",
-              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Main.Designer.cs",
-              "RelativeDocumentMoniker": "Main.Designer.cs",
-              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Main.Designer.cs",
-              "RelativeToolTip": "Main.Designer.cs",
-              "ViewState": "AgIAABACAAAAAAAAAAD4vxwCAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "FrmInvoices.cs [Design]",
+              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\FrmInvoices.cs",
+              "RelativeDocumentMoniker": "invoices\\FrmInvoices.cs",
+              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\FrmInvoices.cs [Design]",
+              "RelativeToolTip": "invoices\\FrmInvoices.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-14T00:33:35.735Z",
+              "WhenOpened": "2026-03-19T04:12:19.435Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "FrmInvoices.cs",
+              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\FrmInvoices.cs",
+              "RelativeDocumentMoniker": "invoices\\FrmInvoices.cs",
+              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\FrmInvoices.cs",
+              "RelativeToolTip": "invoices\\FrmInvoices.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T02:50:11.223Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "CtLinvoiceDetails.cs",
+              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\Controles\\CtLinvoiceDetails.cs",
+              "RelativeDocumentMoniker": "invoices\\Controles\\CtLinvoiceDetails.cs",
+              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\Controles\\CtLinvoiceDetails.cs",
+              "RelativeToolTip": "invoices\\Controles\\CtLinvoiceDetails.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAIA1wBUAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T03:50:01.784Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CtLinvoiceDetails.cs [Design]",
+              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\Controles\\CtLinvoiceDetails.cs",
+              "RelativeDocumentMoniker": "invoices\\Controles\\CtLinvoiceDetails.cs",
+              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\invoices\\Controles\\CtLinvoiceDetails.cs [Design]",
+              "RelativeToolTip": "invoices\\Controles\\CtLinvoiceDetails.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-19T02:13:16.307Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "Main.cs",
               "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Main.cs",
               "RelativeDocumentMoniker": "Main.cs",
               "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Main.cs",
               "RelativeToolTip": "Main.cs",
-              "ViewState": "AgIAAC0AAAAAAAAAAAArwD0AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAlwDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-14T00:32:41.137Z",
               "EditorCaption": ""
@@ -81,31 +122,6 @@
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-03-13T21:41:42.592Z",
               "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "clsReportInfo.cs",
-              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Reports\\clsReportInfo.cs",
-              "RelativeDocumentMoniker": "Reports\\clsReportInfo.cs",
-              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Reports\\clsReportInfo.cs",
-              "RelativeToolTip": "Reports\\clsReportInfo.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAewBAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-13T21:21:09.338Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "MainStockForm.cs",
-              "DocumentMoniker": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Stock\\MainStockForm.cs",
-              "RelativeDocumentMoniker": "Stock\\MainStockForm.cs",
-              "ToolTip": "D:\\(PMS)\\Pharmacy Management System\\PresentationLayer\\Stock\\MainStockForm.cs",
-              "RelativeToolTip": "Stock\\MainStockForm.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAswGYAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-03-12T21:34:13.89Z",
-              "EditorCaption": ""
             }
           ]
         }

@@ -143,7 +143,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(136)))), ((int)(((byte)(77)))));
-            this.label10.Location = new System.Drawing.Point(302, 0);
+            this.label10.Location = new System.Drawing.Point(302, -1);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(9, 13);
             this.label10.TabIndex = 7;

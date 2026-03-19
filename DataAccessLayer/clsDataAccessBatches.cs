@@ -100,7 +100,7 @@ namespace DataAccessLayer
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "SELECT * FROM DrugBatches WHERE DrugID = @drugid";
+                string Query = "select top 1 * from DrugBatches where Quantity > 0 and DrugID = @drugid order by BatchID ASC";
 
                 using (SqlCommand cmd = new SqlCommand(Query,con))
                 {

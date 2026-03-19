@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
 using Pharmacy_Management_System.Drug;
+using Pharmacy_Management_System.invoices.Controles;
 using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Notification.Controles;
 using Pharmacy_Management_System.Stock;
@@ -25,6 +26,9 @@ namespace Pharmacy_Management_System
         {
             InitializeComponent();
         }
+
+        private int PanelCounter = 0;
+        List<Tuple<string, string, decimal, string, string>> TempPanel = new List<Tuple<string, string, decimal, string, string>>();
 
         private void LoadData()
         {
@@ -91,17 +95,37 @@ namespace Pharmacy_Management_System
 
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
-            NotificationPic.Visible = (NotificationPic.Visible == false);
-            bool Panel = (LayoutPanelNotification.Visible == false);
-            if (Panel)
+            FrmInvoices Invoices = new FrmInvoices();
+            Invoices.Show();
+            
+            CtLinvoiceDetails Details;
+
+            foreach (var item in TempPanel)
             {
-                LayoutPanelNotification.Visible = Panel;
-                LayoutPanelNotification.BringToFront();
+                Details = new CtLinvoiceDetails();
+                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5);
+                Invoices.SetControlesInPanel(Details);         
             }
-            else
-            {
-                LayoutPanelNotification.Visible = Panel;
-            }
+        }
+
+        private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PanelCounter++;
+            LBLPanel.Text = PanelCounter.ToString();
+            int DrugID = (int)DGVDrugs.CurrentRow.Cells[0].Value;
+            clsBusinessDrugs Drug = clsBusinessDrugs.FindByDrugID(DrugID);
+            clsBusinessBatches DrugBatch = clsBusinessBatches.FindByDrugID(DrugID);
+
+            string Path = Drug.PicturePath, Drugname = Drug.DrugName, FormName = Drug.DrugForms.DrugForm, Username = clsCurrentUserLogin.CurrentUser.Username;
+            decimal pricePerUnit = DrugBatch.SellingPrice;
+            TempPanel.Add(new Tuple<string, string, decimal, string, string>(Path, Drugname, pricePerUnit, FormName, Username));
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            PanelCounter = 0;
+            LBLPanel.Text = "0";
+            TempPanel.Clear();
         }
     }
 }

@@ -194,6 +194,18 @@
     <Compile Include="Drug\Controles\FindDrugctrl.Designer.cs">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
     </Compile>
+    <Compile Include="invoices\Controles\CtLinvoiceDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="invoices\Controles\CtLinvoiceDetails.Designer.cs">
+      <DependentUpon>CtLinvoiceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="invoices\FrmInvoices.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="invoices\FrmInvoices.Designer.cs">
+      <DependentUpon>FrmInvoices.cs</DependentUpon>
+    </Compile>
     <Compile Include="Drug\FrmManageDrugs.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -294,6 +306,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Drug\Controles\FindDrugctrl.resx">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoices\Controles\CtLinvoiceDetails.resx">
+      <DependentUpon>CtLinvoiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="invoices\FrmInvoices.resx">
+      <DependentUpon>FrmInvoices.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Drug\FrmManageDrugs.resx">
       <DependentUpon>FrmManageDrugs.cs</DependentUpon>
@@ -523,5 +541,6 @@
   <ItemGroup>
     <None Include="Resources\icons8-available-stock-100.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
