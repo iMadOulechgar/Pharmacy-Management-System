@@ -17,22 +17,21 @@ namespace Pharmacy_Management_System.invoices.Controles
             InitializeComponent();
         }
 
-        public void SetDataIntoControl(string Path , string Drugname , decimal Price , string FormName , string Username)
+        public static event Action<string> Delete;
+
+        public void SetDataIntoControl(string Path , string Drugname , decimal Price , string FormName , int Quantity,string Username)
         {
             PBPath.Load(Path);
             LBLDrugname.Text = Drugname;
             LBLDrugForm.Text = FormName;
             LBLPricePerUnit.Text = Convert.ToDecimal(Price).ToString();
-            LBLUsername.Text = Username;    
+            LBLUsername.Text = Username;
+            LBLQuantity.Text = Quantity.ToString();
         }
-
-        private void CtLinvoiceDetails_Load(object sender, EventArgs e)
+        
+        private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
-        }
-
-        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
+            Delete?.Invoke(LBLDrugname.Text);
             this.Dispose();
         }
     }

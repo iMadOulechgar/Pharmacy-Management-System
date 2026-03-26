@@ -9,11 +9,40 @@ namespace BusinessLayer
 {
     public class clsBusinessInvoices
     {
-        public static int GetTotalSales()
+
+        public int InvoiceID { get; set; }
+        public int InvoiceNumber { get; set; }
+        public int PharmacistID { get; set; }
+        public decimal TotalAmount { get; set; }
+        public DateTime CreatedAt { get; set; }
+
+
+        private bool _AddInvoice()
         {
-            return clsDataAccessInvoices.TotalSales();
+            int invoi = clsDataAccessinvoices.AddInvoice(this.InvoiceNumber, this.PharmacistID, this.TotalAmount, this.CreatedAt);
+            if (invoi > 0)
+            {
+                this.InvoiceID = invoi;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
 
+        public bool Save()
+        {
+            if (_AddInvoice())
+                return true;
+            else
+                return false;
+        }
+
+        public static int GetTotalSales()
+        {
+            return clsDataAccessinvoices.GetTotalSales();
+        }
 
     }
 }

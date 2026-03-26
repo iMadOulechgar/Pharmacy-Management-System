@@ -62,6 +62,14 @@
             this.LBLDrugForm = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.LBLUsername = new Guna.UI2.WinForms.Guna2HtmlLabel();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            this.LBLQuantity = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)(this.PBPath)).BeginInit();
             this.SuspendLayout();
             // 
@@ -281,11 +289,11 @@
             this.guna2HtmlLabel5.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel5.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel5.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel5.Location = new System.Drawing.Point(343, 3);
+            this.guna2HtmlLabel5.Location = new System.Drawing.Point(371, 3);
             this.guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            this.guna2HtmlLabel5.Size = new System.Drawing.Size(79, 19);
+            this.guna2HtmlLabel5.Size = new System.Drawing.Size(33, 19);
             this.guna2HtmlLabel5.TabIndex = 14;
-            this.guna2HtmlLabel5.Text = "PricePerUnit";
+            this.guna2HtmlLabel5.Text = "Price";
             // 
             // LBLPricePerUnit
             // 
@@ -373,7 +381,7 @@
             this.guna2HtmlLabel8.BackColor = System.Drawing.Color.Transparent;
             this.guna2HtmlLabel8.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2HtmlLabel8.ForeColor = System.Drawing.Color.Gray;
-            this.guna2HtmlLabel8.Location = new System.Drawing.Point(700, 3);
+            this.guna2HtmlLabel8.Location = new System.Drawing.Point(800, 2);
             this.guna2HtmlLabel8.Name = "guna2HtmlLabel8";
             this.guna2HtmlLabel8.Size = new System.Drawing.Size(93, 19);
             this.guna2HtmlLabel8.TabIndex = 14;
@@ -393,7 +401,7 @@
             // 
             this.LBLUsername.BackColor = System.Drawing.Color.Transparent;
             this.LBLUsername.Font = new System.Drawing.Font("Ebrima", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LBLUsername.Location = new System.Drawing.Point(650, 28);
+            this.LBLUsername.Location = new System.Drawing.Point(750, 27);
             this.LBLUsername.Name = "LBLUsername";
             this.LBLUsername.Size = new System.Drawing.Size(33, 23);
             this.LBLUsername.TabIndex = 14;
@@ -403,13 +411,94 @@
             // 
             this.linkLabel1.AutoSize = true;
             this.linkLabel1.Font = new System.Drawing.Font("Bodoni MT", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(833, 59);
+            this.linkLabel1.Location = new System.Drawing.Point(959, 59);
             this.linkLabel1.Name = "linkLabel1";
             this.linkLabel1.Size = new System.Drawing.Size(76, 17);
             this.linkLabel1.TabIndex = 15;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Delete Order";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked_1);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(735, 64);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(9, 13);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "|";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(735, 41);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(9, 13);
+            this.label2.TabIndex = 9;
+            this.label2.Text = "|";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(735, 51);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(9, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "|";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.BackColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(735, 28);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(9, 13);
+            this.label9.TabIndex = 13;
+            this.label9.Text = "|";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.White;
+            this.label10.Location = new System.Drawing.Point(735, 1);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(9, 13);
+            this.label10.TabIndex = 12;
+            this.label10.Text = "|";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(735, 14);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(9, 13);
+            this.label11.TabIndex = 11;
+            this.label11.Text = "|";
+            // 
+            // guna2HtmlLabel1
+            // 
+            this.guna2HtmlLabel1.BackColor = System.Drawing.Color.Transparent;
+            this.guna2HtmlLabel1.Font = new System.Drawing.Font("Ebrima", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2HtmlLabel1.ForeColor = System.Drawing.Color.Gray;
+            this.guna2HtmlLabel1.Location = new System.Drawing.Point(660, 2);
+            this.guna2HtmlLabel1.Name = "guna2HtmlLabel1";
+            this.guna2HtmlLabel1.Size = new System.Drawing.Size(57, 19);
+            this.guna2HtmlLabel1.TabIndex = 14;
+            this.guna2HtmlLabel1.Text = "Quantity";
+            // 
+            // LBLQuantity
+            // 
+            this.LBLQuantity.BackColor = System.Drawing.Color.Transparent;
+            this.LBLQuantity.Font = new System.Drawing.Font("Ebrima", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LBLQuantity.Location = new System.Drawing.Point(681, 28);
+            this.LBLQuantity.Name = "LBLQuantity";
+            this.LBLQuantity.Size = new System.Drawing.Size(14, 27);
+            this.LBLQuantity.TabIndex = 14;
+            this.LBLQuantity.Text = "0";
             // 
             // CtLinvoiceDetails
             // 
@@ -421,30 +510,38 @@
             this.Controls.Add(this.LBLUsername);
             this.Controls.Add(this.LBLDrugForm);
             this.Controls.Add(this.LBLDrugname);
+            this.Controls.Add(this.LBLQuantity);
             this.Controls.Add(this.LBLPricePerUnit);
+            this.Controls.Add(this.guna2HtmlLabel1);
             this.Controls.Add(this.guna2HtmlLabel8);
             this.Controls.Add(this.guna2HtmlLabel7);
             this.Controls.Add(this.guna2HtmlLabel5);
             this.Controls.Add(this.guna2HtmlLabel2);
+            this.Controls.Add(this.label11);
             this.Controls.Add(this.label30);
             this.Controls.Add(this.label24);
             this.Controls.Add(this.label18);
             this.Controls.Add(this.label12);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label29);
             this.Controls.Add(this.label23);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label8);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.label28);
             this.Controls.Add(this.label22);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label7);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label27);
             this.Controls.Add(this.label21);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label6);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.label20);
             this.Controls.Add(this.label14);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.label19);
@@ -452,8 +549,7 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.PBPath);
             this.Name = "CtLinvoiceDetails";
-            this.Size = new System.Drawing.Size(916, 78);
-            this.Load += new System.EventHandler(this.CtLinvoiceDetails_Load);
+            this.Size = new System.Drawing.Size(1038, 78);
             ((System.ComponentModel.ISupportInitialize)(this.PBPath)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -496,5 +592,13 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel LBLDrugForm;
         private Guna.UI2.WinForms.Guna2HtmlLabel LBLUsername;
         private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2HtmlLabel LBLQuantity;
     }
 }

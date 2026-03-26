@@ -41,9 +41,9 @@
             // 
             this.reflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reflectionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reflectionLabel1.Location = new System.Drawing.Point(412, 0);
+            this.reflectionLabel1.Location = new System.Drawing.Point(458, 7);
             this.reflectionLabel1.Name = "reflectionLabel1";
-            this.reflectionLabel1.Size = new System.Drawing.Size(147, 63);
+            this.reflectionLabel1.Size = new System.Drawing.Size(147, 52);
             this.reflectionLabel1.TabIndex = 8;
             this.reflectionLabel1.Text = "<b><font size=\"+6\"><i>Invoices </i><font color=\"#B02B2C\">Info</font></font></b>";
             // 
@@ -56,12 +56,13 @@
             this.BTNSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSave.ForeColor = System.Drawing.Color.White;
             this.BTNSave.HoverState.Parent = this.BTNSave;
-            this.BTNSave.Location = new System.Drawing.Point(789, 414);
+            this.BTNSave.Location = new System.Drawing.Point(909, 452);
             this.BTNSave.Name = "BTNSave";
             this.BTNSave.ShadowDecoration.Parent = this.BTNSave;
             this.BTNSave.Size = new System.Drawing.Size(147, 45);
             this.BTNSave.TabIndex = 10;
             this.BTNSave.Text = "invoice Now";
+            this.BTNSave.Click += new System.EventHandler(this.BTNSave_Click);
             // 
             // guna2Button1
             // 
@@ -72,40 +73,36 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(636, 414);
+            this.guna2Button1.Location = new System.Drawing.Point(756, 452);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(147, 45);
             this.guna2Button1.TabIndex = 10;
             this.guna2Button1.Text = "Cancel";
+            this.guna2Button1.Click += new System.EventHandler(this.guna2Button1_Click);
             // 
             // LayoutPanelInVoices
             // 
-            this.LayoutPanelInVoices.AutoScroll = true;
-            this.LayoutPanelInVoices.BackColor = System.Drawing.Color.White;
             this.LayoutPanelInVoices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.LayoutPanelInVoices.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
-            this.LayoutPanelInVoices.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.LayoutPanelInVoices.Location = new System.Drawing.Point(9, 66);
-            this.LayoutPanelInVoices.Margin = new System.Windows.Forms.Padding(0);
+            this.LayoutPanelInVoices.Location = new System.Drawing.Point(12, 65);
             this.LayoutPanelInVoices.Name = "LayoutPanelInVoices";
-            this.LayoutPanelInVoices.Size = new System.Drawing.Size(927, 344);
-            this.LayoutPanelInVoices.TabIndex = 9;
-            this.LayoutPanelInVoices.WrapContents = false;
+            this.LayoutPanelInVoices.Size = new System.Drawing.Size(1040, 381);
+            this.LayoutPanelInVoices.TabIndex = 11;
             // 
             // FrmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(953, 471);
+            this.ClientSize = new System.Drawing.Size(1064, 506);
+            this.Controls.Add(this.LayoutPanelInVoices);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.BTNSave);
-            this.Controls.Add(this.LayoutPanelInVoices);
             this.Controls.Add(this.reflectionLabel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "FrmInvoices";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice";
+            this.Load += new System.EventHandler(this.FrmInvoices_Load);
             this.ResumeLayout(false);
 
         }

@@ -20,6 +20,7 @@ using System.Windows.Forms;
 
 namespace Pharmacy_Management_System
 {
+
     public partial class Main : Form
     {
         public Main()
@@ -28,7 +29,23 @@ namespace Pharmacy_Management_System
         }
 
         private int PanelCounter = 0;
-        List<Tuple<string, string, decimal, string, string>> TempPanel = new List<Tuple<string, string, decimal, string, string>>();
+        private List<Tuple<string, string, decimal, string, int,string>> TempPanel = new List<Tuple<string, string, decimal, string, int,string>>();
+
+        private void DeleteFromBasket(string DrugName)
+        {
+            var item = TempPanel.Find(x => x.Item2 == DrugName);
+
+            if (item != null)
+            {
+                if (item.Item5 > 1)
+                    PanelCounter -= item.Item5;
+                else
+                    PanelCounter -= 1;
+
+                LBLPanel.Text = PanelCounter.ToString();
+                TempPanel.Remove(item);
+            }
+        }
 
         private void LoadData()
         {
@@ -96,29 +113,48 @@ namespace Pharmacy_Management_System
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             FrmInvoices Invoices = new FrmInvoices();
-            Invoices.Show();
-            
+            Invoices.DeleteFromBasket += DeleteFromBasket;
+
             CtLinvoiceDetails Details;
 
             foreach (var item in TempPanel)
             {
                 Details = new CtLinvoiceDetails();
-                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5);
+                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5,item.Item6);
                 Invoices.SetControlesInPanel(Details);         
             }
+
+            Invoices.ShowDialog();
         }
 
         private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PanelCounter++;
-            LBLPanel.Text = PanelCounter.ToString();
+            if (TempPanel.Count == 0)
+            {
+                TempPanel.Clear();
+            }
+
             int DrugID = (int)DGVDrugs.CurrentRow.Cells[0].Value;
             clsBusinessDrugs Drug = clsBusinessDrugs.FindByDrugID(DrugID);
             clsBusinessBatches DrugBatch = clsBusinessBatches.FindByDrugID(DrugID);
 
+            PanelCounter++;
+            LBLPanel.Text = PanelCounter.ToString();
+
+            if (TempPanel.Exists(OJ => OJ.Item2 == Drug.DrugName))
+            {
+                Tuple<string, string, decimal, string, int, string> Item = TempPanel.Find(OJ => OJ.Item2 == Drug.DrugName);
+                decimal TotalPrice = Item.Item3 + DrugBatch.SellingPrice;
+                var NewPanel = new Tuple<string, string, decimal, string, int, string>(Item.Item1, Item.Item2, TotalPrice, Item.Item4, Item.Item5 + 1, Item.Item6);
+                TempPanel.Remove(Item);
+                TempPanel.Add(NewPanel);
+                return;
+            }
+
             string Path = Drug.PicturePath, Drugname = Drug.DrugName, FormName = Drug.DrugForms.DrugForm, Username = clsCurrentUserLogin.CurrentUser.Username;
             decimal pricePerUnit = DrugBatch.SellingPrice;
-            TempPanel.Add(new Tuple<string, string, decimal, string, string>(Path, Drugname, pricePerUnit, FormName, Username));
+            TempPanel.Add(new Tuple<string, string,decimal, string, int,string>(Path, Drugname, pricePerUnit, FormName, 1,Username));
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
@@ -126,6 +162,12 @@ namespace Pharmacy_Management_System
             PanelCounter = 0;
             LBLPanel.Text = "0";
             TempPanel.Clear();
+        }
+
+        private void showDrugInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmShowDrugInfo DrugInfo = new FrmShowDrugInfo((int)DGVDrugs.CurrentRow.Cells[0].Value);
+            DrugInfo.Show();
         }
     }
 }

@@ -19,5 +19,13 @@ namespace Pharmacy_Management_System.Drug
             ctrlShowDrugInfo1._Drugs = clsBusinessDrugs.FindByDrugName(DrugName);
             ctrlShowDrugInfo1._LoadInCtrl();
         }
+
+        public FrmShowDrugInfo(int DrugID)
+        {
+            InitializeComponent();
+            ctrlShowDrugInfo1._Drugs = clsBusinessDrugs.FindByDrugID(DrugID);
+            ctrlShowDrugInfo1._LoadInCtrl();
+        }
+
     }
 }

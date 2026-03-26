@@ -61,6 +61,7 @@ namespace Pharmacy_Management_System.Stock
 
         private void _SetControlsInPanel()
         {
+            FlowPanel.Controls.Clear();
             DataTable Table = clsBusinessStockHistory.GetAllStock();
 
             foreach (DataRow item in Table.Rows)

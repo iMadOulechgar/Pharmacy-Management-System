@@ -26,7 +26,7 @@ namespace Pharmacy_Management_System.Drug.Controles
             LBLIsActive.Text = _Drugs.IsActive ? "Yes" : "No";
             LBLDrugForm.Text = _Drugs.DrugForms.DrugForm.ToString();
             LBLPricePerUnit.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).PerchasePrice.ToString();
-            LBLQuantity.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).Quantity.ToString();
+            LBLQuantity.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).TotalOfDrugs.ToString();
             PBpicture.Load(_Drugs.PicturePath);
         }
 

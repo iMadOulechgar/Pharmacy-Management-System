@@ -133,5 +133,34 @@ namespace DataAccessLayer
             return Result;
         }
 
+        public static int GetTheSumOfDrugsByDrugID(int DrugID)
+        {
+            int Result = 0;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT dbo.Func_GetTotalDrugsInStock(@DrugID)";
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@DrugID",DrugID);
+
+                    con.Open();
+
+                    object OBJ = cmd.ExecuteScalar();
+
+                    if (OBJ != null)
+                    {
+                        Result = (int)OBJ;
+                    }
+
+                }
+
+                return Result;
+            }
+        }
+
+
+
+
     }
 }

@@ -44,6 +44,7 @@
     <Compile Include="clsBusinessBatches.cs" />
     <Compile Include="clsBusinessDrugForms.cs" />
     <Compile Include="clsBusinessDrugs.cs" />
+    <Compile Include="clsBusinessInvoiceDetails.cs" />
     <Compile Include="clsBusinessInvoices.cs" />
     <Compile Include="clsBusinessRoles.cs" />
     <Compile Include="clsBusinessStockHistory.cs" />

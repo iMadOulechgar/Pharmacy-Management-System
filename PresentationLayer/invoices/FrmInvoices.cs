@@ -18,10 +18,34 @@ namespace Pharmacy_Management_System.Drug
             InitializeComponent();
         }
 
+        public event Action<string> DeleteFromBasket;
+
+        private void DeleteBasket(string Drugname)
+        {
+            DeleteFromBasket?.Invoke(Drugname);
+        }
+        
         public void SetControlesInPanel(CtLinvoiceDetails Det)
         {
             LayoutPanelInVoices.Controls.Add(Det);
         }
+
+        private void FrmInvoices_Load(object sender, EventArgs e)
+        {
+            CtLinvoiceDetails.Delete += DeleteBasket;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void BTNSave_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+
 
     }
 }

@@ -26,6 +26,7 @@ namespace BusinessLayer
         public DateTime ExpirationDate { get; set; }
         public DateTime CreatedAt { get; set; }
         public int CreatedByUserID { get; set; }
+        public int TotalOfDrugs { get; set; }
 
 
         public clsBusinessBatches()
@@ -50,6 +51,7 @@ namespace BusinessLayer
             this.DrugID = DrugID;
             this.CompDrugs = clsBusinessDrugs.FindByDrugID(DrugID);
             this.Quantity = Quantity;
+            this.TotalOfDrugs = clsDataAccessBatches.GetTheSumOfDrugsByDrugID(this.DrugID);
             this.PerchasePrice = PurchasePrice;
             this.SellingPrice = SellingPrice;
             this.ExpirationDate = ExpirationDate;

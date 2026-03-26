@@ -1,40 +1,69 @@
-﻿using System;
+﻿using Microsoft.SqlServer.Server;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Data.SqlTypes;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataAccessLayer
 {
-    public static class clsDataAccessInvoices
+    public static class clsDataAccessinvoices
     {
-
-        public static int TotalSales()
-        {
-            int Result = 0;
+        public static int AddInvoice(int NumbersOfDrugs , int PharmacistId , decimal TotalAmount , DateTime CreateAt)
+        {   
+            int InvoiceID = 0;
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "select Sum(TotalAmount) from Invoices;";
-
-                using (SqlCommand cmd = new SqlCommand(Query,con))
+                using (SqlCommand cmd = new SqlCommand("ST_InsertInvoice", con))
                 {
-                   con.Open();
+                    cmd.CommandType = CommandType.StoredProcedure;
 
-                   object Obj = cmd.ExecuteScalar();
+                    cmd.Parameters.AddWithValue("@InvoiceNumber", NumbersOfDrugs);
+                    cmd.Parameters.AddWithValue("@PharmacistID", PharmacistId);
+                    cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
+                    cmd.Parameters.AddWithValue("@CreatedAt", CreateAt);
 
-                   if (DBNull.Value != Obj)
-                   {
-                        Result = (int)Obj;
-                   }
-                       
+                    SqlParameter Output = new SqlParameter("@invoiceID", SqlDbType.Int)
+                    {
+                        Direction = ParameterDirection.Output
+                    };
+
+                    cmd.Parameters.Add(Output);
+                    con.Open();
+
+                    cmd.ExecuteNonQuery();
+
+                    InvoiceID = (int)cmd.Parameters["@invoiceID"].Value;
                 }
             }
 
-            return Result;  
+            return InvoiceID;
+        }
+
+        public static int GetTotalSales()
+        {
+            int result = 0;
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "select sum(TotalAmount) from Invoices";
+
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    con.Open();
+
+                    object OBJ = cmd.ExecuteScalar();
+
+                    if (DBNull.Value != OBJ)
+                    {
+                        result = Convert.ToInt32(OBJ);
+                    }
+                }
+            }
+            return result;
         }
 
 

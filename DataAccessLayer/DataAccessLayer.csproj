@@ -46,6 +46,7 @@
     <Compile Include="clsDataAccessDrugs.cs" />
     <Compile Include="clsDataAccessBatches.cs" />
     <Compile Include="clsDataAccessInvoices.cs" />
+    <Compile Include="clsDataAccessInvoicesDetails.cs" />
     <Compile Include="clsDataAccessRoles.cs" />
     <Compile Include="clsDataAccessStockHistory.cs" />
     <Compile Include="clsDataAccessUsers.cs" />
