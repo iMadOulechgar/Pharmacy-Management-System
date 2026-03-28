@@ -31,6 +31,7 @@ namespace Pharmacy_Management_System
         private int PanelCounter = 0;
         private List<Tuple<string, string, decimal, string, int,string>> TempPanel = new List<Tuple<string, string, decimal, string, int,string>>();
 
+
         private void DeleteFromBasket(string DrugName)
         {
             var item = TempPanel.Find(x => x.Item2 == DrugName);
@@ -124,6 +125,7 @@ namespace Pharmacy_Management_System
                 Invoices.SetControlesInPanel(Details);         
             }
 
+            Invoices.TupleHoldingData = new Tuple<int, int, decimal, DateTime>(TempPanel.Sum(x => x.Item5), clsCurrentUserLogin.CurrentUser.UserID, TempPanel.Sum(x => x.Item3), DateTime.Now);
             Invoices.ShowDialog();
         }
 
@@ -168,6 +170,11 @@ namespace Pharmacy_Management_System
         {
             FrmShowDrugInfo DrugInfo = new FrmShowDrugInfo((int)DGVDrugs.CurrentRow.Cells[0].Value);
             DrugInfo.Show();
+        }
+
+        private void TBSearch_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -30,6 +30,8 @@ namespace DataAccessLayer
                         cmd.Parameters.AddWithValue("@TotalAmount", TotalAmount);
                         cmd.Parameters.AddWithValue("@CreateAt", CreatedAt);
 
+                        con.Open();
+
                         Result = cmd.ExecuteNonQuery();
                     }
                 }
