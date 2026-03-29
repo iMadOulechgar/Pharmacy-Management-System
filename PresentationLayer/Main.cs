@@ -29,7 +29,7 @@ namespace Pharmacy_Management_System
         }
 
         private int PanelCounter = 0;
-        private List<Tuple<string, string, decimal, string, int,string>> TempPanel = new List<Tuple<string, string, decimal, string, int,string>>();
+        private List<Tuple<string, string, decimal, string, int,string,List<int>>> TempPanel = new List<Tuple<string, string, decimal, string, int,string, List<int>>>();
 
 
         private void DeleteFromBasket(string DrugName)
@@ -121,7 +121,7 @@ namespace Pharmacy_Management_System
             foreach (var item in TempPanel)
             {
                 Details = new CtLinvoiceDetails();
-                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5,item.Item6);
+                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5,item.Item6,item.Item7);
                 Invoices.SetControlesInPanel(Details);         
             }
 
@@ -145,9 +145,10 @@ namespace Pharmacy_Management_System
 
             if (TempPanel.Exists(OJ => OJ.Item2 == Drug.DrugName))
             {
-                Tuple<string, string, decimal, string, int, string> Item = TempPanel.Find(OJ => OJ.Item2 == Drug.DrugName);
+                Tuple<string, string, decimal, string, int, string,List<int>> Item = TempPanel.Find(OJ => OJ.Item2 == Drug.DrugName);
                 decimal TotalPrice = Item.Item3 + DrugBatch.SellingPrice;
-                var NewPanel = new Tuple<string, string, decimal, string, int, string>(Item.Item1, Item.Item2, TotalPrice, Item.Item4, Item.Item5 + 1, Item.Item6);
+                Item.Item7.Add(DrugBatch.ButchesID);
+                var NewPanel = new Tuple<string, string, decimal, string, int, string, List<int>>(Item.Item1, Item.Item2, TotalPrice, Item.Item4, Item.Item5 + 1, Item.Item6,Item.Item7);
                 TempPanel.Remove(Item);
                 TempPanel.Add(NewPanel);
                 return;
@@ -155,8 +156,8 @@ namespace Pharmacy_Management_System
 
             string Path = Drug.PicturePath, Drugname = Drug.DrugName, FormName = Drug.DrugForms.DrugForm, Username = clsCurrentUserLogin.CurrentUser.Username;
             decimal pricePerUnit = DrugBatch.SellingPrice;
-            TempPanel.Add(new Tuple<string, string,decimal, string, int,string>(Path, Drugname, pricePerUnit, FormName, 1,Username));
-            
+            int BatchIDFirstTime = DrugBatch.ButchesID;
+            TempPanel.Add(new Tuple<string, string, decimal, string, int, string, List<int>>(Path, Drugname, pricePerUnit, FormName, 1, Username, new List<int>{ BatchIDFirstTime }));
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

@@ -21,13 +21,15 @@ namespace Pharmacy_Management_System.invoices.Controles
         public static event Action<int,decimal> AfterDeleteItem;
         public static event Action<string> Delete;
 
+        public List<int> BatchID ;
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public int DrugID { get; set; }
 
 
-        public void SetDataIntoControl(string Path , string Drugname , decimal Price , string FormName , int Quantity,string Username)
+        public void SetDataIntoControl(string Path , string Drugname , decimal Price , string FormName , int Quantity,string Username,List<int>SendBatchID)
         {   
+            this.BatchID = new List<int>(SendBatchID);
             PBPath.Load(Path);
             LBLDrugname.Text = Drugname;
             LBLDrugForm.Text = FormName;
