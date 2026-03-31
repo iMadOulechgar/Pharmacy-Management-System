@@ -12,6 +12,12 @@ namespace Pharmacy_Management_System.Stock.Controles
 {
     public partial class StockHistoryctrl : UserControl
     {
+        public StockHistoryctrl()
+        {
+            InitializeComponent();
+        }
+
+
         public StockHistoryctrl(DateTime date, string action, int quantity, string userAction,string DrugName)
         {
             InitializeComponent();

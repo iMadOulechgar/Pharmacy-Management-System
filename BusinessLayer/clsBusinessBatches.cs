@@ -114,6 +114,22 @@ namespace BusinessLayer
             return false;   
         }
 
+        public static bool DescreaseQuantityByBatchID(int BatchID)
+        {
+            return clsDataAccessBatches.DecreaseTheQuantity(BatchID);
+        }
+
+        public static bool AddQuantityByBatchID(int BatchID)
+        {
+
+            return clsDataAccessBatches.ADDQuantity(BatchID);
+        }
+
+        public static DataTable GetAllDrugsAvailable(int DrugID)
+        {
+            return clsDataAccessBatches.GetTheAvailableDrugs(DrugID);
+        }
+
 
     }
 }

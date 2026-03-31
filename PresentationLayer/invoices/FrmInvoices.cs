@@ -57,6 +57,7 @@ namespace Pharmacy_Management_System.Drug
 
         private void BTNSave_Click(object sender, EventArgs e)
         {
+
             int InvoiceNum = 0;
             decimal PriceTotal = 0;
             DataTable Table = new DataTable();
@@ -72,14 +73,14 @@ namespace Pharmacy_Management_System.Drug
                 {
                     PriceTotal += CtlInvoice.Price;
                     InvoiceNum++;
-                    Table.Rows.Add(null, CtlInvoice.Quantity, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[0]);
+                    Table.Rows.Add(null, 1, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[0]);
                 }
                 else
                 {
                     for (int i = 0; i < CtlInvoice.BatchID.Count; i++)
                     {
                         InvoiceNum++;
-                        Table.Rows.Add(null, CtlInvoice.Quantity, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[i]);
+                        Table.Rows.Add(null, 1, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[i]);
                     }
                     PriceTotal += CtlInvoice.Price;
                 }

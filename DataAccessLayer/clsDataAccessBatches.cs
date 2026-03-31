@@ -100,7 +100,8 @@ namespace DataAccessLayer
 
             using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
             {
-                string Query = "select top 1 * from DrugBatches where Quantity > 0 and DrugID = @drugid order by BatchID ASC";
+                string Query = @"select * from DrugBatches where Quantity > 0 and DrugID = @drugid order by ExpirationDate ASC , BatchID ASC;";
+
 
                 using (SqlCommand cmd = new SqlCommand(Query,con))
                 {
@@ -133,6 +134,49 @@ namespace DataAccessLayer
             return Result;
         }
 
+        public static bool DecreaseTheQuantity(int BatchID){
+
+            int result = 0;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "update DrugBatches SET Quantity -= 1 where BatchID = @BatchID";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@BatchID", BatchID);
+
+                    con.Open();
+
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+
+            return (result != 0);
+        }
+
+        public static bool ADDQuantity(int BatchID)
+        {
+
+            int result = 0;
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "update DrugBatches SET Quantity += 1 where BatchID = @BatchID";
+
+                using (SqlCommand cmd = new SqlCommand(Query, con))
+                {
+                    cmd.Parameters.AddWithValue("@BatchID", BatchID);
+
+                    con.Open();
+
+                    result = cmd.ExecuteNonQuery();
+                }
+            }
+
+            return (result != 0);
+        }
+
         public static int GetTheSumOfDrugsByDrugID(int DrugID)
         {
             int Result = 0;
@@ -159,8 +203,27 @@ namespace DataAccessLayer
             }
         }
 
+        public static DataTable GetTheAvailableDrugs(int DrugID)
+        {
+            DataTable dt = new DataTable();
 
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = @"select * from DrugBatches where Quantity > 0 and DrugID = @drugid order by ExpirationDate ASC , BatchID ASC;";
+                
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@drugid", DrugID);
 
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+                    dt.Load(Reader);
+                }
+            }
+
+            return dt;
+        }
 
     }
 }

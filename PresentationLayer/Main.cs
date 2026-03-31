@@ -131,33 +131,7 @@ namespace Pharmacy_Management_System
 
         private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            if (TempPanel.Count == 0)
-            {
-                TempPanel.Clear();
-            }
-
-            int DrugID = (int)DGVDrugs.CurrentRow.Cells[0].Value;
-            clsBusinessDrugs Drug = clsBusinessDrugs.FindByDrugID(DrugID);
-            clsBusinessBatches DrugBatch = clsBusinessBatches.FindByDrugID(DrugID);
-
-            PanelCounter++;
-            LBLPanel.Text = PanelCounter.ToString();
-
-            if (TempPanel.Exists(OJ => OJ.Item2 == Drug.DrugName))
-            {
-                Tuple<string, string, decimal, string, int, string,List<int>> Item = TempPanel.Find(OJ => OJ.Item2 == Drug.DrugName);
-                decimal TotalPrice = Item.Item3 + DrugBatch.SellingPrice;
-                Item.Item7.Add(DrugBatch.ButchesID);
-                var NewPanel = new Tuple<string, string, decimal, string, int, string, List<int>>(Item.Item1, Item.Item2, TotalPrice, Item.Item4, Item.Item5 + 1, Item.Item6,Item.Item7);
-                TempPanel.Remove(Item);
-                TempPanel.Add(NewPanel);
-                return;
-            }
-
-            string Path = Drug.PicturePath, Drugname = Drug.DrugName, FormName = Drug.DrugForms.DrugForm, Username = clsCurrentUserLogin.CurrentUser.Username;
-            decimal pricePerUnit = DrugBatch.SellingPrice;
-            int BatchIDFirstTime = DrugBatch.ButchesID;
-            TempPanel.Add(new Tuple<string, string, decimal, string, int, string, List<int>>(Path, Drugname, pricePerUnit, FormName, 1, Username, new List<int>{ BatchIDFirstTime }));
+            
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)

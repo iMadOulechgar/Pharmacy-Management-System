@@ -104,3 +104,4 @@ D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\itext.bouncy-cas
 D:\(PMS)\Pharmacy Management System\PresentationLayer\bin\Debug\itext.bouncy-castle-fips-adapter.xml
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.invoices.Controles.CtLinvoiceDetails.resources
 D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.Drug.FrmInvoices.resources
+D:\(PMS)\Pharmacy Management System\PresentationLayer\obj\Debug\Pharmacy_Management_System.History.FrmHistory.resources

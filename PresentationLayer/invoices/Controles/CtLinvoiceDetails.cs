@@ -18,10 +18,9 @@ namespace Pharmacy_Management_System.invoices.Controles
             InitializeComponent();
         }
 
-        public static event Action<int,decimal> AfterDeleteItem;
         public static event Action<string> Delete;
 
-        public List<int> BatchID ;
+        public List<int> BatchID;
         public int Quantity { get; set; }
         public decimal Price { get; set; }
         public int DrugID { get; set; }
@@ -44,7 +43,6 @@ namespace Pharmacy_Management_System.invoices.Controles
         
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            AfterDeleteItem?.Invoke(int.Parse(LBLQuantity.Text),Convert.ToDecimal(LBLPricePerUnit.Text));
             Delete?.Invoke(LBLDrugname.Text);
             this.Dispose();
         }

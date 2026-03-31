@@ -142,6 +142,7 @@
     <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
     </Reference>
+    <Reference Include="System.Messaging" />
     <Reference Include="System.Numerics" />
     <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
@@ -193,6 +194,12 @@
     </Compile>
     <Compile Include="Drug\Controles\FindDrugctrl.Designer.cs">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="History\FrmHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="History\FrmHistory.Designer.cs">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
     </Compile>
     <Compile Include="invoices\Controles\CtLinvoiceDetails.cs">
       <SubType>UserControl</SubType>
@@ -306,6 +313,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Drug\Controles\FindDrugctrl.resx">
       <DependentUpon>FindDrugctrl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="History\FrmHistory.resx">
+      <DependentUpon>FrmHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="invoices\Controles\CtLinvoiceDetails.resx">
       <DependentUpon>CtLinvoiceDetails.cs</DependentUpon>
