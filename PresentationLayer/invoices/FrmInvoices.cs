@@ -23,12 +23,11 @@ namespace Pharmacy_Management_System.Drug
         }
 
         private clsBusinessInvoiceDetails _InvoiceDetails;
-        public Tuple<int, int, decimal, DateTime> TupleHoldingData;
-        public event Action<string> DeleteFromBasket;
+        public event Action<int> DeleteFromBasket;
 
-        private void DeleteBasket(string Drugname)
+        private void DeleteBasket(int DrugID)
         {
-            DeleteFromBasket?.Invoke(Drugname);
+            DeleteFromBasket?.Invoke(DrugID);
         }
         
         public void SetControlesInPanel(CtLinvoiceDetails Det)
@@ -46,53 +45,11 @@ namespace Pharmacy_Management_System.Drug
             this.Close();
         }
 
-        void FillDataIntoInvoiceDetailsTable(DataTable Table , int invoiceNum , decimal Price)
-        {
-            _InvoiceDetails.TableDetails = Table;
-            _InvoiceDetails.invoiceNumber = invoiceNum;
-            _InvoiceDetails.PharmacistID = clsCurrentUserLogin.CurrentUser.UserID;
-            _InvoiceDetails.Price = Price;
-            _InvoiceDetails.CreatedAt = DateTime.Now;
-        }
-
         private void BTNSave_Click(object sender, EventArgs e)
         {
 
-            int InvoiceNum = 0;
-            decimal PriceTotal = 0;
-            DataTable Table = new DataTable();
-            Table.Columns.Add("invoiceID",typeof(int));
-            Table.Columns.Add("Quantity", typeof(int));
-            Table.Columns.Add("Price", typeof(decimal));
-            Table.Columns.Add("DrugID", typeof(int));
-            Table.Columns.Add("BatchID", typeof(int));
 
-            foreach (CtLinvoiceDetails CtlInvoice in LayoutPanelInVoices.Controls.OfType<CtLinvoiceDetails>())
-            {
-                if (CtlInvoice.BatchID.Count == 1)
-                {
-                    PriceTotal += CtlInvoice.Price;
-                    InvoiceNum++;
-                    Table.Rows.Add(null, 1, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[0]);
-                }
-                else
-                {
-                    for (int i = 0; i < CtlInvoice.BatchID.Count; i++)
-                    {
-                        InvoiceNum++;
-                        Table.Rows.Add(null, 1, CtlInvoice.Price, CtlInvoice.DrugID, CtlInvoice.BatchID[i]);
-                    }
-                    PriceTotal += CtlInvoice.Price;
-                }
-            }
-            
-            FillDataIntoInvoiceDetailsTable(Table, InvoiceNum,PriceTotal);
 
-            if (_InvoiceDetails.Save())
-                MessageBox.Show("Data Saved Successfly");
-            else
-                MessageBox.Show("Invalid Data");
-            
 
         }
 

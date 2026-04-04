@@ -29,23 +29,11 @@ namespace Pharmacy_Management_System
         }
 
         private int PanelCounter = 0;
-        private List<Tuple<string, string, decimal, string, int,string,List<int>>> TempPanel = new List<Tuple<string, string, decimal, string, int,string, List<int>>>();
+        private List<CtLinvoiceDetails> TempPanel = new List<CtLinvoiceDetails>();
 
-
-        private void DeleteFromBasket(string DrugName)
+        private void DeleteFromBasket(int DrugID)
         {
-            var item = TempPanel.Find(x => x.Item2 == DrugName);
-
-            if (item != null)
-            {
-                if (item.Item5 > 1)
-                    PanelCounter -= item.Item5;
-                else
-                    PanelCounter -= 1;
-
-                LBLPanel.Text = PanelCounter.ToString();
-                TempPanel.Remove(item);
-            }
+            TempPanel.RemoveAll(Back => Back.DrugID == DrugID);
         }
 
         private void LoadData()
@@ -116,30 +104,40 @@ namespace Pharmacy_Management_System
             FrmInvoices Invoices = new FrmInvoices();
             Invoices.DeleteFromBasket += DeleteFromBasket;
 
-            CtLinvoiceDetails Details;
-
             foreach (var item in TempPanel)
             {
-                Details = new CtLinvoiceDetails();
-                Details.SetDataIntoControl(item.Item1,item.Item2,item.Item3,item.Item4,item.Item5,item.Item6,item.Item7);
-                Invoices.SetControlesInPanel(Details);         
+                Invoices.SetControlesInPanel(item);
             }
 
-            Invoices.TupleHoldingData = new Tuple<int, int, decimal, DateTime>(TempPanel.Sum(x => x.Item5), clsCurrentUserLogin.CurrentUser.UserID, TempPanel.Sum(x => x.Item3), DateTime.Now);
             Invoices.ShowDialog();
         }
 
         private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+            int DrugID = (int)DGVDrugs.CurrentRow.Cells[0].Value;
+            PanelCounter++;
+            LBLPanel.Text = PanelCounter.ToString();
+
+            if (TempPanel.Exists(Temp => Temp.DrugID == DrugID))
+            {
+                var Temp = TempPanel.Find(T => T.DrugID == DrugID);
+                Temp.SetBatches();
+                Temp._LoadData();
+            }
+            else
+            {
+                TempPanel.Add(new CtLinvoiceDetails(DrugID));
+                var Temp = TempPanel.Find(T => T.DrugID == DrugID);
+                Temp.SetBatches();
+                Temp._LoadData();
+            }
         }
 
         private void guna2Button1_Click(object sender, EventArgs e)
         {
             PanelCounter = 0;
             LBLPanel.Text = "0";
-            TempPanel.Clear();
-        }
+       }
 
         private void showDrugInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
