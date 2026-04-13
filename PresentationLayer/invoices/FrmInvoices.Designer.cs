@@ -41,7 +41,7 @@
             // 
             this.reflectionLabel1.BackgroundStyle.CornerType = DevComponents.DotNetBar.eCornerType.Square;
             this.reflectionLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.reflectionLabel1.Location = new System.Drawing.Point(458, 7);
+            this.reflectionLabel1.Location = new System.Drawing.Point(461, 7);
             this.reflectionLabel1.Name = "reflectionLabel1";
             this.reflectionLabel1.Size = new System.Drawing.Size(147, 52);
             this.reflectionLabel1.TabIndex = 8;
@@ -56,7 +56,7 @@
             this.BTNSave.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BTNSave.ForeColor = System.Drawing.Color.White;
             this.BTNSave.HoverState.Parent = this.BTNSave;
-            this.BTNSave.Location = new System.Drawing.Point(909, 452);
+            this.BTNSave.Location = new System.Drawing.Point(929, 452);
             this.BTNSave.Name = "BTNSave";
             this.BTNSave.ShadowDecoration.Parent = this.BTNSave;
             this.BTNSave.Size = new System.Drawing.Size(147, 45);
@@ -73,7 +73,7 @@
             this.guna2Button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button1.ForeColor = System.Drawing.Color.White;
             this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(756, 452);
+            this.guna2Button1.Location = new System.Drawing.Point(776, 452);
             this.guna2Button1.Name = "guna2Button1";
             this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
             this.guna2Button1.Size = new System.Drawing.Size(147, 45);
@@ -83,17 +83,18 @@
             // 
             // LayoutPanelInVoices
             // 
+            this.LayoutPanelInVoices.AutoScroll = true;
             this.LayoutPanelInVoices.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.LayoutPanelInVoices.Location = new System.Drawing.Point(12, 65);
             this.LayoutPanelInVoices.Name = "LayoutPanelInVoices";
-            this.LayoutPanelInVoices.Size = new System.Drawing.Size(1040, 381);
+            this.LayoutPanelInVoices.Size = new System.Drawing.Size(1061, 381);
             this.LayoutPanelInVoices.TabIndex = 11;
             // 
             // FrmInvoices
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1063, 506);
+            this.ClientSize = new System.Drawing.Size(1094, 506);
             this.Controls.Add(this.LayoutPanelInVoices);
             this.Controls.Add(this.guna2Button1);
             this.Controls.Add(this.BTNSave);

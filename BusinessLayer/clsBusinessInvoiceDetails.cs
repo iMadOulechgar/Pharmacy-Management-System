@@ -11,7 +11,7 @@ namespace BusinessLayer
 {
     public class clsBusinessInvoiceDetails
     {
-        public DataTable TableDetails { get; set; }
+        public DataTable TableDetails = new DataTable();
         public int PharmacistID {  get; set; }
         public int invoiceNumber { get; set; }
         public decimal Price { get; set; }

@@ -18,6 +18,5 @@ namespace Pharmacy_Management_System.Validation_AllSettings
                 return BitConverter.ToString(hashbyte).Replace("-", "").ToLower();
             }
         }
-
     }
 }

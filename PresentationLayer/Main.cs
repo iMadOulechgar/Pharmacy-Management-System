@@ -34,6 +34,8 @@ namespace Pharmacy_Management_System
         private void DeleteFromBasket(int DrugID)
         {
             TempPanel.RemoveAll(Back => Back.DrugID == DrugID);
+            PanelCounter--;
+            LBLPanel.Text = PanelCounter.ToString();
         }
 
         private void LoadData()
@@ -115,29 +117,43 @@ namespace Pharmacy_Management_System
         private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
         {
             int DrugID = (int)DGVDrugs.CurrentRow.Cells[0].Value;
-            PanelCounter++;
-            LBLPanel.Text = PanelCounter.ToString();
+            clsBusinessBatches Checker = clsBusinessBatches.FindByDrugID(DrugID);
 
-            if (TempPanel.Exists(Temp => Temp.DrugID == DrugID))
+            if (Checker != null)
             {
-                var Temp = TempPanel.Find(T => T.DrugID == DrugID);
-                Temp.SetBatches();
-                Temp._LoadData();
+                PanelCounter++;
+                LBLPanel.Text = PanelCounter.ToString();
+
+                if (TempPanel.Exists(Temp => Temp.DrugID == DrugID))
+                {
+                    CtLinvoiceDetails Temp = TempPanel.Find(T => T.DrugID == DrugID);
+
+                    if ((clsBusinessBatches.SumOfDrugs(Temp.DrugID) - Temp.Quantity) == 0)
+                    {
+                        PanelCounter--;
+                        LBLPanel.Text = PanelCounter.ToString();
+                        MessageBox.Show("The Drug Is Out Of Stock Now ! , Report For More Quantity Please . ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        return;
+                    }
+
+                    Temp.SetBatches();
+                    Temp._LoadData();
+                }
+                else
+                {
+                    TempPanel.Add(new CtLinvoiceDetails(DrugID));
+                    CtLinvoiceDetails Temp = TempPanel.Find(T => T.DrugID == DrugID);
+                    Temp.SetBatches();
+                    Temp._LoadData();
+                }
             }
             else
             {
-                TempPanel.Add(new CtLinvoiceDetails(DrugID));
-                var Temp = TempPanel.Find(T => T.DrugID == DrugID);
-                Temp.SetBatches();
-                Temp._LoadData();
+                MessageBox.Show("The Drug Is Not In The Stock Any More Please report For More ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-        }
 
-        private void guna2Button1_Click(object sender, EventArgs e)
-        {
-            PanelCounter = 0;
-            LBLPanel.Text = "0";
-       }
+
+        }
 
         private void showDrugInfoToolStripMenuItem_Click(object sender, EventArgs e)
         {

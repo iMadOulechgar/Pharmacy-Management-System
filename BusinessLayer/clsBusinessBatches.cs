@@ -130,6 +130,10 @@ namespace BusinessLayer
             return clsDataAccessBatches.GetTheAvailableDrugs(DrugID);
         }
 
+        public static int SumOfDrugs(int DrugID)
+        {
+            return clsDataAccessBatches.GetTheSumOfDrugsByDrugID(DrugID);
+        }
 
     }
 }

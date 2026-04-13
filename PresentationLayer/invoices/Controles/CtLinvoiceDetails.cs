@@ -30,31 +30,53 @@ namespace Pharmacy_Management_System.invoices.Controles
         }
 
         public static event Action<int> Delete;
-        public List<int> BatchID;
+        public List<Tuple<int,decimal,int,int>> Cards = new List<Tuple<int, decimal, int, int>>();
+
+        public void _RestDataTooDefault()
+        {
+            Cards.Clear();
+            this.Quantity = 0;
+            this.DrugID = 0;
+        } 
 
         public void SetBatches()
         {
+            DataRow Row = TempTable.AsEnumerable().FirstOrDefault(R => (int)R["Quantity"] > 0);
 
-            DataView DT = TempTable.DefaultView;
-            DT.RowFilter = $"Quantity > 0 AND DrugID = {DrugID}";
-            TempTable = DT.ToTable();
+            if(Row != null)
+            {
+                int BatchID = (int)Row[0];
+                decimal Price = Convert.ToDecimal(Row[4]);
+                int DrugID = (int)Row[1];
+                this.Quantity += 1;
 
-            BatchID.Add((int)TempTable.Rows[0][0]);
-            int TempQuantity = (int)TempTable.Rows[0][2];
-            TempTable.Rows[0][2] = TempQuantity - 1;
+                Row["Quantity"] = (int)Row["Quantity"] - 1;
+
+                if (Cards.Exists(Ex => Ex.Item4 == BatchID))
+                {
+                    var Temp = Cards.Find(Ex => Ex.Item4 == BatchID);
+                    Cards.Remove(Temp);
+                    Cards.Add(new Tuple<int, decimal, int, int>(Temp.Item1 + 1, Convert.ToDecimal(Row[4]) + Price, DrugID, BatchID));
+                }
+                else
+                {
+                    Cards.Add(new Tuple<int, decimal, int, int>(1, Price, DrugID, BatchID));
+                }
+            }
         }
 
         public int DrugID { get; set; }
+        public int Quantity { get; set; }
 
         public void _LoadData()
         {
-            clsBusinessDrugs Drugs = clsBusinessDrugs.FindByDrugID(DrugID);
-            PBPath.Load(Drugs.PicturePath);
-            LBLDrugname.Text = Drugs.DrugName;
-            LBLDrugForm.Text = Drugs.DrugForms.DrugForm.ToString();
-            LBLPricePerUnit.Text = Convert.ToDecimal(clsBusinessBatches.FindByDrugID(DrugID).SellingPrice).ToString();
-            LBLUsername.Text = clsCurrentUserLogin.CurrentUser.Username.ToString();
-            LBLQuantity.Text = BatchID.Count.ToString();
+                clsBusinessDrugs Drugs = clsBusinessDrugs.FindByDrugID(DrugID);
+                PBPath.Load(Drugs.PicturePath);
+                LBLDrugname.Text = Drugs.DrugName;
+                LBLDrugForm.Text = Drugs.DrugForms.DrugForm.ToString();
+                LBLUsername.Text = clsCurrentUserLogin.CurrentUser.Username.ToString();
+                LBLPricePerUnit.Text = Convert.ToDecimal(clsBusinessBatches.FindByDrugID(DrugID).SellingPrice * Quantity).ToString();
+                LBLQuantity.Text = Quantity.ToString();
         }
 
         private void linkLabel1_LinkClicked_1(object sender, LinkLabelLinkClickedEventArgs e)
