@@ -25,8 +25,18 @@ namespace Pharmacy_Management_System.Drug.Controles
             LBLDrugName.Text = _Drugs.DrugName;
             LBLIsActive.Text = _Drugs.IsActive ? "Yes" : "No";
             LBLDrugForm.Text = _Drugs.DrugForms.DrugForm.ToString();
-            LBLPricePerUnit.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).PerchasePrice.ToString();
-            LBLQuantity.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).TotalOfDrugs.ToString();
+
+            if (clsBusinessBatches.FindByDrugID(_Drugs.DrugId) == null)
+            {
+                LBLPricePerUnit.Text = "Not In The Stock Any More";
+                LBLQuantity.Text = "0";
+            }
+            else
+            {
+                LBLPricePerUnit.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).PerchasePrice.ToString();
+                LBLQuantity.Text = clsBusinessBatches.FindByDrugID(_Drugs.DrugId).TotalOfDrugs.ToString();
+            }
+                
             PBpicture.Load(_Drugs.PicturePath);
         }
 

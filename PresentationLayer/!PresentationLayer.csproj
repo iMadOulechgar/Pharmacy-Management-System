@@ -207,6 +207,12 @@
     <Compile Include="invoices\Controles\CtLinvoiceDetails.Designer.cs">
       <DependentUpon>CtLinvoiceDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="invoices\Controles\CtrlInvoiceHistoryDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="invoices\Controles\CtrlInvoiceHistoryDetails.Designer.cs">
+      <DependentUpon>CtrlInvoiceHistoryDetails.cs</DependentUpon>
+    </Compile>
     <Compile Include="invoices\FrmInvoices.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -224,12 +230,6 @@
     </Compile>
     <Compile Include="Drug\FrmShowDrugInfo.Designer.cs">
       <DependentUpon>FrmShowDrugInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="History\Controles\CtrlDesign.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="History\Controles\CtrlDesign.Designer.cs">
-      <DependentUpon>CtrlDesign.cs</DependentUpon>
     </Compile>
     <Compile Include="Login\clsCurrentUserLogin.cs" />
     <Compile Include="Login\LoginFrm.cs">
@@ -320,6 +320,9 @@
     <EmbeddedResource Include="invoices\Controles\CtLinvoiceDetails.resx">
       <DependentUpon>CtLinvoiceDetails.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="invoices\Controles\CtrlInvoiceHistoryDetails.resx">
+      <DependentUpon>CtrlInvoiceHistoryDetails.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="invoices\FrmInvoices.resx">
       <DependentUpon>FrmInvoices.cs</DependentUpon>
     </EmbeddedResource>
@@ -328,9 +331,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Drug\FrmShowDrugInfo.resx">
       <DependentUpon>FrmShowDrugInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="History\Controles\CtrlDesign.resx">
-      <DependentUpon>CtrlDesign.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login\LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
@@ -551,6 +551,8 @@
   <ItemGroup>
     <None Include="Resources\icons8-available-stock-100.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="History\Controles\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

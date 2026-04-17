@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
 using Pharmacy_Management_System.Drug;
+using Pharmacy_Management_System.History;
 using Pharmacy_Management_System.invoices.Controles;
 using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Notification.Controles;
@@ -30,6 +31,12 @@ namespace Pharmacy_Management_System
 
         private int PanelCounter = 0;
         private List<CtLinvoiceDetails> TempPanel = new List<CtLinvoiceDetails>();
+
+        private void ResTheCounter()
+        {
+            PanelCounter = 0;
+            LBLPanel.Text = PanelCounter.ToString();
+        }
 
         private void DeleteFromBasket(int DrugID)
         {
@@ -104,7 +111,9 @@ namespace Pharmacy_Management_System
         private void guna2CircleButton1_Click(object sender, EventArgs e)
         {
             FrmInvoices Invoices = new FrmInvoices();
+
             Invoices.DeleteFromBasket += DeleteFromBasket;
+            Invoices.Rest += ResTheCounter;
 
             foreach (var item in TempPanel)
             {
@@ -164,6 +173,19 @@ namespace Pharmacy_Management_System
         private void TBSearch_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void NotificationBTN_Click(object sender, EventArgs e)
+        {
+            NotificationPic.Visible = !(NotificationPic.Visible);
+            LayoutPanelNotification.Visible = !(LayoutPanelNotification.Visible);
+            LayoutPanelNotification.BringToFront();
+        }
+
+        private void guna2GradientButton3_Click(object sender, EventArgs e)
+        {
+            FrmHistory History = new FrmHistory();
+            History.ShowDialog();
         }
     }
 }

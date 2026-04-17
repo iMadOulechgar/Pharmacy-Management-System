@@ -66,7 +66,25 @@ namespace DataAccessLayer
             return result;
         }
 
+        public static DataTable GetHistoryOFInvoices()
+        {
+            DataTable Dt = new DataTable();
 
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM InvoiceHistory_V;";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    con.Open();
+
+                    SqlDataReader Read = cmd.ExecuteReader();
+                    Dt.Load(Read);
+                }
+            }
+
+            return Dt;
+        }
 
 
 

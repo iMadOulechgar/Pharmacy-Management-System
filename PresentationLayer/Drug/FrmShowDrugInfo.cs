@@ -23,8 +23,14 @@ namespace Pharmacy_Management_System.Drug
         public FrmShowDrugInfo(int DrugID)
         {
             InitializeComponent();
+
             ctrlShowDrugInfo1._Drugs = clsBusinessDrugs.FindByDrugID(DrugID);
-            ctrlShowDrugInfo1._LoadInCtrl();
+            if (ctrlShowDrugInfo1._Drugs != null)
+                ctrlShowDrugInfo1._LoadInCtrl();
+            else
+                MessageBox.Show("The Drug Is Not Found ): ");
+
+            
         }
 
     }

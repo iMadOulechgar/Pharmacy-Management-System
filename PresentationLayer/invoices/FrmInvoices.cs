@@ -23,8 +23,8 @@ namespace Pharmacy_Management_System.Drug
 
         private clsBusinessInvoiceDetails _InvoiceDetails = new clsBusinessInvoiceDetails();
 
-
         public event Action<int> DeleteFromBasket;
+        public event Action Rest;
 
         private void DeleteBasket(int DrugID)
         {
@@ -54,8 +54,8 @@ namespace Pharmacy_Management_System.Drug
                     Price += Card.Item2;
                     TotalDrugs += Card.Item1;
                     _InvoiceDetails.TableDetails.Rows.Add(null,Card.Item1,Card.Item2,Card.Item3,Card.Item4);
-                    item._RestDataTooDefault();
                 }
+                item._RestDataTooDefault();
             }
 
             _InvoiceDetails.PharmacistID = clsCurrentUserLogin.CurrentUser.UserID;
@@ -66,10 +66,10 @@ namespace Pharmacy_Management_System.Drug
             if (_InvoiceDetails.Save())
             {
                 LayoutPanelInVoices.Controls.Clear();
+                Rest?.Invoke();
+
                 return true;
             }
-
-
 
             return false;
         }

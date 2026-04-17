@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -42,6 +43,11 @@ namespace BusinessLayer
         public static int GetTotalSales()
         {
             return clsDataAccessinvoices.GetTotalSales();
+        }
+
+        public static DataTable GetAllDataHistoryOfInvoices()
+        {
+            return clsDataAccessinvoices.GetHistoryOFInvoices();
         }
 
     }
