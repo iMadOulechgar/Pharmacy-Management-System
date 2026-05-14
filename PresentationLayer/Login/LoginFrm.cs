@@ -49,6 +49,7 @@ namespace Pharmacy_Management_System.Login
                     }
 
                     DashBoard.ShowDialog();
+                    this.Close();
                 }   
                 else
                     MessageBox.Show("The User Is Not Active Contact Admin . ", "Login Faild", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);

@@ -1,10 +1,12 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
+using iText.StyledXmlParser.Jsoup.Safety;
 using Pharmacy_Management_System.Drug;
 using Pharmacy_Management_System.History;
 using Pharmacy_Management_System.invoices.Controles;
 using Pharmacy_Management_System.Login;
 using Pharmacy_Management_System.Notification.Controles;
+using Pharmacy_Management_System.Properties;
 using Pharmacy_Management_System.Stock;
 using Pharmacy_Management_System.Users;
 using Pharmacy_Management_System.Validation_AllSettings;
@@ -57,14 +59,67 @@ namespace Pharmacy_Management_System
             }
         }
 
+        private void Permissions()
+        {
+            string PermissionAllowed = clsBusinessRoles.GetRoleNameByID(clsCurrentUserLogin.CurrentUser.RoleID);
+
+            switch (PermissionAllowed)
+            {
+                case "Pharmacist":
+
+                    TabUsers.Enabled = false;
+                    TabUsers.FillColor = Color.LightGray;
+                    PBUsers.Image = Resources.icons8_lock_100;
+                    TabStock.Enabled = false;
+                    TabStock.FillColor = Color.LightGray;
+                    PBStock.Image = Resources.icons8_lock_100;
+                    TabHistory.Enabled = false;
+                    TabHistory.FillColor = Color.LightGray;
+                    PBHistory.Image = Resources.icons8_lock_100;
+                    break;
+
+                case "StockManager":
+                    TabUsers.Enabled = false;
+                    TabUsers.FillColor = Color.LightGray;
+                    PBUsers.Image = Resources.icons8_lock_100;
+                    TabHistory.Enabled = false;
+                    TabHistory.FillColor = Color.LightGray;
+                    PBHistory.Image = Resources.icons8_lock_100;
+                    break;
+            }
+        }
+
         public void ChangeUiPictureBoxForCurrentUser(string Path)
         {
             ProfilePicture.Load(Path);
         }
 
+        public void ReLoadNotificationInfo()
+        {
+            ctlNotification Notification;
+            DataTable Temp = clsBusinessBatches.GetAllBatches();
+            DataRow[] Row = Temp.AsEnumerable().Where(R => (int)R["Quantity"] <= 10).ToArray();
+
+            if (Row.Length > 0)
+            {
+                foreach (DataRow Rw in Row)
+                {
+                    Notification = new ctlNotification();
+
+                }
+
+
+            }
+
+
+
+
+        }
+
         private void _FillUserDataInLoad()
         {
             LoadData();
+            Permissions();
             LBLUser.Text = clsCurrentUserLogin.CurrentUser.Username;
             LBLRole.Text = clsCurrentUserLogin.CurrentUser.CompositionRoles.RoleName;
             ProfilePicture.Load(clsCurrentUserLogin.CurrentUser.ImagePath);
@@ -84,6 +139,7 @@ namespace Pharmacy_Management_System
         {
             this.Close();
         }
+
         private void Main_Load(object sender, EventArgs e)
         {
             _FillUserDataInLoad();
@@ -94,7 +150,7 @@ namespace Pharmacy_Management_System
             MainStockForm frm = new MainStockForm();
             frm.ShowDialog();
         }
-
+        
         private void guna2GradientButton7_Click(object sender, EventArgs e)
         {
             frmManageUsers Users = new frmManageUsers();

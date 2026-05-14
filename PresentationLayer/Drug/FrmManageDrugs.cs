@@ -23,6 +23,8 @@ namespace Pharmacy_Management_System.Drug
 
         private void LoadData()
         {   
+            DGVDrugs.Rows.Clear();
+
             DataTable Drugs = clsBusinessDrugs.GetDrugs();
             DGVDrugs.RowTemplate.Height = 50;
 

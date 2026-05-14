@@ -22,6 +22,7 @@ namespace Pharmacy_Management_System.Notification.Controles
         {
             LBLTitle.Text = Title;
             LBLDesc.Text = Description;
+
         }
 
 

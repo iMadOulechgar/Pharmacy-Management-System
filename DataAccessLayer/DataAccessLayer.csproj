@@ -47,6 +47,7 @@
     <Compile Include="clsDataAccessBatches.cs" />
     <Compile Include="clsDataAccessInvoices.cs" />
     <Compile Include="clsDataAccessInvoicesDetails.cs" />
+    <Compile Include="clsDataAccessNotification.cs" />
     <Compile Include="clsDataAccessRoles.cs" />
     <Compile Include="clsDataAccessStockHistory.cs" />
     <Compile Include="clsDataAccessUsers.cs" />

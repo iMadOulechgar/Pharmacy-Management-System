@@ -554,5 +554,11 @@
   <ItemGroup>
     <Folder Include="History\Controles\" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-unlock-100.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-lock-100.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

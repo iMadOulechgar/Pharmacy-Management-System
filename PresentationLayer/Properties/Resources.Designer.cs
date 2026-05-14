@@ -203,6 +203,16 @@ namespace Pharmacy_Management_System.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap icons8_lock_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-lock-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap icons8_notification_40 {
             get {
                 object obj = ResourceManager.GetObject("icons8-notification-40", resourceCulture);
@@ -396,6 +406,16 @@ namespace Pharmacy_Management_System.Properties {
         internal static System.Drawing.Bitmap icons8_true_false_100 {
             get {
                 object obj = ResourceManager.GetObject("icons8-true-false-100", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap icons8_unlock_100 {
+            get {
+                object obj = ResourceManager.GetObject("icons8-unlock-100", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

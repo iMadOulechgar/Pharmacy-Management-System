@@ -42,16 +42,15 @@
             this.LBLUser = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.guna2GradientButton3 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.TabHistory = new Guna.UI2.WinForms.Guna2GradientButton();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.guna2GradientButton2 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton9 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton8 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton7 = new Guna.UI2.WinForms.Guna2GradientButton();
-            this.guna2GradientButton4 = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.TabStock = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.TabUsers = new Guna.UI2.WinForms.Guna2GradientButton();
+            this.TabDrugs = new Guna.UI2.WinForms.Guna2GradientButton();
             this.guna2GradientButton1 = new Guna.UI2.WinForms.Guna2GradientButton();
             this.LayoutPanelNotification = new System.Windows.Forms.FlowLayoutPanel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.reflectionLabel1 = new DevComponents.DotNetBar.Controls.ReflectionLabel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.LBLTotlaDrugs2 = new System.Windows.Forms.Label();
@@ -87,10 +86,13 @@
             this.NotificationPic = new System.Windows.Forms.PictureBox();
             this.bunifuTextbox1 = new Bunifu.Framework.UI.BunifuTextbox();
             this.guna2GradientCircleButton1 = new Guna.UI2.WinForms.Guna2GradientCircleButton();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.PBHistory = new System.Windows.Forms.PictureBox();
+            this.PBStock = new System.Windows.Forms.PictureBox();
+            this.PBDashboard = new System.Windows.Forms.PictureBox();
+            this.PBDrugs = new System.Windows.Forms.PictureBox();
+            this.PBUsers = new System.Windows.Forms.PictureBox();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
@@ -98,6 +100,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.LayoutPanelNotification.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             this.guna2Panel2.SuspendLayout();
             this.guna2Panel3.SuspendLayout();
@@ -108,10 +111,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBHistory)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBStock)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDashboard)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDrugs)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
@@ -219,44 +225,45 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.panel2.Controls.Add(this.pictureBox7);
             this.panel2.Controls.Add(this.pictureBox8);
             this.panel2.Controls.Add(this.pictureBox4);
-            this.panel2.Controls.Add(this.pictureBox6);
+            this.panel2.Controls.Add(this.PBHistory);
+            this.panel2.Controls.Add(this.PBStock);
+            this.panel2.Controls.Add(this.PBDashboard);
+            this.panel2.Controls.Add(this.PBDrugs);
+            this.panel2.Controls.Add(this.PBUsers);
             this.panel2.Controls.Add(this.pictureBox5);
             this.panel2.Controls.Add(this.pictureBox3);
             this.panel2.Controls.Add(this.pictureBox2);
-            this.panel2.Controls.Add(this.guna2GradientButton3);
+            this.panel2.Controls.Add(this.TabHistory);
             this.panel2.Controls.Add(this.panel3);
-            this.panel2.Controls.Add(this.guna2GradientButton2);
-            this.panel2.Controls.Add(this.guna2GradientButton9);
-            this.panel2.Controls.Add(this.guna2GradientButton8);
-            this.panel2.Controls.Add(this.guna2GradientButton7);
-            this.panel2.Controls.Add(this.guna2GradientButton4);
+            this.panel2.Controls.Add(this.TabStock);
+            this.panel2.Controls.Add(this.TabUsers);
+            this.panel2.Controls.Add(this.TabDrugs);
             this.panel2.Controls.Add(this.guna2GradientButton1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(283, 771);
             this.panel2.TabIndex = 0;
             // 
-            // guna2GradientButton3
+            // TabHistory
             // 
-            this.guna2GradientButton3.CheckedState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton3.CustomImages.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton3.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton3.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton3.HoverState.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Location = new System.Drawing.Point(54, 625);
-            this.guna2GradientButton3.Name = "guna2GradientButton3";
-            this.guna2GradientButton3.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton3.ShadowDecoration.Parent = this.guna2GradientButton3;
-            this.guna2GradientButton3.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton3.TabIndex = 1;
-            this.guna2GradientButton3.Text = "History";
-            this.guna2GradientButton3.Click += new System.EventHandler(this.guna2GradientButton3_Click);
+            this.TabHistory.CheckedState.Parent = this.TabHistory;
+            this.TabHistory.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TabHistory.CustomImages.Parent = this.TabHistory;
+            this.TabHistory.FillColor = System.Drawing.Color.Transparent;
+            this.TabHistory.FillColor2 = System.Drawing.Color.Silver;
+            this.TabHistory.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabHistory.ForeColor = System.Drawing.Color.LightGray;
+            this.TabHistory.HoverState.Parent = this.TabHistory;
+            this.TabHistory.Location = new System.Drawing.Point(63, 680);
+            this.TabHistory.Name = "TabHistory";
+            this.TabHistory.PressedColor = System.Drawing.Color.Transparent;
+            this.TabHistory.ShadowDecoration.Parent = this.TabHistory;
+            this.TabHistory.Size = new System.Drawing.Size(199, 45);
+            this.TabHistory.TabIndex = 1;
+            this.TabHistory.Text = "History";
+            this.TabHistory.Click += new System.EventHandler(this.guna2GradientButton3_Click);
             // 
             // panel3
             // 
@@ -280,98 +287,62 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "iMad Pharmacy";
             // 
-            // guna2GradientButton2
+            // TabStock
             // 
-            this.guna2GradientButton2.CheckedState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton2.CustomImages.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton2.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton2.HoverState.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Location = new System.Drawing.Point(54, 454);
-            this.guna2GradientButton2.Name = "guna2GradientButton2";
-            this.guna2GradientButton2.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton2.ShadowDecoration.Parent = this.guna2GradientButton2;
-            this.guna2GradientButton2.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton2.TabIndex = 1;
-            this.guna2GradientButton2.Text = "Stock";
-            this.guna2GradientButton2.Click += new System.EventHandler(this.guna2GradientButton2_Click);
+            this.TabStock.CheckedState.Parent = this.TabStock;
+            this.TabStock.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TabStock.CustomImages.Parent = this.TabStock;
+            this.TabStock.FillColor = System.Drawing.Color.Transparent;
+            this.TabStock.FillColor2 = System.Drawing.Color.Silver;
+            this.TabStock.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabStock.ForeColor = System.Drawing.Color.LightGray;
+            this.TabStock.HoverState.Parent = this.TabStock;
+            this.TabStock.Location = new System.Drawing.Point(54, 420);
+            this.TabStock.Name = "TabStock";
+            this.TabStock.PressedColor = System.Drawing.Color.Transparent;
+            this.TabStock.ShadowDecoration.Parent = this.TabStock;
+            this.TabStock.Size = new System.Drawing.Size(199, 45);
+            this.TabStock.TabIndex = 1;
+            this.TabStock.Text = "Stock";
+            this.TabStock.Click += new System.EventHandler(this.guna2GradientButton2_Click);
             // 
-            // guna2GradientButton9
+            // TabUsers
             // 
-            this.guna2GradientButton9.CheckedState.Parent = this.guna2GradientButton9;
-            this.guna2GradientButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton9.CustomImages.Parent = this.guna2GradientButton9;
-            this.guna2GradientButton9.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton9.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton9.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton9.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton9.HoverState.Parent = this.guna2GradientButton9;
-            this.guna2GradientButton9.Location = new System.Drawing.Point(54, 692);
-            this.guna2GradientButton9.Name = "guna2GradientButton9";
-            this.guna2GradientButton9.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton9.ShadowDecoration.Parent = this.guna2GradientButton9;
-            this.guna2GradientButton9.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton9.TabIndex = 1;
-            this.guna2GradientButton9.Text = "Settings";
+            this.TabUsers.CheckedState.Parent = this.TabUsers;
+            this.TabUsers.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TabUsers.CustomImages.Parent = this.TabUsers;
+            this.TabUsers.FillColor = System.Drawing.Color.Transparent;
+            this.TabUsers.FillColor2 = System.Drawing.Color.Silver;
+            this.TabUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabUsers.ForeColor = System.Drawing.Color.LightGray;
+            this.TabUsers.HoverState.Parent = this.TabUsers;
+            this.TabUsers.Location = new System.Drawing.Point(54, 323);
+            this.TabUsers.Name = "TabUsers";
+            this.TabUsers.PressedColor = System.Drawing.Color.Transparent;
+            this.TabUsers.ShadowDecoration.Parent = this.TabUsers;
+            this.TabUsers.Size = new System.Drawing.Size(199, 45);
+            this.TabUsers.TabIndex = 1;
+            this.TabUsers.Text = "Users";
+            this.TabUsers.Click += new System.EventHandler(this.guna2GradientButton7_Click);
             // 
-            // guna2GradientButton8
+            // TabDrugs
             // 
-            this.guna2GradientButton8.CheckedState.Parent = this.guna2GradientButton8;
-            this.guna2GradientButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton8.CustomImages.Parent = this.guna2GradientButton8;
-            this.guna2GradientButton8.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton8.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton8.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton8.HoverState.Parent = this.guna2GradientButton8;
-            this.guna2GradientButton8.Location = new System.Drawing.Point(54, 371);
-            this.guna2GradientButton8.Name = "guna2GradientButton8";
-            this.guna2GradientButton8.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton8.ShadowDecoration.Parent = this.guna2GradientButton8;
-            this.guna2GradientButton8.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton8.TabIndex = 1;
-            this.guna2GradientButton8.Text = "Reports";
-            // 
-            // guna2GradientButton7
-            // 
-            this.guna2GradientButton7.CheckedState.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton7.CustomImages.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton7.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton7.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton7.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton7.HoverState.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Location = new System.Drawing.Point(54, 288);
-            this.guna2GradientButton7.Name = "guna2GradientButton7";
-            this.guna2GradientButton7.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton7.ShadowDecoration.Parent = this.guna2GradientButton7;
-            this.guna2GradientButton7.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton7.TabIndex = 1;
-            this.guna2GradientButton7.Text = "Users";
-            this.guna2GradientButton7.Click += new System.EventHandler(this.guna2GradientButton7_Click);
-            // 
-            // guna2GradientButton4
-            // 
-            this.guna2GradientButton4.CheckedState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.guna2GradientButton4.CustomImages.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.FillColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton4.FillColor2 = System.Drawing.Color.Silver;
-            this.guna2GradientButton4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2GradientButton4.ForeColor = System.Drawing.Color.LightGray;
-            this.guna2GradientButton4.HoverState.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Location = new System.Drawing.Point(54, 204);
-            this.guna2GradientButton4.Name = "guna2GradientButton4";
-            this.guna2GradientButton4.PressedColor = System.Drawing.Color.Transparent;
-            this.guna2GradientButton4.ShadowDecoration.Parent = this.guna2GradientButton4;
-            this.guna2GradientButton4.Size = new System.Drawing.Size(199, 45);
-            this.guna2GradientButton4.TabIndex = 1;
-            this.guna2GradientButton4.Text = "Drugs";
-            this.guna2GradientButton4.Click += new System.EventHandler(this.guna2GradientButton4_Click);
+            this.TabDrugs.CheckedState.Parent = this.TabDrugs;
+            this.TabDrugs.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.TabDrugs.CustomImages.Parent = this.TabDrugs;
+            this.TabDrugs.FillColor = System.Drawing.Color.Transparent;
+            this.TabDrugs.FillColor2 = System.Drawing.Color.Silver;
+            this.TabDrugs.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TabDrugs.ForeColor = System.Drawing.Color.LightGray;
+            this.TabDrugs.HoverState.Parent = this.TabDrugs;
+            this.TabDrugs.Location = new System.Drawing.Point(54, 223);
+            this.TabDrugs.Name = "TabDrugs";
+            this.TabDrugs.PressedColor = System.Drawing.Color.Transparent;
+            this.TabDrugs.ShadowDecoration.Parent = this.TabDrugs;
+            this.TabDrugs.Size = new System.Drawing.Size(199, 45);
+            this.TabDrugs.TabIndex = 1;
+            this.TabDrugs.Text = "Drugs";
+            this.TabDrugs.Click += new System.EventHandler(this.guna2GradientButton4_Click);
             // 
             // guna2GradientButton1
             // 
@@ -398,6 +369,7 @@
             // 
             this.LayoutPanelNotification.AutoScroll = true;
             this.LayoutPanelNotification.BackColor = System.Drawing.Color.White;
+            this.LayoutPanelNotification.Controls.Add(this.linkLabel1);
             this.LayoutPanelNotification.FlowDirection = System.Windows.Forms.FlowDirection.TopDown;
             this.LayoutPanelNotification.ForeColor = System.Drawing.SystemColors.ControlText;
             this.LayoutPanelNotification.Location = new System.Drawing.Point(723, 78);
@@ -407,6 +379,18 @@
             this.LayoutPanelNotification.TabIndex = 4;
             this.LayoutPanelNotification.Visible = false;
             this.LayoutPanelNotification.WrapContents = false;
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.Red;
+            this.linkLabel1.Location = new System.Drawing.Point(3, 0);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(66, 16);
+            this.linkLabel1.TabIndex = 0;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Clear All";
             // 
             // reflectionLabel1
             // 
@@ -881,20 +865,10 @@
             this.guna2GradientCircleButton1.TabIndex = 0;
             this.guna2GradientCircleButton1.Click += new System.EventHandler(this.guna2GradientCircleButton1_Click);
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_settings_48;
-            this.pictureBox7.Location = new System.Drawing.Point(3, 692);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(54, 45);
-            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox7.TabIndex = 4;
-            this.pictureBox7.TabStop = false;
-            // 
             // pictureBox8
             // 
             this.pictureBox8.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_history_48__1_;
-            this.pictureBox8.Location = new System.Drawing.Point(3, 625);
+            this.pictureBox8.Location = new System.Drawing.Point(12, 680);
             this.pictureBox8.Name = "pictureBox8";
             this.pictureBox8.Size = new System.Drawing.Size(54, 45);
             this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -904,27 +878,67 @@
             // pictureBox4
             // 
             this.pictureBox4.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_supplier_48;
-            this.pictureBox4.Location = new System.Drawing.Point(3, 454);
+            this.pictureBox4.Location = new System.Drawing.Point(3, 420);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(54, 45);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox4.TabIndex = 4;
             this.pictureBox4.TabStop = false;
             // 
-            // pictureBox6
+            // PBHistory
             // 
-            this.pictureBox6.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_reports_48;
-            this.pictureBox6.Location = new System.Drawing.Point(3, 371);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(54, 45);
-            this.pictureBox6.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox6.TabIndex = 4;
-            this.pictureBox6.TabStop = false;
+            this.PBHistory.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_unlock_100;
+            this.PBHistory.Location = new System.Drawing.Point(239, 715);
+            this.PBHistory.Name = "PBHistory";
+            this.PBHistory.Size = new System.Drawing.Size(23, 28);
+            this.PBHistory.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBHistory.TabIndex = 4;
+            this.PBHistory.TabStop = false;
+            // 
+            // PBStock
+            // 
+            this.PBStock.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_unlock_100;
+            this.PBStock.Location = new System.Drawing.Point(232, 458);
+            this.PBStock.Name = "PBStock";
+            this.PBStock.Size = new System.Drawing.Size(23, 28);
+            this.PBStock.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBStock.TabIndex = 4;
+            this.PBStock.TabStop = false;
+            // 
+            // PBDashboard
+            // 
+            this.PBDashboard.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_unlock_100;
+            this.PBDashboard.Location = new System.Drawing.Point(230, 154);
+            this.PBDashboard.Name = "PBDashboard";
+            this.PBDashboard.Size = new System.Drawing.Size(23, 28);
+            this.PBDashboard.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBDashboard.TabIndex = 4;
+            this.PBDashboard.TabStop = false;
+            // 
+            // PBDrugs
+            // 
+            this.PBDrugs.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_unlock_100;
+            this.PBDrugs.Location = new System.Drawing.Point(230, 259);
+            this.PBDrugs.Name = "PBDrugs";
+            this.PBDrugs.Size = new System.Drawing.Size(23, 28);
+            this.PBDrugs.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBDrugs.TabIndex = 4;
+            this.PBDrugs.TabStop = false;
+            // 
+            // PBUsers
+            // 
+            this.PBUsers.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_unlock_100;
+            this.PBUsers.Location = new System.Drawing.Point(232, 357);
+            this.PBUsers.Name = "PBUsers";
+            this.PBUsers.Size = new System.Drawing.Size(23, 28);
+            this.PBUsers.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PBUsers.TabIndex = 4;
+            this.PBUsers.TabStop = false;
             // 
             // pictureBox5
             // 
             this.pictureBox5.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_users_48;
-            this.pictureBox5.Location = new System.Drawing.Point(3, 288);
+            this.pictureBox5.Location = new System.Drawing.Point(3, 323);
             this.pictureBox5.Name = "pictureBox5";
             this.pictureBox5.Size = new System.Drawing.Size(54, 45);
             this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -944,7 +958,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Pharmacy_Management_System.Properties.Resources.icons8_drugs_48;
-            this.pictureBox2.Location = new System.Drawing.Point(3, 204);
+            this.pictureBox2.Location = new System.Drawing.Point(3, 223);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(54, 45);
             this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -990,6 +1004,8 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
+            this.LayoutPanelNotification.ResumeLayout(false);
+            this.LayoutPanelNotification.PerformLayout();
             this.guna2Panel1.ResumeLayout(false);
             this.guna2Panel1.PerformLayout();
             this.guna2Panel2.ResumeLayout(false);
@@ -1003,10 +1019,13 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ProfilePicture)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.NotificationPic)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBHistory)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBStock)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDashboard)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBDrugs)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.PBUsers)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
@@ -1025,17 +1044,13 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton9;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton7;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton4;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton8;
-        private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.PictureBox pictureBox6;
+        private Guna.UI2.WinForms.Guna2GradientButton TabUsers;
+        private Guna.UI2.WinForms.Guna2GradientButton TabDrugs;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton2;
+        private Guna.UI2.WinForms.Guna2GradientButton TabStock;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label LBLUser;
@@ -1043,7 +1058,7 @@
         private System.Windows.Forms.Label LBLTime;
         private System.Windows.Forms.Label LBLDate;
         private System.Windows.Forms.PictureBox pictureBox8;
-        private Guna.UI2.WinForms.Guna2GradientButton guna2GradientButton3;
+        private Guna.UI2.WinForms.Guna2GradientButton TabHistory;
         private Bunifu.Framework.UI.BunifuTextbox bunifuTextbox1;
         private System.Windows.Forms.PictureBox NotificationPic;
         private System.Windows.Forms.FlowLayoutPanel LayoutPanelNotification;
@@ -1080,6 +1095,12 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn Column3;
         private System.Windows.Forms.DataGridViewImageColumn Column4;
         private Guna.UI2.WinForms.Guna2CircleButton NotificationBTN;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.PictureBox PBStock;
+        private System.Windows.Forms.PictureBox PBDashboard;
+        private System.Windows.Forms.PictureBox PBDrugs;
+        private System.Windows.Forms.PictureBox PBUsers;
+        private System.Windows.Forms.PictureBox PBHistory;
     }
 }
 

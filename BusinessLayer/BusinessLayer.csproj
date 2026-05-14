@@ -46,6 +46,7 @@
     <Compile Include="clsBusinessDrugs.cs" />
     <Compile Include="clsBusinessInvoiceDetails.cs" />
     <Compile Include="clsBusinessInvoices.cs" />
+    <Compile Include="clsBusinessNotification.cs" />
     <Compile Include="clsBusinessRoles.cs" />
     <Compile Include="clsBusinessStockHistory.cs" />
     <Compile Include="clsBusinessUsers.cs" />
