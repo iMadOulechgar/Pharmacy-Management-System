@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,11 +19,15 @@ namespace Pharmacy_Management_System.Notification.Controles
             InitializeComponent();
         }
 
-        public void FillControleWithData(string Title , string Description)
+        private string Drugname { get; set; }
+
+        public void FillControleWithData(string Title , string Description,DateTime Dt,string Path)
         {
+            Drugname = Title;
             LBLTitle.Text = Title;
             LBLDesc.Text = Description;
-
+            LBLTime.Text = Dt.ToString();
+            pictureBox1.ImageLocation = Path;
         }
 
 
@@ -31,5 +36,16 @@ namespace Pharmacy_Management_System.Notification.Controles
             this.Width = this.Parent.Width - 25;
         }
 
+        private void LBLDelete_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            if (clsBusinessBatches.FindByDrugID(clsBusinessDrugs.FindByDrugName(Drugname).DrugId).Quantity > 10)
+            {
+                this.Dispose();
+            }
+            else
+            {
+                MessageBox.Show("You Cannot Delete This Notification , Please Report For More Drugs","Error",MessageBoxButtons.OK,MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -1,6 +1,7 @@
 ﻿using DataAccessLayer;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
@@ -65,6 +66,17 @@ namespace BusinessLayer
 
             return false;
         }
+
+        public static bool IsExists(int DrugID)
+        {
+            return clsDataAccessNotification.IsExists(DrugID);
+        }
+
+        public static DataTable GetNotificationTable()
+        {
+            return clsDataAccessNotification.NotificationAllowedNow();
+        }
+
 
 
 

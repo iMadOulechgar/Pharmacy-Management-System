@@ -52,7 +52,7 @@
             this.LBLTime.AutoSize = true;
             this.LBLTime.Font = new System.Drawing.Font("Microsoft JhengHei UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LBLTime.ForeColor = System.Drawing.SystemColors.WindowFrame;
-            this.LBLTime.Location = new System.Drawing.Point(341, 13);
+            this.LBLTime.Location = new System.Drawing.Point(275, 14);
             this.LBLTime.Name = "LBLTime";
             this.LBLTime.Size = new System.Drawing.Size(58, 15);
             this.LBLTime.TabIndex = 1;
@@ -100,6 +100,7 @@
             this.LBLDelete.TabIndex = 3;
             this.LBLDelete.TabStop = true;
             this.LBLDelete.Text = "Delete";
+            this.LBLDelete.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LBLDelete_LinkClicked);
             // 
             // ctlNotification
             // 

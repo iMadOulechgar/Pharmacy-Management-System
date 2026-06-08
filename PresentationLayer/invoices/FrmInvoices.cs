@@ -104,7 +104,9 @@ namespace Pharmacy_Management_System.Drug
             }
         }
 
+        private void FrmInvoices_Leave(object sender, EventArgs e)
+        {
 
-
+        }
     }
 }

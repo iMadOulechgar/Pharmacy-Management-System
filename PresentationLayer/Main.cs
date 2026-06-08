@@ -1,6 +1,7 @@
 ﻿using BusinessLayer;
 using Guna.UI2.WinForms.Suite;
 using iText.StyledXmlParser.Jsoup.Safety;
+using iText.StyledXmlParser.Node;
 using Pharmacy_Management_System.Drug;
 using Pharmacy_Management_System.History;
 using Pharmacy_Management_System.invoices.Controles;
@@ -33,6 +34,8 @@ namespace Pharmacy_Management_System
 
         private int PanelCounter = 0;
         private List<CtLinvoiceDetails> TempPanel = new List<CtLinvoiceDetails>();
+
+
 
         private void ResTheCounter()
         {
@@ -94,30 +97,34 @@ namespace Pharmacy_Management_System
             ProfilePicture.Load(Path);
         }
 
-        public void ReLoadNotificationInfo()
+        private void ReLoadNotificationInfo()
         {
+            DataTable Table = clsBusinessNotification.GetNotificationTable();
             ctlNotification Notification;
-            DataTable Temp = clsBusinessBatches.GetAllBatches();
-            DataRow[] Row = Temp.AsEnumerable().Where(R => (int)R["Quantity"] <= 10).ToArray();
 
-            if (Row.Length > 0)
+            int count = 0;
+
+            if (Table.Rows.Count > 0)
             {
-                foreach (DataRow Rw in Row)
+                foreach (DataRow item in Table.Rows)
                 {
+                    string Title = item[1].ToString();
+                    string Description = item[2].ToString();
+                    string Path = item[4].ToString();
+
                     Notification = new ctlNotification();
-
+                    Notification.FillControleWithData(Title, Description, DateTime.Now,Path);
+                    LayoutPanelNotification.Controls.Add(Notification);
+                    LBLNotificationNum.Text = count++.ToString();
                 }
-
-
             }
 
-
-
-
+            
         }
 
         private void _FillUserDataInLoad()
         {
+            ReLoadNotificationInfo();
             LoadData();
             Permissions();
             LBLUser.Text = clsCurrentUserLogin.CurrentUser.Username;
@@ -177,6 +184,7 @@ namespace Pharmacy_Management_System
             }
 
             Invoices.ShowDialog();
+            ReLoadNotificationInfo();
         }
 
         private void addDrugInThePanelToolStripMenuItem_Click(object sender, EventArgs e)
@@ -242,6 +250,11 @@ namespace Pharmacy_Management_System
         {
             FrmHistory History = new FrmHistory();
             History.ShowDialog();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+
         }
     }
 }

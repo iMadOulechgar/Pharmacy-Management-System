@@ -104,6 +104,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Invoice";
             this.Load += new System.EventHandler(this.FrmInvoices_Load);
+            this.Leave += new System.EventHandler(this.FrmInvoices_Leave);
             this.ResumeLayout(false);
 
         }

@@ -64,8 +64,51 @@ namespace DataAccessLayer
 
             return (result > 0);
         }
-        
+       
+        public static bool IsExists(int DrugID)
+        {
+            bool Result = false;
 
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "select 1 from alert where DrugID = @DrugID";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                    cmd.Parameters.AddWithValue("@DrugID", DrugID);
+
+                    object Obj = cmd.ExecuteScalar();
+
+                    if (Obj != null)
+                        Result = true;
+                }
+            }
+
+            return Result;
+        }
+
+        public static DataTable NotificationAllowedNow()
+        {
+            DataTable Dt = new DataTable();
+
+            using (SqlConnection con = new SqlConnection(clsConnectionString.ConnectionString))
+            {
+                string Query = "SELECT * FROM Alert";
+
+                using (SqlCommand cmd = new SqlCommand(Query,con))
+                {
+                 
+                    con.Open();
+
+                    SqlDataReader Reader = cmd.ExecuteReader();
+
+                    Dt.Load(Reader);
+                }
+            }
+
+            return Dt;
+
+        }
 
     }
 }
